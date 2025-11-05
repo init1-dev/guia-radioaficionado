@@ -16,6 +16,29 @@ body {
     background: linear-gradient(180deg, #071028 0%, #051025 100%);
 }
 
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Fondo de la barra de scroll */
+*::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+/* Minatura de la barra de scroll */
+*::-webkit-scrollbar-thumb {
+    background-color: #1900ff;
+    border-radius: 10px;
+    border: 3px solid #e0e0e0;
+    /* Para un efecto de flotación */
+}
+
+/* Estilo al pasar el ratón por encima de la miniatura */
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #333333;
+}
+
 html {
     scroll-padding-top: 70px;
 }
@@ -72,14 +95,14 @@ header {
 
 nav {
     position: sticky;
-    top: 76px;
-    height: calc(100vh - 96px);
+    top: 96px;
+    height: fit-content;
     overflow: auto;
-    padding: 12px;
-    border-radius: 12px;
+    padding: 12px 12px 12px 18px;
+    border-radius: 12px 15px 20px 15px;
     background: linear-gradient(180deg,
-            rgba(255, 255, 255, 0.01),
-            rgba(255, 255, 255, 0.005));
+            rgba(255, 255, 255, 0.02),
+            rgba(255, 255, 255, 0.05));
     border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
@@ -114,8 +137,8 @@ article {
     padding: 18px;
     border-radius: 12px;
     background: linear-gradient(180deg,
-            rgba(255, 255, 255, 0.01),
-            rgba(255, 255, 255, 0.005));
+            rgba(255, 255, 255, 0.02),
+            rgba(255, 255, 255, 0.05));
     border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
@@ -217,4 +240,53 @@ footer {
     border-radius: 8px;
     border: 1px solid rgba(255, 165, 0, 0.06);
     color: #fff6e6;
+}
+
+/* TABLA DE CONTENIDO */
+
+#index-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.toc-link {
+    
+}
+
+#toc summary {
+    cursor: pointer;
+    list-style-position: inside; /* Mejora la alineación del marcador */
+}
+
+#toc summary:focus {
+    outline: none;
+}
+
+details.empty > summary::-webkit-details-marker {
+    display: none;
+}
+
+details.empty > summary {
+    list-style-type: none;
+}
+
+#toc ul ul {
+    padding-left: 1.5rem;
+    list-style-type: circle;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#toc ul ul li a {
+    font-size: 0.9em;
+    color: var(--muted);
+    font-weight: normal;
+}
+
+/* Estilo para los títulos de las secciones principales */
+#toc ul li > a.toc-h2,
+#toc summary > span.toc-h2 {
+    font-weight: bold;
 }

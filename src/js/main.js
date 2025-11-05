@@ -1,27 +1,9 @@
 
 // Navegación TOC active link
 document.querySelectorAll('.toc-link').forEach(a => a.addEventListener('click', e => {
-    e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth', block: 'start' });
 }));
-
-// Search (client-side): show matching sections by heading and text
-const q = document.getElementById('q');
-q.addEventListener('input', () => search(q.value));
-function search(term) {
-    const s = term.trim().toLowerCase();
-    const sections = document.querySelectorAll('article section');
-    sections.forEach(sec => {
-        const text = sec.innerText.toLowerCase();
-        if (!s) { sec.style.display = 'block'; } else {
-            sec.style.display = text.includes(s) ? 'block' : 'none';
-        }
-    });
-    // highlight toc
-    document.querySelectorAll('nav a').forEach(a => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target && target.style.display === 'none') a.style.display = 'none'; else a.style.display = 'block';
-    });
-}
 
 // small helper: activate toc on scroll
 const tocLinks = document.querySelectorAll('nav a');
@@ -36,3 +18,118 @@ window.addEventListener('scroll', () => {
 
 // Accessibility: focus search on load (deshabilitar durante eldesarrollo)
 // window.addEventListener('load', () => document.getElementById('q').focus());
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tocList = document.getElementById('index-list');
+    const article = document.getElementById('main');
+
+    if (!tocList || !article) {
+        console.error("No se pudo encontrar la lista del índice o el artículo principal.");
+        return;
+    }
+    tocList.innerHTML = ''; // Limpia el contenido existente
+
+    const sections = article.querySelectorAll('section');
+
+    const slugify = (text) => {
+        return text.toString().toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[^\w\-]+/g, '')
+            .replace(/\-\-+/g, '-')
+            .replace(/^-+/, '')
+            .replace(/-+$/, '');
+    };
+
+    sections.forEach((section, i) => {
+        const h2 = section.querySelector('h2');
+        if (!h2) return;
+
+        const sectionId = section.id;
+        const sectionTitle =`${i + 1}. ${h2.textContent}`;
+
+        const mainLi = document.createElement('li');
+
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+        
+        const summaryTitle = document.createElement('span');
+        summaryTitle.textContent = sectionTitle;
+        summaryTitle.classList.add('toc-link', 'toc-h2');
+        summary.appendChild(summaryTitle);
+
+        const h3s = section.querySelectorAll('h3');
+
+        summary.addEventListener('click', (e) => {
+            e.preventDefault();
+            location.hash = sectionId; // Navegar siempre
+
+            // Abrir/cerrar solo si tiene sub-elementos
+            if (h3s.length > 0) {
+                details.open = !details.open;
+            }
+        });
+
+        details.appendChild(summary);
+
+        if (h3s.length > 0) {
+            const subUl = document.createElement('ul');
+            h3s.forEach(h3 => {
+                const h3Id = h3.id || slugify(`${sectionId}-${h3.textContent}`);
+                h3.id = h3Id;
+                subUl.innerHTML += `<li><a href="#${h3Id}" class="toc-link toc-h3">${h3.textContent}</a></li>`;
+            });
+            details.appendChild(subUl);
+        } else {
+            details.classList.add('empty');
+        }
+
+        mainLi.appendChild(details);
+        tocList.appendChild(mainLi);
+    });
+
+    const searchInput = document.getElementById('q');
+    if (searchInput) {
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const tocItems = tocList.querySelectorAll(':scope > li');
+
+            tocItems.forEach(li => {
+                const details = li.querySelector('details');
+                const h2Span = li.querySelector('.toc-h2');
+                const h3ListItems = li.querySelectorAll('ul > li');
+
+                const h2Text = h2Span.textContent.toLowerCase();
+                const h2Matches = h2Text.includes(searchTerm);
+                
+                let hasVisibleH3 = false;
+                h3ListItems.forEach(h3Li => {
+                    const h3Link = h3Li.querySelector('a');
+                    const h3Text = h3Link.textContent.toLowerCase();
+                    const h3Matches = h3Text.includes(searchTerm);
+
+                    if (h2Matches || h3Matches) {
+                        h3Li.style.display = '';
+                        if (h3Matches) hasVisibleH3 = true;
+                    } else {
+                        h3Li.style.display = 'none';
+                    }
+                });
+
+                if (h2Matches || hasVisibleH3) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+
+                if (details) {
+                    if (searchTerm && hasVisibleH3 && !h2Matches) {
+                        details.open = true;
+                    } else if (!searchTerm) {
+                        details.open = false;
+                    }
+                }
+            });
+        });
+    }
+});
+
