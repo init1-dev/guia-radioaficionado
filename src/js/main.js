@@ -34,5 +34,5 @@ window.addEventListener('scroll', () => {
     if (current) { const link = document.querySelector('nav a[href="#' + current.id + '"]'); if (link) link.classList.add('active'); }
 });
 
-// Accessibility: focus search on load
-window.addEventListener('load', () => document.getElementById('q').focus());
+// Accessibility: focus search on load (deshabilitar durante eldesarrollo)
+// window.addEventListener('load', () => document.getElementById('q').focus());

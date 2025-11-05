@@ -157,6 +157,11 @@ td {
     font-size: 14px;
 }
 
+th {
+    background-color: darkblue;
+    color: white;
+}
+
 .glossary dt {
     font-weight: 700;
     margin-top: 10px;
