@@ -65,11 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         summary.addEventListener('click', (e) => {
             e.preventDefault();
-            location.hash = sectionId; // Navegar siempre
 
             // Abrir/cerrar solo si tiene sub-elementos
             if (h3s.length > 0) {
-                details.open = !details.open;
+                // Si tiene sub-elementos, gestiona el despliegue.
+                if (!details.open) {
+                    // Si está cerrado, lo abre y navega.
+                    details.open = true;
+                    location.hash = sectionId;
+                } else {
+                    // Si está abierto, solo lo cierra.
+                    details.open = false;
+                }
+            } else {
+                // Si no tiene sub-elementos, siempre navega.
+                location.hash = sectionId;
             }
         });
 
