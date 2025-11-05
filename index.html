@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>guia-radioaficionado</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Guía RT-950 PRO</div>
+      <div id="search"><input id="q" placeholder="Buscar en la guía — ejemplo: APRS, GPS, programación, 27MHz" aria-label="buscar" autocomplete="off"/></div>
+      <div style="min-width:120px;text-align:right;color:var(--muted);font-size:13px">Versión: 1.0</div>
+    </header>
+  
+    <div class="container">
+      <div class="grid">
+        <nav id="toc">
+          <h3>Contenido</h3>
+          <ul>
+            <li><a href="#producto" class="toc-link">Sobre tu Radtel RT-950 PRO</a></li>
+            <li><a href="#especificaciones" class="toc-link">Especificaciones principales</a></li>
+            <li><a href="#panel" class="toc-link">Panel, botones y conectores</a></li>
+            <li><a href="#modos" class="toc-link">Modos y siglas (AM/FM/USB/LSB/CW/DMR/APRS)</a></li>
+            <li><a href="#gps-aprs" class="toc-link">GPS & APRS</a></li>
+            <li><a href="#bluetooth" class="toc-link">Bluetooth y App</a></li>
+            <li><a href="#programacion" class="toc-link">Programación por cable y software</a></li>
+            <li><a href="#antenas" class="toc-link">Antenas y rendimiento</a></li>
+            <li><a href="#legal" class="toc-link">Aspectos legales y seguridad</a></li>
+            <li><a href="#conceptos" class="toc-link">Teoría básica de radio</a></li>
+            <li><a href="#practicas" class="toc-link">Prácticas recomendadas y primeros pasos</a></li>
+            <li><a href="#glosario" class="toc-link">Glosario</a></li>
+            <li><a href="#faq" class="toc-link">FAQ y resolución de problemas</a></li>
+            <li><a href="#recursos" class="toc-link">Recursos y lecturas</a></li>
+          </ul>
+        </nav>
+  
+        <article id="main">
+          <section id="producto">
+            <h2>Sobre tu Radtel RT-950 PRO</h2>
+            <p>Has comprado la Radtel RT-950 PRO — un transceptor portátil multibanda con funciones avanzadas pensadas tanto para CB/27MHz como para entusiastas del radioaficionado. Incluye transmisión en 27 MHz (hasta 10 W según modo), recepción en múltiples modos (AM/FM/USB/LSB/CW), GPS, APRS, Bluetooth para programación por app, clonación inalámbrica, recepción NOAA y funciones adicionales como escaneo de espectro y DMR/APRS (firmware según versión).</p>
+            <p class="note">Esta guía integra explicación del equipo y teoría general para que, desde cero, puedas aprender tanto a usar la radio como los conceptos de radioafición necesarios.</p>
+          </section>
+  
+          <section id="especificaciones">
+            <h2>Especificaciones principales (resumen)</h2>
+            <div class="specs">
+              <div class="card"><strong>Modelo</strong><div>Radtel RT-950 PRO</div></div>
+              <div class="card"><strong>Banda TX</strong><div>27 MHz (CB/27MHz) — FM (según variante)</div></div>
+              <div class="card"><strong>Potencia</strong><div>Hasta 10 W (depende del modo y regulación)</div></div>
+              <div class="card"><strong>Modos RX/TX</strong><div>FM/AM/USB/LSB/CW (recepción ampliada)</div></div>
+              <div class="card"><strong>GPS/APRS</strong><div>Integrado — envío/recepción de paquetes APRS</div></div>
+              <div class="card"><strong>Bluetooth</strong><div>App móvil para programación y clonación inalámbrica</div></div>
+              <div class="card"><strong>NOAA</strong><div>Recepción de estaciones meteorológicas (si tu región lo soporta)</div></div>
+              <div class="card"><strong>Accesorios</strong><div>Cable de programación (opcional), antena, clip de cinturón, batería, cargador</div></div>
+            </div>
+  
+            <h3>Especificaciones técnicas (extendidas)</h3>
+            <table>
+              <tr><th>Parámetro</th><th>Valor típico</th></tr>
+              <tr><td>Rango TX</td><td>27 MHz transmit/receive (ver manual para rangos exactos y variantes)</td></tr>
+              <tr><td>Salida RF</td><td>Hasta 10 W (ajustable)</td></tr>
+              <tr><td>Modulación</td><td>AM/FM/SSB(CW/USB/LSB) recepción</td></tr>
+              <tr><td>GPS</td><td>Integrado para posicionamiento y APRS</td></tr>
+              <tr><td>Conectividad</td><td>Bluetooth, puerto para cable de programación (USB/TTL según adaptador)</td></tr>
+              <tr><td>Alimentación</td><td>Batería recargable (Li-ion), cargador incluido</td></tr>
+              <tr><td>Dimensiones</td><td>Variable — consultar manual del fabricante</td></tr>
+            </table>
+  
+            <p class="warn">Nota: algunas funciones dependen de la versión de firmware. Para detalles exactos revisa el manual y la página del fabricante.</p>
+          </section>
+  
+          <section id="panel">
+            <h2>Panel, botones y conectores — qué hace cada cosa</h2>
+            <p>Descripción general de controles habituales en la RT-950 PRO (puede variar ligeramente):</p>
+            <ul>
+              <li><strong>Knob de encendido/volumen</strong>: girar para encender/apagar y ajustar volumen.</li>
+              <li><strong>Selector de canal/frecuencia</strong>: rueda o teclas para cambiar canal/frecuencia.</li>
+              <li><strong>Botón PTT (Push-To-Talk)</strong>: mantener para transmitir.</li>
+              <li><strong>Teclas laterales</strong>: accesos directos (escaneo, modo, guardado canal, etc.).</li>
+              <li><strong>Conector para micrófono/auricular</strong>: para usar micrófonos externos o auriculares.</li>
+              <li><strong>Puerto de programación</strong>: para conectar a PC y programar memorias (usa adaptador de cable opcional).</li>
+              <li><strong>Conector de antena</strong>: conector estándar (tipo PL259/SO-239 o SMA según versión) — revisar manual.</li>
+            </ul>
+          </section>
+  
+          <section id="modos">
+            <h2>Modos de operación y siglas</h2>
+            <p>A continuación explico de forma clara cada sigla/función que aparece en la descripción de la radio:</p>
+            <dl class="glossary">
+              <dt>AM (Amplitud Modulada)</dt><dd>Modulación clásica usada históricamente en radio. En HF y CB permite compatibilidad con estaciones antiguas. Buena para voz en ciertas condiciones.</dd>
+              <dt>FM (Frecuencia Modulada)</dt><dd>Modo muy común en VHF/UHF y CB; más inmune al ruido que AM para voz.</dd>
+              <dt>USB / LSB (Upper/Lower Side Band)</dt><dd>Modos de Banda Lateral Única, usados en SSB. Permiten comunicación en HF/parametric bands con mayor eficiencia de potencia. USB = side band superior; LSB = inferior.</dd>
+              <dt>CW (Continuous Wave)</dt><dd>Modo de telegrafía (Morse). Transmisión de pulsos on/off — eficiente para señales largas/distantes.</dd>
+              <dt>APRS (Automatic Packet Reporting System)</dt><dd>Sistema para enviar/recibir paquetes de datos (posición GPS, mensajes cortos, telemetría) sobre radioafición.</dd>
+              <dt>GPS</dt><dd>Sistema de posicionamiento global integrado; usado para geolocalización y APRS.</dd>
+              <dt>DMR</dt><dd>Digital Mobile Radio — estándar digital que permite llamadas privadas, grupos y enlaces con puentes. No todas las unidades DMR son compatibles o configuradas por defecto.</dd>
+              <dt>NOAA</dt><dd>Estaciones meteorológicas (en EE. UU.) que transmiten alertas y forecast; si estás fuera, busca el servicio meteorológico de tu país.</dd>
+              <dt>CTCSS / DCS</dt><dd>Subtonos que permiten abrir squelch selectivo en repetidores o radios para evitar escuchar a otros canales.</dd>
+            </dl>
+          </section>
+  
+          <section id="gps-aprs">
+            <h2>GPS y APRS — cómo funcionan y cómo usarlos</h2>
+            <p>La RT-950 PRO incluye receptor GPS y soporte APRS. APRS permite compartir tu posición y mensajes en tiempo real a otros usuarios o a portales de la red APRS (si existen en tu región) y a través de pasarelas a Internet.</p>
+            <ol>
+              <li>Activa GPS en el menú y espera a "fix" (varios satélites fijados).</li>
+              <li>Configura tu indicativo (callsign) en los ajustes APRS — esto es obligatorio en redes de radioaficionados.</li>
+              <li>Define si quieres enviar beacons automáticamente y su intervalo.</li>
+              <li>Para recibir paquetes APRS, coloca la radio en el canal/frecuencia APRS local (varía por región).</li>
+            </ol>
+            <p class="note">Importante: para transmitir APRS en bandas reservadas a radioaficionados normalmente necesitas una licencia. Usa APRS sólo en frecuencias permitidas para tu país.</p>
+          </section>
+  
+          <section id="bluetooth">
+            <h2>Bluetooth y App móvil</h2>
+            <p>La radio soporta programación por APP vía Bluetooth y clonación inalámbrica entre radios. Pasos típicos:</p>
+            <ul>
+              <li>Instala la app recomendada por Radtel (busca la app RT-950 o Radtel en App Store / Google Play).</li>
+              <li>Empareja la radio desde los ajustes Bluetooth de tu móvil y desde la app siguiendo las instrucciones.</li>
+              <li>Desde la app podrás editar memorias, renombrar canales, subir/descargar configuraciones y clonar a otra unidad.</li>
+            </ul>
+            <p class="warn">No todas las apps son oficiales; usa la app del fabricante o versiones recomendadas por la comunidad para evitar perder datos o cargar firmwares no compatibles.</p>
+          </section>
+  
+          <section id="programacion">
+            <h2>Programación por cable y software</h2>
+            <p>Opciones para programar memorias y parámetros:</p>
+            <ul>
+              <li><strong>App Bluetooth</strong>: la vía más cómoda para editar desde el móvil.</li>
+              <li><strong>Cable de programación + software PC</strong>: hay software genérico (programmers) compatibles con radios Radtel/baofeng clones; revisa el manual para el tipo de cable (USB-serial o cable propietario).</li>
+              <li><strong>Clonación inalámbrica</strong>: clona configuraciones entre dos unidades con Bluetooth si la función está presente.</li>
+            </ul>
+            <pre><code>// Ejemplo: pasos rápidos para programar canales con cable
+  1. Instala el driver del cable USB-serial (si es necesario)
+  2. Abre el software de programación recomendado
+  3. Conecta la radio en modo programación
+  4. Lee la configuración actual
+  5. Modifica memorias/ajustes y escribe de vuelta
+  </code></pre>
+          </section>
+  
+          <section id="antenas">
+            <h2>Antena, SWR y rendimiento</h2>
+            <p>La antena incluida está optimizada para uso portátil en la banda 27 MHz, pero si quieres mejorar alcance y calidad considera:</p>
+            <ul>
+              <li>Antenas más largas / tipo látigo para 27 MHz (mejor ganancia en CB/27MHz).</li>
+              <li>Antena externa con conector compatible (ver manual: ¿SMA? ¿PL259?).</li>
+              <li>Medir SWR (Standing Wave Ratio). Un SWR alto puede dañar el final de RF o reducir eficacia; mantén SWR &lt; 3:1, ideal &lt; 2:1.</li>
+              <li>Usar soporte/mastil para elevar la antena mejora cobertura.</li>
+            </ul>
+          </section>
+  
+          <section id="legal">
+            <h2>Aspectos legales y seguridad</h2>
+            <p>Antes de transmitir, verifica la regulación local: en muchos países la transmisión en 27 MHz (CB) está sujeta a potencias y reglas específicas — en otros países ciertas frecuencias requieren licencia de radioaficionado.</p>
+            <p class="warn">No uses la radio en frecuencias exclusivas para servicios públicos, aeronáuticos, marítimos o privadas. El uso indebido puede suponer sanciones.</p>
+            <p>Recomendación: infórmate en la autoridad de telecomunicaciones de tu país sobre licencias, bandas permitidas y limitaciones de potencia.</p>
+          </section>
+  
+          <section id="conceptos">
+            <h2>Teoría básica de radio — conceptos que deberías conocer</h2>
+            <ul>
+              <li><strong>Frecuencia (Hz)</strong>: cuántas oscilaciones por segundo. MHz = megahercios = 10^6 Hz.</li>
+              <li><strong>Longitud de onda</strong>: inversa de la frecuencia; frecuencias bajas = ondas largas.</li>
+              <li><strong>Modulación</strong>: forma en que la información (voz/datos) se pone sobre la portadora (AM, FM, SSB, CW, digital).</li>
+              <li><strong>SNR (Signal-to-Noise Ratio)</strong>: relación señal/ruido — mayor es mejor.</li>
+              <li><strong>Squelch</strong>: umbral que evita escuchar ruido entre transmisiones.</li>
+              <li><strong>Potencia de salida</strong>: potencia RF transmitida; más potencia no siempre = mejor recepción (ruido, antena y condiciones importan).</li>
+              <li><strong>Repeater (repetidor)</strong>: estación que recibe y retransmite para aumentar el alcance.</li>
+              <li><strong>Contactos y protocolo</strong>: normas de cortesía (CTCSS para acceso a repetidores, identificarte con tu indicativo, evitar lenguaje ofensivo).</li>
+            </ul>
+          </section>
+  
+          <section id="practicas">
+            <h2>Prácticas recomendadas y primeros pasos</h2>
+            <ol>
+              <li>Lee el manual oficial y revisa la tabla de frecuencias de tu país.</li>
+              <li>Empieza en modo recepción para familiarizarte con el squelch y los canales locales.</li>
+              <li>Programa 5 memorias: 2 para recibir estaciones locales fuertes, 1 para APRS (si procede), 1 para emergencias, 1 para un contacto planificado.</li>
+              <li>Practica con PTT breves y control de micrófono (hablar claro, 3–4 segundos antes de soltar).</li>
+              <li>Prueba APRS en modo "receive only" si no tienes licencia para transmitir aún.</li>
+            </ol>
+          </section>
+  
+          <section id="glosario">
+            <h2>Glosario rápido</h2>
+            <dl>
+              <dt>CB</dt><dd>Citizen's Band — Banda ciudadana, frecuencias alrededor de 27 MHz en muchos países.</dd>
+              <dt>SWR</dt><dd>Standing Wave Ratio — indica adaptación de antena al transmisor.</dd>
+              <dt>HT</dt><dd>Handheld Transceiver — radio de mano.</dd>
+              <dt>Beacon</dt><dd>Trasmisión automática periódica que anuncia la posición/estado en APRS.</dd>
+            </dl>
+          </section>
+  
+          <section id="faq">
+            <h2>FAQ y resolución de problemas</h2>
+            <h4>La radio no transmite</h4>
+            <p>Verifica: batería cargada, botón PTT, configuración de bloqueo, frecuencia permitida, antena conectada correctamente y SWR correcto.</p>
+            <h4>Se oyen ruidos o interferencias</h4>
+            <p>Comprueba el squelch, prueba otro canal, reduce potencia, y aleja la radio de fuentes de ruido (ordenadores, cargadores, luces LED).</p>
+            <h4>GPS no consigue fix</h4>
+            <p>Prueba al aire libre, espera varios minutos o reinicia la radio; comprueba que la antena GPS no esté cubierta y que la función esté activada.</p>
+          </section>
+  
+          <section id="recursos">
+            <h2>Recursos y lecturas recomendadas</h2>
+            <ul>
+              <li>Página oficial del fabricante para manuales y firmware (consulta la sección "User Manual Downloads").</li>
+              <li>Foros y grupos de usuarios de Radtel y RT-950 donde comparten perfiles de programación y accesorios.</li>
+              <li>Sitios de referencia de radioafición de tu país (licencias, tablas de bandas, repetidores locales).</li>
+              <li>Cursos básicos de radioafición — busca el curso de la autoridad nacional (ej. en España: examen de radioaficionado) si te interesa obtener licencia.</li>
+            </ul>
+          </section>
+  
+          <footer>
+            <p>Generado: Guía inicial personalizada para Radtel RT-950 PRO. Esta guía integra información del manual del fabricante y recursos públicos. Revisa siempre el manual original antes de realizar modificaciones en la radio.</p>
+          </footer>
+        </article>
+      </div>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
