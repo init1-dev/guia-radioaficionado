@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("No se pudo encontrar la lista del índice o el artículo principal.");
         return;
     }
-    tocList.innerHTML = ''; // Limpia el contenido existente
+    tocList.innerHTML = '';
 
     const sections = article.querySelectorAll('section');
 
@@ -39,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
             .replace(/^-+/, '')
             .replace(/-+$/, '');
     };
+
+    const indice = document.createElement('li');
+    indice.innerHTML = `<li><a href="#hero-banner" class="toc-link toc-h2">Guía del Radioaficionado</a></li>`;
+    tocList.appendChild(indice);
 
     sections.forEach((section, i) => {
         const h2 = section.querySelector('h2');

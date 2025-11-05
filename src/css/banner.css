@@ -1,0 +1,26 @@
+/* Estilos para el banner de cabecera */
+#hero-banner {
+    background-color: #505050; /* Mismo color que el header */
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.banner-content {
+    text-align: center;
+    color: white;
+}
+
+.banner-content h1 {
+    font-size: 6rem;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.banner-content p {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: var(--muted);
+}
