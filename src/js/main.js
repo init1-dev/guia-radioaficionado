@@ -40,8 +40,30 @@ document.addEventListener('DOMContentLoaded', () => {
     tocCloseBtn.addEventListener('click', closeToc);
     overlay.addEventListener('click', closeToc);
 
-    // --- Lógica para generar el índice ---
+    // --- Lógica para mover la barra de búsqueda ---
+    const header = document.querySelector('header');
+    const searchElement = document.getElementById('search');
+    const versionInfo = header.querySelector('div[style*="min-width"]');
     const tocList = document.getElementById('index-list');
+
+    function moveSearchbar() {
+        if (window.innerWidth <= 900) {
+            if (searchElement.parentElement !== tocNav) {
+                tocNav.insertBefore(searchElement, tocList);
+            }
+        } else {
+            if (searchElement.parentElement !== header) {
+                header.insertBefore(searchElement, versionInfo);
+            }
+        }
+    }
+
+    // Mover al cargar y al redimensionar
+    moveSearchbar();
+    window.addEventListener('resize', moveSearchbar);
+
+    // --- Lógica para generar el índice ---
+    
     const article = document.getElementById('main');
 
     if (!tocList || !article) {
