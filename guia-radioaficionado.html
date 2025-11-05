@@ -11,7 +11,11 @@
 </head>
 
 <body>
+    <div id="overlay"></div>
     <header>
+        <button id="toc-toggle-btn" aria-label="Abrir contenido">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
         <div class="logo">G.R.A.</div>
         <div id="search"><input id="q" placeholder="Buscar en la guía — ejemplo: Bandas, Indicativos, Subtonos, Procedimientos, etc"
                 aria-label="buscar" autocomplete="off" /></div>
@@ -22,6 +26,7 @@
         <div class="grid">
             <nav id="toc">
                 <h3>Contenido</h3>
+                <button id="toc-close-btn" aria-label="Cerrar contenido">&times;</button>
                 <ul id="index-list">
                     <!-- <li><a href="#bandas-frecuencias" class="toc-link">1. Tabla de Bandas y Frecuencias</a></li>
                     <li><a href="#banda-ciudadana" class="toc-link">2. Banda Ciudadana (CB)</a></li>

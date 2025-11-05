@@ -20,6 +20,27 @@ window.addEventListener('scroll', () => {
 // window.addEventListener('load', () => document.getElementById('q').focus());
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Lógica para el menú de contenido móvil ---
+    const tocToggleBtn = document.getElementById('toc-toggle-btn');
+    const tocCloseBtn = document.getElementById('toc-close-btn');
+    const tocNav = document.getElementById('toc');
+    const overlay = document.getElementById('overlay');
+
+    const openToc = () => {
+        tocNav.classList.add('toc-mobile-open');
+        document.body.classList.add('overlay-active');
+    };
+
+    const closeToc = () => {
+        tocNav.classList.remove('toc-mobile-open');
+        document.body.classList.remove('overlay-active');
+    };
+
+    tocToggleBtn.addEventListener('click', openToc);
+    tocCloseBtn.addEventListener('click', closeToc);
+    overlay.addEventListener('click', closeToc);
+
+    // --- Lógica para generar el índice ---
     const tocList = document.getElementById('index-list');
     const article = document.getElementById('main');
 
@@ -95,6 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
             details.appendChild(subUl);
         } else {
             details.classList.add('empty');
+        }
+        // Cierra el menú móvil si se hace clic en un enlace
+        if (window.innerWidth <= 900) {
+            closeToc();
         }
 
         mainLi.appendChild(details);
