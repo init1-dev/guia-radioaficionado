@@ -16,6 +16,10 @@ body {
     background: linear-gradient(180deg, #071028 0%, #051025 100%);
 }
 
+html {
+    scroll-padding-top: 70px;
+}
+
 header {
     position: fixed;
     top: 0;

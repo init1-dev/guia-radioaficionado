@@ -22,15 +22,21 @@
             <nav id="toc">
                 <h3>Contenido</h3>
                 <ul>
-                    <li><a href="#bandas-frecuencias" class="toc-link">Tabla de Bandas y Frecuencias</a></li>
-                    <li><a href="#banda-ciudadana" class="toc-link">Banda Ciudadana (CB)</a></li>
-                    <li><a href="#modos-emision" class="toc-link">Modos de Emisión</a></li>
-                    <li><a href="#indicativos" class="toc-link">Sistema de Indicativos en España</a></li>
-                    <li><a href="#conceptos-clave" class="toc-link">Conceptos Clave de Radioafición</a></li>
-                    <li><a href="#subtonos" class="toc-link">Subtonos CTCSS y DCS</a></li>
-                    <li><a href="#propagacion" class="toc-link">Propagación de Ondas</a></li>
-                    <li><a href="#codigos-q" class="toc-link">Códigos Q y Abreviaturas</a></li>
-                    <li><a href="#procedimientos" class="toc-link">Procedimientos Operativos</a></li>
+                    <li><a href="#bandas-frecuencias" class="toc-link">1. Tabla de Bandas y Frecuencias</a></li>
+                    <li><a href="#banda-ciudadana" class="toc-link">2. Banda Ciudadana (CB)</a></li>
+                    <li><a href="#modos-emision" class="toc-link">3. Modos de Emisión</a></li>
+                    <li><a href="#indicativos" class="toc-link">4. Sistema de Indicativos</a></li>
+                    <li><a href="#conceptos-clave" class="toc-link">5. Conceptos Clave</a></li>
+                    <li><a href="#subtonos" class="toc-link">6. Subtonos CTCSS y DCS</a></li>
+                    <li><a href="#propagacion" class="toc-link">7. Propagación de Ondas</a></li>
+                    <li><a href="#repetidores" class="toc-link">8. Repetidores</a></li>
+                    <li><a href="#codigos-q" class="toc-link">9. Códigos Q y Abreviaturas</a></li>
+                    <li><a href="#procedimientos" class="toc-link">10. Procedimientos Operativos</a></li>
+                    <li><a href="#consejos-principiantes" class="toc-link">Consejos para Principiantes</a></li>
+                    <li><a href="#software" class="toc-link">Software Útil</a></li>
+                    <li><a href="#recursos" class="toc-link">Recursos y Contactos</a></li>
+                    <li><a href="#glosario" class="toc-link">Glosario Rápido</a></li>
+                    <li><a href="#emergencia" class="toc-link">Contactos de Emergencia</a></li>
                 </ul>
             </nav>
 
@@ -693,7 +699,7 @@
                         <dd>General, se asigna después de EB </dd>
                         <dt>ED </dt>
                         <dd>Estaciones especiales (eventos, conmemorativas) </dd>
-                        <dt>AM/4J-1J </dt>
+                        <dt>AM/AO</dt>
                         <dd>Ceuta y Melilla (Alternativo a EA9) / Estaciones especiales (histórico) </dd>
     
                     </dl>
@@ -803,7 +809,7 @@
                         </tr>
                         <tr>
                             <td>Especial </td>
-                            <td>AO5ABC</td>
+                            <td>AO3ABC</td>
                             <td>Eventos conmemorativos </td>
                         </tr>
                         <tr>
@@ -1179,34 +1185,184 @@
                                 <li>Uso: Banda 160m, CB</li>
                             </ul>
                         </dd>
-                        <dt>Onda Espacial / Troposférica</dt>
-                        <dd>Frecuencias: VHF/UHF. Alcance: Línea de visión (+ troposfera). Usada en repetidores y
-                            comunicaciones locales. </dd>
-                        <dt>Onda Ionosférica (Sky Wave)</dt>
-                        <dd>Frecuencias: HF. Alcance: Larga distancia (DX). Depende de las capas F2 para reflejar la
-                            señal. </dd>
-                        <dt>MUF </dt>
-                        <dd>Maximum Usable Frequency: Frecuencia máxima utilizable para una distancia. </dd>
-                        <dt>LUF </dt>
-                        <dd>Lowest Usable Frequency: Frecuencia mínima (por debajo, demasiada absorción). </dd>
-
+                        <dt>PROPAGACIÓN IONOSFÉRICA (Sky Wave)</dt>
+                        <dd>
+                            <ul>
+                                <li>Frecuencias: HF (3-30 MHz)</li>
+                                <li>Alcance: 500 km - mundial</li>
+                                <li>Características: Reflejo en ionosfera, varía con hora, estación y ciclo solar.</li>
+                            </ul>
+                        </dd>
+                        <dt>PROPAGACIÓN LÍNEA DE VISTA (Line of Sight)</dt>
+                        <dd>
+                            <ul>
+                                <li>Frecuencias: VHF, UHF, Microondas (> 30 MHz)</li>
+                                <li>Alcance: 5-15 km (portátil), 50-100 km (con repetidor)</li>
+                                <li>Características: No atraviesa obstáculos sólidos.</li>
+                            </ul>
+                        </dd>
+                        <dt>PROPAGACIÓN TROPOSFÉRICA</dt>
+                        <dd>
+                            <ul>
+                                <li>Frecuencias: VHF, UHF</li>
+                                <li>Alcance: 200-800 km</li>
+                                <li>Características: Ductos troposféricos, inversión térmica.</li>
+                            </ul>
+                        </dd>
+                        <dt>PROPAGACIÓN ESPORÁDICA-E (Es)</dt>
+                        <dd>
+                            <ul>
+                                <li>Frecuencias: VHF (especialmente 6m y 2m)</li>
+                                <li>Alcance: 500-2500 km</li>
+                                <li>Características: Impredecible, más frecuente en verano.</li>
+                            </ul>
+                        </dd>
                     </dl>
+                    
+                    <h3>Frecuencia Crítica y MUF</h3>
+                    <table>
+                        <tr>
+                            <th>Término</th>
+                            <th>Definición</th>
+                        </tr>
+                        <tr>
+                            <td>MUF</td>
+                            <td>Maximum Usable Frequency: Frecuencia máxima utilizable para una distancia.</td>
+                        </tr>
+                        <tr>
+                            <td>LUF</td>
+                            <td>Lowest Usable Frequency: Frecuencia mínima (por debajo, demasiada absorción).</td>
+                        </tr>
+                        <tr>
+                            <td>FOT</td>
+                            <td>Optimum Working Frequency: Frecuencia óptima de trabajo (85% de MUF).</td>
+                        </tr>
+                    </table>
+
+                    <h3>Indices de Propagación</h3>
+                    <table>
+                        <tr>
+                            <th>Índice</th>
+                            <th>Qué mide</th>
+                            <th>Valores</th>
+                        </tr>
+                        <tr>
+                            <td>SFI (Solar Flux Index)</td>
+                            <td>Actividad solar</td>
+                            <td>70-300 (mejor propagación con valores altos)</td>
+                        </tr>
+                        <tr>
+                            <td>SSN (Sunspot Number)</td>
+                            <td>Manchas solares</td>
+                            <td>0-300 (más manchas, mejor HF)</td>
+                        </tr>
+                        <tr>
+                            <td>A-Index</td>
+                            <td>Perturbaciones geomagnéticas</td>
+                            <td>0-400 (0-7 excelente, >50 tormentas)</td>
+                        </tr>
+                        <tr>
+                            <td>K-Index</td>
+                            <td>Perturbaciones locales (3h)</td>
+                            <td>0-9 (0-2 bueno, >5 mala propagación)</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="repetidores">
+                    <h2>Repetidores</h2>
+                    
+                    <h3>¿Qué es un Repetidor?</h3>
+                    <p>Un repetidor es una estación automática que:</p>
+                    <ol>
+                        <li>Recibe en una frecuencia (RX).</li>
+                        <li>Retransmite simultáneamente en otra frecuencia (TX).</li>
+                        <li>Amplifica la señal y la eleva en altura.</li>
+                        <li>Extiende el alcance de equipos portátiles de 5 km a 50-100 km.</li>
+                    </ol>
+
+                    <h3>Configuración de Repetidores VHF/UHF</h3>
+                    <h4>Separación de Frecuencias (Offset)</h4>
+                    <table>
+                        <tr>
+                            <th>Banda</th>
+                            <th>Offset Estándar</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                        <tr>
+                            <td>2m (144-146 MHz)</td>
+                            <td>-600 kHz</td>
+                            <td>TX: 145.750 &rarr; RX: 145.150</td>
+                        </tr>
+                        <tr>
+                            <td>70cm (430-440 MHz)</td>
+                            <td>-7.6 MHz</td>
+                            <td>TX: 438.000 &rarr; RX: 430.400</td>
+                        </tr>
+                    </table>
+
+                    <h4>Nomenclatura de Repetidores</h4>
+                    <p>Formato: R + número de zona + letras. Ejemplos:</p>
+                    <ul>
+                        <li><strong>R3A:</strong> Repetidor en zona EA3 (Barcelona)</li>
+                        <li><strong>R7B:</strong> Repetidor en zona EA7 (Sevilla)</li>
+                    </ul>
+
+                    <h4>Cómo Programar un Repetidor</h4>
+                    <p>Ejemplo: Repetidor en 145.750 MHz con subtono 88.5 Hz</p>
+                    <table>
+                        <tr>
+                            <th>Parámetro</th>
+                            <th>Valor</th>
+                        </tr>
+                        <tr>
+                            <td>Frecuencia RX (tú escuchas)</td>
+                            <td>145.750 MHz</td>
+                        </tr>
+                        <tr>
+                            <td>Frecuencia TX (tú transmites)</td>
+                            <td>145.150 MHz (offset -600 kHz)</td>
+                        </tr>
+                        <tr>
+                            <td>CTCSS TX</td>
+                            <td>88.5 Hz</td>
+                        </tr>
+                        <tr>
+                            <td>CTCSS RX</td>
+                            <td>88.5 Hz (opcional, para filtrar)</td>
+                        </tr>
+                        <tr>
+                            <td>Offset</td>
+                            <td>-600 kHz</td>
+                        </tr>
+                    </table>
+
+                    <h4>Cortesía y Uso de Repetidores</h4>
+                    <ul>
+                        <li><strong>Identifícate:</strong> Siempre di tu indicativo.</li>
+                        <li><strong>Escucha primero:</strong> No interrumpas conversaciones.</li>
+                        <li><strong>Sé breve:</strong> Otros pueden necesitar el repetidor.</li>
+                        <li><strong>Tono de cortesía:</strong> Espera el "beep" antes de hablar.</li>
+                        <li><strong>Emergencias:</strong> El repetidor se despeja automáticamente.</li>
+                    </ul>
+
+                    <h4>Mapa de Repetidores en España</h4>
+                    <ul>
+                        <li>URE (ure.es): Lista oficial de repetidores.</li>
+                        <li>RepeaterBook: App móvil con repetidores mundiales.</li>
+                        <li>RFinder: Base de datos mundial.</li>
+                    </ul>
                 </section>
 
                 <section id="codigos-q">
                     <h2>Códigos Q y Abreviaturas</h2>
 
-                    <h3>Códigos Q Más Comunes (Pregunta/Respuesta)</h3>
+                    <h3>Códigos Q Esenciales</h3>
                     <table>
                         <tr>
                             <th>Código</th>
                             <th>Pregunta</th>
                             <th>Respuesta/Afirmación</th>
-                        </tr>
-                        <tr>
-                            <td>QRA? </td>
-                            <td>¿Quién me llama? </td>
-                            <td>Te llama... </td>
                         </tr>
                         <tr>
                             <td>QTH? </td>
@@ -1259,6 +1415,11 @@
                             <td>Espera (volveré a llamar) </td>
                         </tr>
                         <tr>
+                            <td>QRZ?</td>
+                            <td>¿Quién me llama?</td>
+                            <td>Te está llamando...</td>
+                        </tr>
+                        <tr>
                             <td>QSB </td>
                             <td>¿Mi señal tiene fading? </td>
                             <td>Tu señal tiene fading </td>
@@ -1285,40 +1446,47 @@
                         </tr>
                     </table>
 
-                    <h3>Abreviaturas Populares</h3>
+                    <h3>Alfabeto Fonético Internacional (ITU)</h3>
                     <table>
-                        <tr>
-                            <th>Abreviatura</th>
-                            <th>Significado</th>
-                        </tr>
+                        <tr><th>Letra</th><th>Palabra</th><th>Letra</th><th>Palabra</th></tr>
+                        <tr><td>A</td><td>Alfa</td><td>N</td><td>November</td></tr>
+                        <tr><td>B</td><td>Bravo</td><td>O</td><td>Oscar</td></tr>
+                        <tr><td>C</td><td>Charlie</td><td>P</td><td>Papa</td></tr>
+                        <tr><td>D</td><td>Delta</td><td>Q</td><td>Quebec</td></tr>
+                        <tr><td>E</td><td>Echo</td><td>R</td><td>Romeo</td></tr>
+                        <tr><td>F</td><td>Foxtrot</td><td>S</td><td>Sierra</td></tr>
+                        <tr><td>G</td><td>Golf</td><td>T</td><td>Tango</td></tr>
+                        <tr><td>H</td><td>Hotel</td><td>U</td><td>Uniform</td></tr>
+                        <tr><td>I</td><td>India</td><td>V</td><td>Victor</td></tr>
+                        <tr><td>J</td><td>Juliett</td><td>W</td><td>Whiskey</td></tr>
+                        <tr><td>K</td><td>Kilo</td><td>X</td><td>X-ray</td></tr>
+                        <tr><td>L</td><td>Lima</td><td>Y</td><td>Yankee</td></tr>
+                        <tr><td>M</td><td>Mike</td><td>Z</td><td>Zulu</td></tr>
+                    </table>
+                    <p><strong>Números:</strong> 0: Zero, 1: One (Wun), 2: Two (Too), 3: Three (Tree), 4: Four (Fower), 5: Five (Fife), 6: Six, 7: Seven, 8: Eight (Ait), 9: Nine (Niner).</p>
+
+
+                    <h3>Abreviaturas Populares (CW/SSB)</h3>
+                    <table>
+                        <tr><th>Abreviatura</th><th>Significado</th></tr>
                         <tr><td>73</td><td>Saludos cordiales</td></tr>
                         <tr><td>88</td><td>Amor y besos (raramente usado)</td></tr>
                         <tr><td>CQ</td><td>Llamada general a todos</td></tr>
                         <tr><td>DX</td><td>Larga distancia / Contacto internacional</td></tr>
-                        <tr><td>ES</td><td>Y, además (en CW)</td></tr>
                         <tr><td>FB</td><td>Fine Business (Excelente)</td></tr>
-                        <tr><td>GA</td><td>Good Afternoon</td></tr>
-                        <tr><td>GE</td><td>Good Evening</td></tr>
+                        <tr><td>GM/GA/GE/GN</td><td>Good Morning / Afternoon / Evening / Night</td></tr>
                         <tr><td>GL</td><td>Good Luck</td></tr>
-                        <tr><td>GM</td><td>Good Morning</td></tr>
-                        <tr><td>GN</td><td>Good Night</td></tr>
                         <tr><td>HI</td><td>Risa</td></tr>
-                        <tr><td>HR</td><td>Here (Aquí)</td></tr>
-                        <tr><td>HW</td><td>How (Cómo)</td></tr>
                         <tr><td>OM</td><td>Old Man (Radioaficionado experimentado)</td></tr>
                         <tr><td>OP</td><td>Operator (Operador)</td></tr>
                         <tr><td>PSE</td><td>Please (Por favor)</td></tr>
                         <tr><td>R</td><td>Roger (Recibido)</td></tr>
                         <tr><td>RIG</td><td>Equipo, transmisor</td></tr>
-                        <tr><td>RPT</td><td>Repeat (Repite)</td></tr>
                         <tr><td>RST</td><td>Readability-Strength-Tone (Reporte de señal)</td></tr>
                         <tr><td>RX</td><td>Receiver (Receptor)</td></tr>
-                        <tr><td>SRI</td><td>Sorry (Perdona)</td></tr>
+                        <tr><td>TX</td><td>Transmitter (Transmisor)</td></tr>
                         <tr><td>TKS/TNX</td><td>Thanks (Gracias)</td></tr>
                         <tr><td>TU</td><td>Thank You (Gracias)</td></tr>
-                        <tr><td>TX</td><td>Transmitter (Transmisor)</td></tr>
-                        <tr><td>UR</td><td>Your (Tu)</td></tr>
-                        <tr><td>VY</td><td>Very (Muy)</td></tr>
                         <tr><td>WX</td><td>Weather (Tiempo meteorológico)</td></tr>
                         <tr><td>XYL</td><td>Wife (Esposa)</td></tr>
                         <tr><td>YL</td><td>Young Lady (Señorita, operadora femenina)</td></tr>
@@ -1343,17 +1511,206 @@
                         <dd>Perfectamente legible, S9, tono perfecto (típico en CW) </dd>
                         <dt>Reporte 33 </dt>
                         <dd>Legible con dificultad, señal débil </dd>
-
                     </dl>
 
-                    <h3>Ejemplo de Contacto Básico</h3>
-
+                    <h3>Llamada General (CQ)</h3>
+                    <p>Para iniciar un contacto con cualquier estación.</p>
                     <pre><code>
-CQ CQ DE EA3ABC EA3ABC
-EA3ABC DE EA7XYZ. Buenos días, QTH Sevilla. RST 59.
-R. Buen QTH. RST 59. 73.
-            </code></pre>
+"CQ CQ CQ, de EA3ABC, Echo Alfa Tres Alfa Bravo Charlie, 
+CQ CQ CQ de EA3ABC, llamando CQ y quedando a la escucha."
 
+CQ CQ CQ DE EA3ABC EA3ABC EA3ABC K
+                    </code></pre>
+
+                    <h3>Responder a una Llamada</h3>
+                    <pre><code>
+"EA3ABC, de EA7XYZ, Echo Alfa Siete X-ray Yankee Zulu, te copio."
+                    </code></pre>
+                    
+                    <h3>Contacto Típico (QSO)</h3>
+                    <ol>
+                        <li><strong>EA3ABC (Llama):</strong> "CQ CQ CQ de EA3ABC..."</li>
+                        <li><strong>EA7XYZ (Responde):</strong> "EA3ABC de EA7XYZ"</li>
+                        <li><strong>EA3ABC:</strong> "EA7XYZ de EA3ABC, buenas tardes. Tu reporte es 59 (cinco nueve). Mi QTH es Barcelona, nombre Pedro. ¿Cómo me copias?"</li>
+                        <li><strong>EA7XYZ:</strong> "EA3ABC de EA7XYZ, te copio 57 (cinco siete). Mi QTH es Sevilla, nombre Antonio. Mi equipo es un Yaesu FT-450 con antena dipolo."</li>
+                        <li><strong>EA3ABC:</strong> "Roger EA7XYZ, copiado todo. Mi equipo es un Icom IC-7300. Gracias por el contacto, 73."</li>
+                        <li><strong>EA7XYZ:</strong> "73 EA3ABC, hasta la próxima, EA7XYZ QRT (cerrando estación)."</li>
+                    </ol>
+
+                    <h3>Contacto DX (Pileup)</h3>
+                    <p>Cuando una estación rara (DX) llama, muchas estaciones responden (pileup). A menudo, el DX escuchará en "split" (frecuencia dividida).</p>
+                    <ul>
+                        <li><strong>Estación DX (anuncia):</strong> "DX, listening UP 5" (Escuchando 5 kHz arriba).</li>
+                        <li><strong>Tú (en VFO B):</strong> Si el DX está en 14.200, tú transmites en 14.205.</li>
+                        <li><strong>Procedimiento:</strong> Transmite solo tu indicativo ("EA3ABC") una vez. Sé breve y ten paciencia.</li>
+                    </ul>
+
+                    <h3>QSL Cards (Tarjetas de confirmación)</h3>
+                    <p>Una QSL es una tarjeta postal que confirma un contacto de radio. Debe incluir:</p>
+                    <ul>
+                        <li>Indicativos de ambas estaciones</li>
+                        <li>Fecha y hora (UTC)</li>
+                        <li>Frecuencia y modo</li>
+                        <li>Reporte RST</li>
+                    </ul>
+                    <p><strong>Cómo intercambiar QSL:</strong></p>
+                    <ul>
+                        <li><strong>Directa:</strong> Correo postal directo.</li>
+                        <li><strong>Buro:</strong> Sistema de envío masivo (ej. URE en España).</li>
+                        <li><strong>eQSL:</strong> Electrónica (eqsl.cc).</li>
+                        <li><strong>LoTW:</strong> Logbook of The World (sistema ARRL, el más usado para diplomas).</li>
+                        <li><strong>QRZ.com:</strong> Sistema de confirmación online.</li>
+                    </ul>
+                </section>
+
+                <section id="consejos-principiantes">
+                    <h2>Consejos para Principiantes</h2>
+
+                    <h3>Equipo Inicial Recomendado</h3>
+                    
+                    <h4>Opción económica (500-800€)</h4>
+                    <ul>
+                        <li><strong>Transceptor HF:</strong> Yaesu FT-450D, Icom IC-718</li>
+                        <li><strong>Antena:</strong> Dipolo multibanda o hilo largo con sintonizador.</li>
+                        <li><strong>Fuente alimentación:</strong> 13.8V, 20A</li>
+                    </ul>
+
+                    <h4>Opción media (1.500-2.000€)</h4>
+                    <ul>
+                        <li><strong>Transceptor:</strong> Yaesu FT-991A, Icom IC-7300</li>
+                        <li><strong>Antena:</strong> Vertical multibanda o dipolo + sintonizador automático.</li>
+                        <li><strong>Accesorios:</strong> Medidor ROE, cable coaxial RG-213</li>
+                    </ul>
+
+                    <h4>Para VHF/UHF portátil (150-400€)</h4>
+                    <ul>
+                        <li><strong>Iniciación:</strong> Baofeng UV-5R (40€)</li>
+                        <li><strong>Calidad media:</strong> Yaesu FT-60R (200€)</li>
+                        <li><strong>Digital (DMR/D-STAR):</strong> Icom ID-52, Anytone (400€)</li>
+                    </ul>
+
+                    <h3>Primeros Pasos</h3>
+                    <ol>
+                        <li>Estudia para el examen (URE ofrece cursos).</li>
+                        <li><strong>Escucha:</strong> Antes de transmitir, escucha durante semanas.</li>
+                        <li>Únete a un radio club. Aprende de los expertos ("Elmer").</li>
+                        <li>Empieza en VHF/UHF local: Es más fácil que HF.</li>
+                        <li>Aprende CW (Morse): Abre muchas puertas en HF.</li>
+                        <li>Registra tus contactos: Usa un logbook (papel o digital).</li>
+                        <li>Participa en concursos: Mejora tus habilidades rápidamente.</li>
+                    </ol>
+
+                    <h3>Errores Comunes a Evitar</h3>
+                    <ul>
+                        <li>Transmitir sin licencia.</li>
+                        <li>No identificarte correctamente (cada 10 min y al inicio/fin).</li>
+                        <li>Usar potencia excesiva (usa solo la necesaria).</li>
+                        <li>Transmitir en frecuencias prohibidas (respeta el plan de bandas).</li>
+                        <li>Monopolizar repetidores con conversaciones largas.</li>
+                        <li>Transmitir con una antena con ROE alta (> 3:1).</li>
+                    </ul>
+                </section>
+                
+                <section id="software">
+                    <h2>Software Útil</h2>
+
+                    <h3>Logging (Registro de contactos)</h3>
+                    <ul>
+                        <li>CQRLOG (Linux, gratis)</li>
+                        <li>Logger32 (Windows, gratis)</li>
+                        <li>Ham Radio Deluxe (Windows, de pago)</li>
+                        <li>N1MM Logger+ (Concursos, gratis)</li>
+                    </ul>
+
+                    <h3>Modos digitales</h3>
+                    <ul>
+                        <li>WSJT-X (FT8, FT4, gratis)</li>
+                        <li>Fldigi (PSK31, RTTY, gratis)</li>
+                        <li>MMSSTV (SSTV en Windows)</li>
+                    </ul>
+                    
+                    <h3>Planificación</h3>
+                    <ul>
+                        <li>VOACAP (Predicción de propagación HF)</li>
+                        <li>Radio Mobile (Cobertura VHF/UHF)</li>
+                        <li>Google Earth (Perfil de terreno)</li>
+                    </ul>
+                </section>
+
+                <section id="recursos">
+                    <h2>Recursos y Contactos</h2>
+                    
+                    <h3>Organizaciones en España</h3>
+                    <ul>
+                        <li><strong>URE (Unión de Radioaficionados Españoles):</strong> www.ure.es</li>
+                        <li><strong>FEDI-EA:</strong> www.fedi-ea.org</li>
+                        <li><strong>Secretaría de Estado de Telecomunicaciones:</strong> Exámenes y licencias.</li>
+                    </ul>
+
+                    <h3>Sitios Web Útiles</h3>
+                    <ul>
+                        <li><strong>QRZ.com:</strong> Base de datos de radioaficionados.</li>
+                        <li><strong>HamQTH.com:</strong> QTH Locator y propagación.</li>
+                        <li><strong>DXWatch.com:</strong> Spots DX en tiempo real.</li>
+                        <li><strong>RepeaterBook.com:</strong> Repetidores mundiales.</li>
+                        <li><strong>PSKReporter.info:</strong> Propagación en vivo (modos digitales).</li>
+                        <li><strong>APRS.fi:</strong> Tracking APRS en tiempo real.</li>
+                    </ul>
+
+                    <h3>Aplicaciones Móviles</h3>
+                    <ul>
+                        <li>Repeater Book</li>
+                        <li>EchoLink (VoIP radioafición)</li>
+                        <li>APRSdroid (APRS para Android)</li>
+                        <li>Morse Machine (Aprender CW)</li>
+                    </ul>
+                </section>
+                
+                <section id="glosario">
+                    <h2>Glosario Rápido</h2>
+                    <table>
+                        <tr><th>Término</th><th>Definición</th></tr>
+                        <tr><td>Antena</td><td>Dispositivo que irradia o recibe ondas electromagnéticas</td></tr>
+                        <tr><td>Balun</td><td>Dispositivo de adaptación balanced/unbalanced (ej. dipolo a coaxial)</td></tr>
+                        <tr><td>Dipolo</td><td>Antena básica de media onda</td></tr>
+                        <tr><td>DX</td><td>Larga distancia, contacto internacional</td></tr>
+                        <tr><td>Elmer</td><td>Mentor, radioaficionado experimentado que enseña</td></tr>
+                        <tr><td>Ground plane</td><td>Antena vertical con radiales</td></tr>
+                        <tr><td>HF</td><td>High Frequency (3-30 MHz)</td></tr>
+                        <tr><td>Ionosfera</td><td>Capa atmosférica que refleja ondas de radio HF</td></tr>
+                        <tr><td>Log</td><td>Libro de registro de contactos</td></tr>
+                        <tr><td>Modo</td><td>Tipo de emisión (CW, SSB, FM, FT8, etc.)</td></tr>
+                        <tr><td>Pile-up</td><td>Muchas estaciones llamando a una DX</td></tr>
+                        <tr><td>QSO</td><td>Contacto de radio</td></tr>
+                        <tr><td>Rig</td><td>Equipo transmisor-receptor (transceptor)</td></tr>
+                        <tr><td>ROE/SWR</td><td>Relación de Ondas Estacionarias</td></tr>
+                        <tr><td>Transceptor</td><td>Equipo que transmite y recibe</td></tr>
+                        <tr><td>UHF</td><td>Ultra High Frequency (300 MHz - 3 GHz)</td></tr>
+                        <tr><td>VFO</td><td>Variable Frequency Oscillator (control de frecuencia)</td></tr>
+                        <tr><td>VHF</td><td>Very High Frequency (30-300 MHz)</td></tr>
+                        <tr><td>Yagi</td><td>Antena directiva con elementos (director, reflector)</td></tr>
+                    </table>
+                </section>
+
+                <section id="emergencia">
+                    <h2>Contactos de Emergencia</h2>
+                    
+                    <h3>Frecuencias de Emergencia Internacionales</h3>
+                    <ul>
+                        <li>2182 kHz: Emergencias marítimas MF</li>
+                        <li>121.5 MHz: Emergencias aeronáuticas</li>
+                        <li>156.8 MHz (Canal 16): Emergencias marítimas VHF</li>
+                        <li>3.760 kHz: Emergencias HF (80m)</li>
+                        <li>7.060 kHz: Emergencias HF (40m)</li>
+                        <li>14.300 kHz: Emergencias HF (20m)</li>
+                        <li>145.500 MHz: Llamada VHF internacional</li>
+                    </ul>
+
+                    <h3>Red de Emergencia en España</h3>
+                    <ul>
+                        <li><strong>REMER (Red Radio de Emergencia):</strong> 145.350 MHz (coordinada por Protección Civil)</li>
+                        <li>Cruz Roja: Diversas frecuencias locales.</li>
+                    </ul>
                 </section>
 
                 <footer>
