@@ -116,7 +116,6 @@ article {
 }
 
 section h2 {
-    margin-top: 0;
     color: var(--accent);
 }
 
@@ -139,6 +138,11 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 8px;
+}
+
+table .canal {
+    color: green;
+    text-align: center;
 }
 
 th,
