@@ -1,105 +1,106 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/css/style.css">
-    <title>guia-radioaficionado</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo">Guía Radioaficionado</div>
-      <div id="search"><input id="q" placeholder="Buscar en la guía — ejemplo: APRS, GPS, programación, 27MHz" aria-label="buscar" autocomplete="off"/></div>
-      <div style="min-width:120px;text-align:right;color:var(--muted);font-size:13px">Versión: 1.0</div>
-    </header>
-  
-    <div class="container">
-      <div class="grid">
-        <nav id="toc">
-          <h3>Contenido</h3>
-          <ul>
-            <li><a href="#bandas-frecuencias" class="toc-link">Tabla de Bandas y Frecuencias</a></li>
-            <li><a href="#banda-ciudadana" class="toc-link">Banda Ciudadana (CB)</a></li>
-            <li><a href="#modos-emision" class="toc-link">Modos de Emisión</a></li>
-            <li><a href="#indicativos" class="toc-link">Sistema de Indicativos en España</a></li>
-            <li><a href="#conceptos-clave" class="toc-link">Conceptos Clave de Radioafición</a></li>
-            <li><a href="#subtonos" class="toc-link">Subtonos CTCSS y DCS</a></li>
-            <li><a href="#propagacion" class="toc-link">Propagación de Ondas</a></li>
-            <li><a href="#codigos-q" class="toc-link">Códigos Q y Abreviaturas</a></li>
-            <li><a href="#procedimientos" class="toc-link">Procedimientos Operativos</a></li>
-          </ul>
-        </nav>
-  
-        <article id="main">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>guia-radioaficionado</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Guía Radioaficionado</div>
+        <div id="search"><input id="q" placeholder="Buscar en la guía — ejemplo: APRS, GPS, programación, 27MHz" aria-label="buscar" autocomplete="off" /></div>
+        <div style="min-width:120px;text-align:right;color:var(--muted);font-size:13px">Versión: 1.0</div>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <nav id="toc">
+                <h3>Contenido</h3>
+                <ul>
+                    <li><a href="#bandas-frecuencias" class="toc-link">Tabla de Bandas y Frecuencias</a></li>
+                    <li><a href="#banda-ciudadana" class="toc-link">Banda Ciudadana (CB)</a></li>
+                    <li><a href="#modos-emision" class="toc-link">Modos de Emisión</a></li>
+                    <li><a href="#indicativos" class="toc-link">Sistema de Indicativos en España</a></li>
+                    <li><a href="#conceptos-clave" class="toc-link">Conceptos Clave de Radioafición</a></li>
+                    <li><a href="#subtonos" class="toc-link">Subtonos CTCSS y DCS</a></li>
+                    <li><a href="#propagacion" class="toc-link">Propagación de Ondas</a></li>
+                    <li><a href="#codigos-q" class="toc-link">Códigos Q y Abreviaturas</a></li>
+                    <li><a href="#procedimientos" class="toc-link">Procedimientos Operativos</a></li>
+                </ul>
+            </nav>
+
+        <article id="main">
           <section id="bandas-frecuencias">
             <h2>Tabla de Bandas y Frecuencias (España)</h2>
             
             <h3>BANDAS DE BAJA FRECUENCIA</h3>
             <table>
               <tr><th>Banda</th><th>Metros</th><th>Frecuencias</th><th>Potencia Máxima</th><th>Ancho Banda</th><th>Tipo</th></tr>
-[cite_start]              <tr><td>LF [cite: 885][cite_start]</td><td>2200m [cite: 885][cite_start]</td><td>135.7-137.8 kHz [cite: 885][cite_start]</td><td>1W p.r.a. [cite: 885][cite_start]</td><td>0.3 kHz [cite: 885][cite_start]</td><td>CW, Digital [cite: 885]</td></tr>
-[cite_start]              <tr><td>MF [cite: 885][cite_start]</td><td>630m [cite: 885][cite_start]</td><td>472-479 kHz [cite: 885][cite_start]</td><td>W p.i.r.e. [cite: 885][cite_start]</td><td></td><td>CW, Digital [cite: 885]</td></tr>
+              <tr><td>LF </td><td>2200m </td><td>135.7-137.8 kHz </td><td>1W p.r.a. </td><td>0.3 kHz </td><td>CW, Digital </td></tr>
+              <tr><td>MF </td><td>630m </td><td>472-479 kHz </td><td>W p.i.r.e. </td><td></td><td>CW, Digital </td></tr>
             </table>
           
             <h3>BANDAS HF (ALTA FRECUENCIA) - COMUNICACIONES A LARGA DISTANCIA</h3>
             <table>
               <tr><th>Banda</th><th>Metros</th><th>Frecuencias</th><th>Potencia Portadora</th><th>Potencia Pico (PEP)</th><th>Ancho Banda</th><th>Uso Principal</th></tr>
-[cite_start]              <tr><td>MF/HF [cite: 888][cite_start]</td><td>160m [cite: 888][cite_start]</td><td>1.810-1850 MHz [cite: 888][cite_start]</td><td>50 W [cite: 888][cite_start]</td><td>200 W [cite: 888][cite_start]</td><td>3 kHz [cite: 888][cite_start]</td><td>DX nocturno [cite: 888]</td></tr>
-[cite_start]              <tr><td>HF [cite: 888][cite_start]</td><td>80m [cite: 888][cite_start]</td><td>3.500-3.800 MHz [cite: 888][cite_start]</td><td>250 W [cite: 888][cite_start]</td><td>1000 W [cite: 888][cite_start]</td><td>3 kHz [cite: 888][cite_start]</td><td>Regional/Continental [cite: 888]</td></tr>
-[cite_start]              <tr><td>HF [cite: 888][cite_start]</td><td>40m [cite: 888][cite_start]</td><td>7.000-7.200 MHz [cite: 888][cite_start]</td><td>250 W [cite: 888][cite_start]</td><td>1000 W [cite: 888][cite_start]</td><td>6 kHz [cite: 888][cite_start]</td><td>DX día/noche [cite: 888]</td></tr>
-[cite_start]              <tr><td>HF [cite: 888][cite_start]</td><td>30m [cite: 888][cite_start]</td><td>10.100-10.150 MHz [cite: 888][cite_start]</td><td>250 W [cite: 888][cite_start]</td><td>1000 W [cite: 888][cite_start]</td><td>6 kHz [cite: 888][cite_start]</td><td>Modos digitales [cite: 888]</td></tr>
-[cite_start]              <tr><td>HF [cite: 888][cite_start]</td><td>20m [cite: 888][cite_start]</td><td>14.000-14.350 MHz [cite: 888][cite_start]</td><td>250 W [cite: 888][cite_start]</td><td>1000 W [cite: 888][cite_start]</td><td>6 kHz [cite: 888][cite_start]</td><td>DX diurno (muy activa) [cite: 888]</td></tr>
-[cite_start]              <tr><td>HF [cite: 888][cite_start]</td><td>17m [cite: 888][cite_start]</td><td>18.068-18.168 MHz [cite: 888][cite_start]</td><td>250 W [cite: 888][cite_start]</td><td>1000 W [cite: 888][cite_start]</td><td>6 kHz [cite: 888][cite_start]</td><td>DX diurno [cite: 888]</td></tr>
-[cite_start]              <tr><td>HF [cite: 888][cite_start]</td><td>15m [cite: 888][cite_start]</td><td>21.000-21.450 MHz [cite: 888][cite_start]</td><td>250 W [cite: 888][cite_start]</td><td>1000 W [cite: 888][cite_start]</td><td>6 kHz [cite: 888][cite_start]</td><td>DX diurno [cite: 888]</td></tr>
-[cite_start]              <tr><td>HF [cite: 888][cite_start]</td><td>12m [cite: 888][cite_start]</td><td>24.890-24.990 MHz [cite: 888][cite_start]</td><td>250 W [cite: 888][cite_start]</td><td>1000 W [cite: 888][cite_start]</td><td>6 kHz [cite: 888][cite_start]</td><td>DX diurno [cite: 888]</td></tr>
-[cite_start]              <tr><td>HF [cite: 888][cite_start]</td><td>10m [cite: 888][cite_start]</td><td>28.000-29.700 MHz [cite: 888][cite_start]</td><td>250 W [cite: 888][cite_start]</td><td>1000 W [cite: 888][cite_start]</td><td>6 kHz [cite: 888][cite_start]</td><td>DX propagación esporádica [cite: 888]</td></tr>
+              <tr><td>MF/HF </td><td>160m </td><td>1.810-1850 MHz </td><td>50 W </td><td>200 W </td><td>3 kHz </td><td>DX nocturno </td></tr>
+              <tr><td>HF </td><td>80m </td><td>3.500-3.800 MHz </td><td>250 W </td><td>1000 W </td><td>3 kHz </td><td>Regional/Continental </td></tr>
+              <tr><td>HF </td><td>40m </td><td>7.000-7.200 MHz </td><td>250 W </td><td>1000 W </td><td>6 kHz </td><td>DX día/noche </td></tr>
+              <tr><td>HF </td><td>30m </td><td>10.100-10.150 MHz </td><td>250 W </td><td>1000 W </td><td>6 kHz </td><td>Modos digitales </td></tr>
+              <tr><td>HF </td><td>20m </td><td>14.000-14.350 MHz </td><td>250 W </td><td>1000 W </td><td>6 kHz </td><td>DX diurno (muy activa) </td></tr>
+              <tr><td>HF </td><td>17m </td><td>18.068-18.168 MHz </td><td>250 W </td><td>1000 W </td><td>6 kHz </td><td>DX diurno </td></tr>
+              <tr><td>HF </td><td>15m </td><td>21.000-21.450 MHz </td><td>250 W </td><td>1000 W </td><td>6 kHz </td><td>DX diurno </td></tr>
+              <tr><td>HF </td><td>12m </td><td>24.890-24.990 MHz </td><td>250 W </td><td>1000 W </td><td>6 kHz </td><td>DX diurno </td></tr>
+              <tr><td>HF </td><td>10m </td><td>28.000-29.700 MHz </td><td>250 W </td><td>1000 W </td><td>6 kHz </td><td>DX propagación esporádica </td></tr>
             </table>
           
             <h3>BANDAS VHF (MUY ALTA FRECUENCIA) - COMUNICACIONES LOCALES/REGIONALES</h3>
             <table>
               <tr><th>Banda</th><th>Metros</th><th>Frecuencias</th><th>Potencia Portadora</th><th>Potencia Pico</th><th>Ancho Banda</th><th>Uso Principal</th></tr>
-[cite_start]              <tr><td>VHF [cite: 896][cite_start]</td><td>6m [cite: 896][cite_start]</td><td>50.000-52.000 MHz [cite: 896][cite_start]</td><td>100 W [cite: 896][cite_start]</td><td></td><td>12 kHz [cite: 896][cite_start]</td><td>Propagación esporádica [cite: 896]</td></tr>
-[cite_start]              <tr><td>VHF [cite: 896][cite_start]</td><td>4m [cite: 896][cite_start]</td><td>70.150-70.200 MHz [cite: 896][cite_start]</td><td>10 W [cite: 896][cite_start]</td><td></td><td>12 kHz [cite: 896][cite_start]</td><td>Experimental (secundario) [cite: 896]</td></tr>
-[cite_start]              <tr><td>VHF [cite: 868][cite_start]</td><td>2m [cite: 868][cite_start]</td><td>144.000-146.000 MHz [cite: 868][cite_start]</td><td>150 W [cite: 868][cite_start]</td><td>600 W [cite: 868][cite_start]</td><td>25 kHz [cite: 868][cite_start]</td><td>Repetidores, local (MUY ACTIVA) [cite: 868]</td></tr>
+              <tr><td>VHF </td><td>6m </td><td>50.000-52.000 MHz </td><td>100 W </td><td></td><td>12 kHz </td><td>Propagación esporádica </td></tr>
+              <tr><td>VHF </td><td>4m </td><td>70.150-70.200 MHz </td><td>10 W </td><td></td><td>12 kHz </td><td>Experimental (secundario) </td></tr>
+              <tr><td>VHF </td><td>2m </td><td>144.000-146.000 MHz </td><td>150 W </td><td>600 W </td><td>25 kHz </td><td>Repetidores, local (MUY ACTIVA) </td></tr>
             </table>
           
             <h3>BANDAS UHF (ULTRA ALTA FRECUENCIA) - COMUNICACIONES LOCALES</h3>
             <table>
               <tr><th>Banda</th><th>Centímetros</th><th>Frecuencias</th><th>Potencia Portadora</th><th>Potencia Pico</th><th>Ancho Banda</th><th>Uso Principal</th></tr>
-[cite_start]              <tr><td>UHF [cite: 877][cite_start]</td><td>70cm [cite: 877][cite_start]</td><td>430.000-440.000 MHz [cite: 877][cite_start]</td><td>50 W [cite: 877][cite_start]</td><td>200 W [cite: 877][cite_start]</td><td>25 kHz [cite: 877][cite_start]</td><td>Repetidores, DMR, D-STAR [cite: 877]</td></tr>
+              <tr><td>UHF </td><td>70cm </td><td>430.000-440.000 MHz </td><td>50 W </td><td>200 W </td><td>25 kHz </td><td>Repetidores, DMR, D-STAR </td></tr>
             </table>
           
             <h3>BANDAS DE MICROONDAS (SHF y superiores)</h3>
             <table>
               <tr><th>Banda</th><th>Centímetros</th><th>Frecuencias</th><th>Uso Principal</th></tr>
-[cite_start]              <tr><td>SHF [cite: 879][cite_start]</td><td>23cm [cite: 879][cite_start]</td><td>1240-1300 MHz [cite: 879][cite_start]</td><td>Enlaces, ATV, Satélites [cite: 879]</td></tr>
-[cite_start]              <tr><td>SHF [cite: 879][cite_start]</td><td>13cm [cite: 879][cite_start]</td><td>2300-2450 MHz [cite: 879][cite_start]</td><td>Experimental, WiFi overlap [cite: 879]</td></tr>
-[cite_start]              <tr><td>SHF [cite: 879][cite_start]</td><td>9cm [cite: 879][cite_start]</td><td>3.400-3.410 GHz [cite: 879][cite_start]</td><td>Enlaces punto a punto. [cite: 879]</td></tr>
-[cite_start]              <tr><td>SHF [cite: 879][cite_start]</td><td>6cm [cite: 879][cite_start]</td><td>5.650-5.925 GHz [cite: 879][cite_start]</td><td>Enlaces de alta velocidad [cite: 879]</td></tr>
-[cite_start]              <tr><td>SHF [cite: 879][cite_start]</td><td>3cm [cite: 879][cite_start]</td><td>10.000-10.500 GHz [cite: 879][cite_start]</td><td>Microondas [cite: 879]</td></tr>
-[cite_start]              <tr><td>EHF [cite: 879][cite_start]</td><td>12cm [cite: 879][cite_start]</td><td>24 GHz [cite: 879][cite_start]</td><td>Experimental [cite: 879]</td></tr>
-[cite_start]              <tr><td>EHF [cite: 879][cite_start]</td><td>6mm [cite: 879][cite_start]</td><td>47 GHz [cite: 879][cite_start]</td><td>Experimental [cite: 879]</td></tr>
-[cite_start]              <tr><td>EHF [cite: 879][cite_start]</td><td>4mm [cite: 879][cite_start]</td><td>76 GHz [cite: 879][cite_start]</td><td>Experimental [cite: 879]</td></tr>
-[cite_start]              <tr><td>EHF [cite: 879][cite_start]</td><td>mmm [cite: 879][cite_start]</td><td>134-250 GHz [cite: 879][cite_start]</td><td>Experimental [cite: 879]</td></tr>
+              <tr><td>SHF </td><td>23cm </td><td>1240-1300 MHz </td><td>Enlaces, ATV, Satélites </td></tr>
+              <tr><td>SHF </td><td>13cm </td><td>2300-2450 MHz </td><td>Experimental, WiFi overlap </td></tr>
+              <tr><td>SHF </td><td>9cm </td><td>3.400-3.410 GHz </td><td>Enlaces punto a punto. </td></tr>
+              <tr><td>SHF </td><td>6cm </td><td>5.650-5.925 GHz </td><td>Enlaces de alta velocidad </td></tr>
+              <tr><td>SHF </td><td>3cm </td><td>10.000-10.500 GHz </td><td>Microondas </td></tr>
+              <tr><td>EHF </td><td>12cm </td><td>24 GHz </td><td>Experimental </td></tr>
+              <tr><td>EHF </td><td>6mm </td><td>47 GHz </td><td>Experimental </td></tr>
+              <tr><td>EHF </td><td>4mm </td><td>76 GHz </td><td>Experimental </td></tr>
+              <tr><td>EHF </td><td>mmm </td><td>134-250 GHz </td><td>Experimental </td></tr>
             </table>
           
             <h3>Frecuencias de Llamada Internacionales (Resumen)</h3>
             <table>
               <tr><th>Banda</th><th>Frecuencia</th><th>Modo</th></tr>
-[cite_start]              <tr><td>160m [cite: 901][cite_start]</td><td>1.843 MHz [cite: 901][cite_start]</td><td>SSB [cite: 901]</td></tr>
-[cite_start]              <tr><td>80m [cite: 901][cite_start]</td><td>3.760 MHz [cite: 901][cite_start]</td><td>LSB [cite: 901]</td></tr>
-[cite_start]              <tr><td>40m [cite: 901][cite_start]</td><td>7.090 MHz [cite: 901][cite_start]</td><td>LSB [cite: 901]</td></tr>
-[cite_start]              <tr><td>30m [cite: 901][cite_start]</td><td>10.130 MHz [cite: 901][cite_start]</td><td>CW/Digital [cite: 901]</td></tr>
-[cite_start]              <tr><td>20m [cite: 901][cite_start]</td><td>14.300 MHz [cite: 901][cite_start]</td><td>USB [cite: 901]</td></tr>
-[cite_start]              <tr><td>17m [cite: 901][cite_start]</td><td>18.130 MHz [cite: 901][cite_start]</td><td>USB [cite: 901]</td></tr>
-[cite_start]              <tr><td>15m [cite: 901][cite_start]</td><td>21.360 MHz [cite: 901][cite_start]</td><td>USB [cite: 901]</td></tr>
-[cite_start]              <tr><td>12m [cite: 901][cite_start]</td><td>24.960 MHz [cite: 901][cite_start]</td><td>USB [cite: 901]</td></tr>
-[cite_start]              <tr><td>10m [cite: 901][cite_start]</td><td>28.500 MHz [cite: 901][cite_start]</td><td>USB [cite: 901]</td></tr>
-[cite_start]              <tr><td>6m [cite: 901][cite_start]</td><td>50.110 MHz [cite: 901][cite_start]</td><td>SSB [cite: 901]</td></tr>
-[cite_start]              <tr><td>2m [cite: 901][cite_start]</td><td>144.300 MHz [cite: 901][cite_start]</td><td>SSB [cite: 901]</td></tr>
-[cite_start]              <tr><td>2m [cite: 901][cite_start]</td><td>145.500 MHz [cite: 901][cite_start]</td><td>FM [cite: 901]</td></tr>
-[cite_start]              <tr><td>70cm [cite: 901][cite_start]</td><td>433.500 MHz [cite: 901][cite_start]</td><td>FM [cite: 901]</td></tr>
+              <tr><td>160m </td><td>1.843 MHz </td><td>SSB </td></tr>
+              <tr><td>80m </td><td>3.760 MHz </td><td>LSB </td></tr>
+              <tr><td>40m </td><td>7.090 MHz </td><td>LSB </td></tr>
+              <tr><td>30m </td><td>10.130 MHz </td><td>CW/Digital </td></tr>
+              <tr><td>20m </td><td>14.300 MHz </td><td>USB </td></tr>
+              <tr><td>17m </td><td>18.130 MHz </td><td>USB </td></tr>
+              <tr><td>15m </td><td>21.360 MHz </td><td>USB </td></tr>
+              <tr><td>12m </td><td>24.960 MHz </td><td>USB </td></tr>
+              <tr><td>10m </td><td>28.500 MHz </td><td>USB </td></tr>
+              <tr><td>6m </td><td>50.110 MHz </td><td>SSB </td></tr>
+              <tr><td>2m </td><td>144.300 MHz </td><td>SSB </td></tr>
+              <tr><td>2m </td><td>145.500 MHz </td><td>FM </td></tr>
+              <tr><td>70cm </td><td>433.500 MHz </td><td>FM </td></tr>
             </table>
           </section>
         
@@ -108,30 +109,30 @@
           
             <h3>Características Generales de la Banda Ciudadana (27 MHz - 11 metros)</h3>
             <div class="specs">
-[cite_start]              <div class="card"><strong>Banda</strong><div>27 MHz (11 metros) [cite: 889]</div></div>
-[cite_start]              <div class="card"><strong>Frecuencias</strong><div>26.965-27.405 MHz [cite: 889]</div></div>
-[cite_start]              <div class="card"><strong>Canales</strong><div>40 canales (en Europa) [cite: 889]</div></div>
-[cite_start]              <div class="card"><strong>Potencia máxima</strong><div>4 W AM/12 W SSB (PEP) [cite: 889]</div></div>
-[cite_start]              <div class="card"><strong>Separación canales</strong><div>10 kHz [cite: 889]</div></div>
-[cite_start]              <div class="card"><strong>Modulación</strong><div>AM, FM, SSB [cite: 889]</div></div>
-[cite_start]              <div class="card"><strong>Licencia</strong><div>NO requiere licencia de radioaficionado [cite: 889]</div></div>
+              <div class="card"><strong>Banda</strong><div>27 MHz (11 metros) </div></div>
+              <div class="card"><strong>Frecuencias</strong><div>26.965-27.405 MHz </div></div>
+              <div class="card"><strong>Canales</strong><div>40 canales (en Europa) </div></div>
+              <div class="card"><strong>Potencia máxima</strong><div>4 W AM/12 W SSB (PEP) </div></div>
+              <div class="card"><strong>Separación canales</strong><div>10 kHz </div></div>
+              <div class="card"><strong>Modulación</strong><div>AM, FM, SSB </div></div>
+              <div class="card"><strong>Licencia</strong><div>NO requiere licencia de radioaficionado </div></div>
             </div>
           
             <h3>Canales CB Más Importantes (Europa)</h3>
             <table>
               <tr><th>Canal</th><th>Frecuencia</th><th>Uso</th></tr>
-[cite_start]              <tr><td>Canal 9 [cite: 892][cite_start]</td><td>27.065 MHz [cite: 892][cite_start]</td><td>EMERGENCIAS (vigilancia obligatoria) [cite: 892]</td></tr>
-[cite_start]              <tr><td>Canal 19 [cite: 892][cite_start]</td><td>27.185 MHz [cite: 892][cite_start]</td><td>Llamada en ruta (camioneros) [cite: 892]</td></tr>
-[cite_start]              <tr><td>Canal 11 [cite: 892][cite_start]</td><td>27.085 MHz [cite: 892][cite_start]</td><td>Llamada general [cite: 892]</td></tr>
-[cite_start]              <tr><td>Canal 14 [cite: 892][cite_start]</td><td>27.125 MHz [cite: 892][cite_start]</td><td>Llamada marina [cite: 892]</td></tr>
+              <tr><td>Canal 9 </td><td>27.065 MHz </td><td>EMERGENCIAS (vigilancia obligatoria) </td></tr>
+              <tr><td>Canal 19 </td><td>27.185 MHz </td><td>Llamada en ruta (camioneros) </td></tr>
+              <tr><td>Canal 11 </td><td>27.085 MHz </td><td>Llamada general </td></tr>
+              <tr><td>Canal 14 </td><td>27.125 MHz </td><td>Llamada marina </td></tr>
             </table>
           
             <h3>Frecuencias DX en CB (SSB)</h3>
             <table>
               <tr><th>Frecuencia</th><th>Modo Preferido</th><th>Uso</th></tr>
-[cite_start]              <tr><td>27.455 MHz [cite: 899][cite_start]</td><td>USB [cite: 899][cite_start]</td><td>Llamada DX internacional [cite: 899]</td></tr>
-[cite_start]              <tr><td>27.555 MHz [cite: 899][cite_start]</td><td>USB [cite: 899][cite_start]</td><td>Llamada DX [cite: 899]</td></tr>
-[cite_start]              <tr><td>26.285 MHz [cite: 899][cite_start]</td><td>USB [cite: 899][cite_start]</td><td>Llamada DX alternativa [cite: 899]</td></tr>
+              <tr><td>27.455 MHz </td><td>USB </td><td>Llamada DX internacional </td></tr>
+              <tr><td>27.555 MHz </td><td>USB </td><td>Llamada DX </td></tr>
+              <tr><td>26.285 MHz </td><td>USB </td><td>Llamada DX alternativa </td></tr>
             </table>
           </section>
         
@@ -142,83 +143,83 @@
             <h3>Tabla Completa de Modos de Emisión</h3>
             <table>
               <tr><th>Modo</th><th>Nombre Completo</th><th>Ancho Banda</th><th>Uso Principal</th><th>Ventajas</th><th>Desventajas</th></tr>
-[cite_start]              <tr><td>CW [cite: 904][cite_start]</td><td>Continuous Wave (Morse) [cite: 904][cite_start]</td><td>100-200 Hz [cite: 904][cite_start]</td><td>HF, DX, QRP [cite: 904][cite_start]</td><td>Ancho de banda mínimo, penetra ruido [cite: 904][cite_start]</td><td>Requiere aprendizaje [cite: 904]</td></tr>
-[cite_start]              <tr><td>SSB [cite: 904][cite_start]</td><td>Single Side Band [cite: 904][cite_start]</td><td>2.7-3 kHz [cite: 904][cite_start]</td><td>HF conversación [cite: 904][cite_start]</td><td>Eficiente en potencia [cite: 904][cite_start]</td><td>Requiere sintonización precisa [cite: 904]</td></tr>
-[cite_start]              <tr><td>LSB [cite: 904][cite_start]</td><td>Lower Side Band [cite: 904][cite_start]</td><td>2.7-3 kHz [cite: 904]</td><td>HF &lt; [cite_start]10 MHz [cite: 904][cite_start]</td><td>Estándar en bandas bajas [cite: 904]</td><td></td></tr>
-[cite_start]              <tr><td>USB [cite: 904][cite_start]</td><td>Upper Side Band [cite: 904][cite_start]</td><td>2.7-3 kHz [cite: 904]</td><td>HF &gt; [cite_start]10 MHz, VHF/UHF [cite: 904][cite_start]</td><td>Estándar en bandas altas [cite: 904]</td><td></td></tr>
-[cite_start]              <tr><td>AM [cite: 904][cite_start]</td><td>Amplitude Modulation [cite: 904][cite_start]</td><td>6-8 kHz [cite: 904][cite_start]</td><td>CB, Aviación [cite: 904][cite_start]</td><td>Fácil sintonía, audio, simplicidad [cite: 904][cite_start]</td><td>Ineficiente en potencia [cite: 904]</td></tr>
-[cite_start]              <tr><td>FM [cite: 904][cite_start]</td><td>Frequency Modulation [cite: 904][cite_start]</td><td>12-25 kHz [cite: 904][cite_start]</td><td>VHF/UHF, repetidores [cite: 904][cite_start]</td><td>Calidad, inmune a fading [cite: 904][cite_start]</td><td>Requiere más ancho de banda [cite: 904]</td></tr>
-[cite_start]              <tr><td>RTTY [cite: 904][cite_start]</td><td>Radio Tele Type [cite: 904][cite_start]</td><td>170-500 Hz [cite: 904][cite_start]</td><td>HF digital [cite: 904][cite_start]</td><td>Texto automático [cite: 904][cite_start]</td><td>Lento [cite: 904]</td></tr>
-[cite_start]              <tr><td>PSK31 [cite: 904][cite_start]</td><td>Phase Shift Keying [cite: 904][cite_start]</td><td>31 Hz [cite: 904][cite_start]</td><td>HF digital [cite: 904][cite_start]</td><td>Ancho banda mínimo, muy eficiente [cite: 904][cite_start]</td><td>Requiere PC [cite: 904]</td></tr>
-[cite_start]              <tr><td>PSK63 [cite: 904][cite_start]</td><td>Phase Shift Keying [cite: 904][cite_start]</td><td>63 Hz [cite: 904][cite_start]</td><td>HF digital [cite: 904][cite_start]</td><td>Más rápido que PSK31 [cite: 904][cite_start]</td><td>Requiere PC [cite: 904]</td></tr>
-[cite_start]              <tr><td>FT8 [cite: 904][cite_start]</td><td>Franke-Taylor 8 FSK [cite: 904][cite_start]</td><td>~50 Hz [cite: 904][cite_start]</td><td>HF DX débil [cite: 904][cite_start]</td><td>Señales muy débiles, automático [cite: 904][cite_start]</td><td>Contactos cortos, requiere PC [cite: 904]</td></tr>
-[cite_start]              <tr><td>FT4 [cite: 904][cite_start]</td><td>Franke-Taylor 4-FSK [cite: 904][cite_start]</td><td>90 Hz [cite: 904][cite_start]</td><td>HF concursos [cite: 904][cite_start]</td><td>Rápido [cite: 904][cite_start]</td><td>Menos sensible que FT8 [cite: 904]</td></tr>
-[cite_start]              <tr><td>SSTV [cite: 904][cite_start]</td><td>Slow Scan TV [cite: 904][cite_start]</td><td>3 kHz [cite: 904][cite_start]</td><td>HF imágenes [cite: 904][cite_start]</td><td>Transmisión de imágenes [cite: 904][cite_start]</td><td>Lento [cite: 904]</td></tr>
-[cite_start]              <tr><td>ATV [cite: 904][cite_start]</td><td>Amateur TV [cite: 904][cite_start]</td><td>Ancho [cite: 904][cite_start]</td><td>VHF/UHF/Microondas [cite: 904][cite_start]</td><td>Vídeo en vivo. [cite: 904][cite_start]</td><td>Requiere mucho ancho de banda [cite: 904]</td></tr>
-[cite_start]              <tr><td>DMR [cite: 904][cite_start]</td><td>Digital Mobile Radio [cite: 904][cite_start]</td><td>12.5 kHz [cite: 904][cite_start]</td><td>VHF/UHF [cite: 904][cite_start]</td><td>Audio digital, talkgroups [cite: 904][cite_start]</td><td>Requiere codecs [cite: 904]</td></tr>
-[cite_start]              <tr><td>D-STAR [cite: 904][cite_start]</td><td>Digital Smart Technologies [cite: 904][cite_start]</td><td>12.5 kHz [cite: 904][cite_start]</td><td>VHF/UHF [cite: 904][cite_start]</td><td>Audio digital, datos [cite: 904][cite_start]</td><td>Propietario (Icom) [cite: 904]</td></tr>
-[cite_start]              <tr><td>C4FM [cite: 904][cite_start]</td><td>Continnous 4-level FM [cite: 904][cite_start]</td><td>12.5kHz [cite: 904][cite_start]</td><td>VHF/UHF [cite: 904][cite_start]</td><td>Audio digital (Yaesu) [cite: 904][cite_start]</td><td>Propietario [cite: 904]</td></tr>
-[cite_start]              <tr><td>APRS [cite: 904][cite_start]</td><td>Automatic Packet Reporting System [cite: 904][cite_start]</td><td>Variable [cite: 904][cite_start]</td><td>VHF datos [cite: 904][cite_start]</td><td>Tracking GPS, telemetría [cite: 904][cite_start]</td><td>Solo datos [cite: 904]</td></tr>
+              <tr><td>CW </td><td>Continuous Wave (Morse) </td><td>100-200 Hz </td><td>HF, DX, QRP </td><td>Ancho de banda mínimo, penetra ruido </td><td>Requiere aprendizaje </td></tr>
+              <tr><td>SSB </td><td>Single Side Band </td><td>2.7-3 kHz </td><td>HF conversación </td><td>Eficiente en potencia </td><td>Requiere sintonización precisa </td></tr>
+              <tr><td>LSB </td><td>Lower Side Band </td><td>2.7-3 kHz </td><td>HF &lt; 10 MHz </td><td>Estándar en bandas bajas </td><td></td></tr>
+              <tr><td>USB </td><td>Upper Side Band </td><td>2.7-3 kHz </td><td>HF &gt; 10 MHz, VHF/UHF </td><td>Estándar en bandas altas </td><td></td></tr>
+              <tr><td>AM </td><td>Amplitude Modulation </td><td>6-8 kHz </td><td>CB, Aviación </td><td>Fácil sintonía, audio, simplicidad </td><td>Ineficiente en potencia </td></tr>
+              <tr><td>FM </td><td>Frequency Modulation </td><td>12-25 kHz </td><td>VHF/UHF, repetidores </td><td>Calidad, inmune a fading </td><td>Requiere más ancho de banda </td></tr>
+              <tr><td>RTTY </td><td>Radio Tele Type </td><td>170-500 Hz </td><td>HF digital </td><td>Texto automático </td><td>Lento </td></tr>
+              <tr><td>PSK31 </td><td>Phase Shift Keying </td><td>31 Hz </td><td>HF digital </td><td>Ancho banda mínimo, muy eficiente </td><td>Requiere PC </td></tr>
+              <tr><td>PSK63 </td><td>Phase Shift Keying </td><td>63 Hz </td><td>HF digital </td><td>Más rápido que PSK31 </td><td>Requiere PC </td></tr>
+              <tr><td>FT8 </td><td>Franke-Taylor 8 FSK </td><td>~50 Hz </td><td>HF DX débil </td><td>Señales muy débiles, automático </td><td>Contactos cortos, requiere PC </td></tr>
+              <tr><td>FT4 </td><td>Franke-Taylor 4-FSK </td><td>90 Hz </td><td>HF concursos </td><td>Rápido </td><td>Menos sensible que FT8 </td></tr>
+              <tr><td>SSTV </td><td>Slow Scan TV </td><td>3 kHz </td><td>HF imágenes </td><td>Transmisión de imágenes </td><td>Lento </td></tr>
+              <tr><td>ATV </td><td>Amateur TV </td><td>Ancho </td><td>VHF/UHF/Microondas </td><td>Vídeo en vivo. </td><td>Requiere mucho ancho de banda </td></tr>
+              <tr><td>DMR </td><td>Digital Mobile Radio </td><td>12.5 kHz </td><td>VHF/UHF </td><td>Audio digital, talkgroups </td><td>Requiere codecs </td></tr>
+              <tr><td>D-STAR </td><td>Digital Smart Technologies </td><td>12.5 kHz </td><td>VHF/UHF </td><td>Audio digital, datos </td><td>Propietario (Icom) </td></tr>
+              <tr><td>C4FM </td><td>Continnous 4-level FM </td><td>12.5kHz </td><td>VHF/UHF </td><td>Audio digital (Yaesu) </td><td>Propietario </td></tr>
+              <tr><td>APRS </td><td>Automatic Packet Reporting System </td><td>Variable </td><td>VHF datos </td><td>Tracking GPS, telemetría </td><td>Solo datos </td></tr>
             </table>
           </section>
         
           <section id="indicativos">
             <h2>Sistema de Indicativos en España</h2>
           
-[cite_start]            <p>La estructura básica de un indicativo de radioaficionado es: <strong>Prefijo (EA/EB/EC...) + Distrito (0-9) + Sufijo (1-3 letras)</strong>, por ejemplo: <strong>EA3ABC</strong>[cite: 908].</p>
+            <p>La estructura básica de un indicativo de radioaficionado es: <strong>Prefijo (EA/EB/EC...) + Distrito (0-9) + Sufijo (1-3 letras)</strong>, por ejemplo: <strong>EA3ABC</strong>.</p>
             <p>La segmentación por modo en bandas HF (ej. banda 20m) asegura un uso ordenado de las frecuencias:</p>
             <table>
               <tr><th>Frecuencia (20m)</th><th>Modo Preferido</th><th>Uso</th></tr>
-[cite_start]              <tr><td>14.000-14.070 MHz [cite: 916][cite_start]</td><td>CW [cite: 916][cite_start]</td><td>Telegrafía exclusiva [cite: 916]</td></tr>
-[cite_start]              <tr><td>14.070-14.099 MHz [cite: 916][cite_start]</td><td>Datos digitales [cite: 916][cite_start]</td><td>PSK31, RTTY, FT8 [cite: 916]</td></tr>
-[cite_start]              <tr><td>14.100-14.112 MHz [cite: 916][cite_start]</td><td>Datos digitales [cite: 916][cite_start]</td><td>Packet, APRS [cite: 916]</td></tr>
-[cite_start]              <tr><td>14.112-14.230 MHz [cite: 899][cite_start]</td><td>SSB, datos [cite: 899][cite_start]</td><td>Zona mixta [cite: 899]</td></tr>
-[cite_start]              <tr><td>14.230 MHz [cite: 899][cite_start]</td><td>SSTV [cite: 899][cite_start]</td><td>Frecuencia de imágenes [cite: 899]</td></tr>
-[cite_start]              <tr><td>14.230-14.350 MHz [cite: 899][cite_start]</td><td>SSB [cite: 899][cite_start]</td><td>Voz exclusiva [cite: 899]</td></tr>
+              <tr><td>14.000-14.070 MHz </td><td>CW </td><td>Telegrafía exclusiva </td></tr>
+              <tr><td>14.070-14.099 MHz </td><td>Datos digitales </td><td>PSK31, RTTY, FT8 </td></tr>
+              <tr><td>14.100-14.112 MHz </td><td>Datos digitales </td><td>Packet, APRS </td></tr>
+              <tr><td>14.112-14.230 MHz </td><td>SSB, datos </td><td>Zona mixta </td></tr>
+              <tr><td>14.230 MHz </td><td>SSTV </td><td>Frecuencia de imágenes </td></tr>
+              <tr><td>14.230-14.350 MHz </td><td>SSB </td><td>Voz exclusiva </td></tr>
             </table>
           
             <h3>Prefijos Españoles</h3>
             <dl class="glossary">
-[cite_start]              <dt>EA [cite: 912][cite_start]</dt><dd>General (más común), se asigna primero [cite: 912]</dd>
-[cite_start]              <dt>EB [cite: 912][cite_start]</dt><dd>General, se asigna después de EA [cite: 912]</dd>
-[cite_start]              <dt>EC [cite: 912][cite_start]</dt><dd>General, se asigna después de EB [cite: 912]</dd>
-[cite_start]              <dt>ED [cite: 912][cite_start]</dt><dd>Estaciones especiales (eventos, conmemorativas) [cite: 912]</dd>
-[cite_start]              <dt>AM/4J-1J [cite: 912][cite_start]</dt><dd>Ceuta y Melilla (Alternativo a EA9) / Estaciones especiales (histórico) [cite: 912]</dd>
+              <dt>EA </dt><dd>General (más común), se asigna primero </dd>
+              <dt>EB </dt><dd>General, se asigna después de EA </dd>
+              <dt>EC </dt><dd>General, se asigna después de EB </dd>
+              <dt>ED </dt><dd>Estaciones especiales (eventos, conmemorativas) </dd>
+              <dt>AM/4J-1J </dt><dd>Ceuta y Melilla (Alternativo a EA9) / Estaciones especiales (histórico) </dd>
             </dl>
           
             <h3>Distritos Geográficos</h3>
             <table>
               <tr><th>Distrito</th><th>Provincias/Región</th></tr>
-[cite_start]              <tr><td>EA0 [cite: 914][cite_start]</td><td>Posesiones españolas en África del Norte [cite: 914]</td></tr>
-[cite_start]              <tr><td>EA1 [cite: 914][cite_start]</td><td>Galicia, Asturias, Cantabria, Castilla y León, La Rioja [cite: 914]</td></tr>
-[cite_start]              <tr><td>EA2 [cite: 914][cite_start]</td><td>País Vasco, Navarra, Aragón [cite: 914]</td></tr>
-[cite_start]              <tr><td>EA3 [cite: 914][cite_start]</td><td>Cataluña [cite: 914]</td></tr>
-[cite_start]              <tr><td>EA4 [cite: 914][cite_start]</td><td>Madrid, Castilla-La Mancha [cite: 914]</td></tr>
-[cite_start]              <tr><td>EA5 [cite: 914][cite_start]</td><td>Comunidad Valenciana, Murcia [cite: 914]</td></tr>
-[cite_start]              <tr><td>EA6 [cite: 914][cite_start]</td><td>Islas Baleares [cite: 914]</td></tr>
-[cite_start]              <tr><td>EA7 [cite: 914][cite_start]</td><td>Andalucía, Extremadura [cite: 914]</td></tr>
-[cite_start]              <tr><td>EA8 [cite: 914][cite_start]</td><td>Islas Canarias [cite: 914]</td></tr>
-[cite_start]              <tr><td>EA9 [cite: 914][cite_start]</td><td>Ceuta y Melilla [cite: 914]</td></tr>
+              <tr><td>EA0 </td><td>Posesiones españolas en África del Norte </td></tr>
+              <tr><td>EA1 </td><td>Galicia, Asturias, Cantabria, Castilla y León, La Rioja </td></tr>
+              <tr><td>EA2 </td><td>País Vasco, Navarra, Aragón </td></tr>
+              <tr><td>EA3 </td><td>Cataluña </td></tr>
+              <tr><td>EA4 </td><td>Madrid, Castilla-La Mancha </td></tr>
+              <tr><td>EA5 </td><td>Comunidad Valenciana, Murcia </td></tr>
+              <tr><td>EA6 </td><td>Islas Baleares </td></tr>
+              <tr><td>EA7 </td><td>Andalucía, Extremadura </td></tr>
+              <tr><td>EA8 </td><td>Islas Canarias </td></tr>
+              <tr><td>EA9 </td><td>Ceuta y Melilla </td></tr>
             </table>
           
             <h3>Indicativos Especiales y Portátiles</h3>
             <table>
               <tr><th>Sufijo</th><th>Significado</th><th>Ejemplo</th></tr>
-[cite_start]              <tr><td>/P [cite: 925][cite_start]</td><td>Portátil [cite: 925][cite_start]</td><td>EA3ABC/P [cite: 925]</td></tr>
-[cite_start]              <tr><td>/M [cite: 925][cite_start]</td><td>Móvil [cite: 925][cite_start]</td><td>EA3ABC/M [cite: 925]</td></tr>
-[cite_start]              <tr><td>/MM [cite: 925][cite_start]</td><td>Móvil Marítimo [cite: 925][cite_start]</td><td>EA3ABC/MM [cite: 925]</td></tr>
-[cite_start]              <tr><td>/AM [cite: 925][cite_start]</td><td>Móvil Aeronáutico [cite: 925][cite_start]</td><td>EA3ABC/AM [cite: 925]</td></tr>
-[cite_start]              <tr><td>/QRP [cite: 925][cite_start]</td><td>Baja potencia (&lt;5W) [cite: 925][cite_start]</td><td>EA3ABC/QRP [cite: 925]</td></tr>
-[cite_start]              <tr><td>/número [cite: 925][cite_start]</td><td>Visitando otro distrito [cite: 925][cite_start]</td><td>EA3ABC/7 (en Andalucía) [cite: 925]</td></tr>
+              <tr><td>/P </td><td>Portátil </td><td>EA3ABC/P </td></tr>
+              <tr><td>/M </td><td>Móvil </td><td>EA3ABC/M </td></tr>
+              <tr><td>/MM </td><td>Móvil Marítimo </td><td>EA3ABC/MM </td></tr>
+              <tr><td>/AM </td><td>Móvil Aeronáutico </td><td>EA3ABC/AM </td></tr>
+              <tr><td>/QRP </td><td>Baja potencia (&lt;5W) </td><td>EA3ABC/QRP </td></tr>
+              <tr><td>/número </td><td>Visitando otro distrito </td><td>EA3ABC/7 (en Andalucía) </td></tr>
             </table>
         
             <table>
               <tr><th>Tipo</th><th>Formato</th><th>Uso</th></tr>
-[cite_start]              <tr><td>Individual [cite: 918][cite_start]</td><td>EA3ABC [cite: 918][cite_start]</td><td>Radioaficionado personal [cite: 918]</td></tr>
-[cite_start]              <tr><td>Radio Club [cite: 918][cite_start]</td><td>ED3ABC [cite: 918][cite_start]</td><td>Estaciones colectivas [cite: 918]</td></tr>
-[cite_start]              <tr><td>Especial [cite: 918][cite_start]</td><td>AO5ABC</td><td>Eventos conmemorativos [cite: 918]</td></tr>
-[cite_start]              <tr><td>Repetidor [cite: 918][cite_start]</td><td>EA3RXX [cite: 918][cite_start]</td><td>Repetidores (R+ letras) [cite: 918]</td></tr>
-[cite_start]              <tr><td>Baliza [cite: 918][cite_start]</td><td>EA3BXX [cite: 918][cite_start]</td><td>Balizas (B+ letras) [cite: 918]</td></tr>
+              <tr><td>Individual </td><td>EA3ABC </td><td>Radioaficionado personal </td></tr>
+              <tr><td>Radio Club </td><td>ED3ABC </td><td>Estaciones colectivas </td></tr>
+              <tr><td>Especial </td><td>AO5ABC</td><td>Eventos conmemorativos </td></tr>
+              <tr><td>Repetidor </td><td>EA3RXX </td><td>Repetidores (R+ letras) </td></tr>
+              <tr><td>Baliza </td><td>EA3BXX </td><td>Balizas (B+ letras) </td></tr>
             </table>
           </section>
         
@@ -226,68 +227,68 @@
             <h2>Conceptos Clave de Radioafición</h2>
           
             <h3>Relación Frecuencia - Longitud de Onda</h3>
-[cite_start]            <p>La longitud de onda ($\lambda$) se relaciona con la frecuencia ($f$) mediante la fórmula: $\lambda = 300 / f_{MHz}$ [cite: 944]</p>
+            <p>La longitud de onda ($\lambda$) se relaciona con la frecuencia ($f$) mediante la fórmula: $\lambda = 300 / f_{MHz}$ </p>
             <ul>
-              <li>Ejemplo: <strong>14 MHz</strong> &rightarrow; [cite_start]300/14 = <strong>21.4 metros</strong> ("Banda de 20m") [cite: 946]</li>
-              <li>Ejemplo: <strong>144 MHz</strong> &rightarrow; [cite_start]300/144 = <strong>2.08 metros</strong> ("Banda de 2m") [cite: 947]</li>
-              <li>Ejemplo: <strong>435 MHz</strong> &rightarrow; [cite_start]300/435 = <strong>0.69 metros</strong> ("Banda de 70cm") [cite: 948]</li>
+              <li>Ejemplo: <strong>14 MHz</strong> &rightarrow; 300/14 = <strong>21.4 metros</strong> ("Banda de 20m") </li>
+              <li>Ejemplo: <strong>144 MHz</strong> &rightarrow; 300/144 = <strong>2.08 metros</strong> ("Banda de 2m") </li>
+              <li>Ejemplo: <strong>435 MHz</strong> &rightarrow; 300/435 = <strong>0.69 metros</strong> ("Banda de 70cm") </li>
             </ul>
             
             <h3>Potencia: Conceptos y Unidades</h3>
             <dl class="glossary">
-[cite_start]              <dt>PEP (Peak Envelope Power) [cite: 940]</dt><dd>Potencia pico de envolvente. [cite_start]Potencia máxima en modos SSB. [cite: 940]</dd>
-[cite_start]              <dt>Potencia portadora [cite: 940][cite_start]</dt><dd>Potencia en modos continuos (CW, FM, AM). [cite: 940]</dd>
-              <dt>p.r.a. (Potencia radiada aparente) [cite_start][cite: 940][cite_start]</dt><dd>Potencia x Ganancia de la antena. [cite: 940]</dd>
-              <dt>p.i.r.e. (Potencia isotrópica radiada efectiva) [cite_start][cite: 940][cite_start]</dt><dd>Potencia radiada respecto a una antena isotrópica. [cite: 940]</dd>
-[cite_start]              <dt>QRP [cite: 940]</dt><dd>Baja potencia, típicamente &lt; [cite_start]5 W. [cite: 940]</dd>
-[cite_start]              <dt>QRO [cite: 940]</dt><dd>Alta potencia, &gt; [cite_start]100 W. [cite: 940]</dd>
+              <dt>PEP (Peak Envelope Power) </dt><dd>Potencia pico de envolvente. Potencia máxima en modos SSB. </dd>
+              <dt>Potencia portadora </dt><dd>Potencia en modos continuos (CW, FM, AM). </dd>
+              <dt>p.r.a. (Potencia radiada aparente) </dt><dd>Potencia x Ganancia de la antena. </dd>
+              <dt>p.i.r.e. (Potencia isotrópica radiada efectiva) </dt><dd>Potencia radiada respecto a una antena isotrópica. </dd>
+              <dt>QRP </dt><dd>Baja potencia, típicamente &lt; 5 W. </dd>
+              <dt>QRO </dt><dd>Alta potencia, &gt; 100 W. </dd>
             </dl>
           
             <h3>Decibeles (dB)</h3>
-            <p>Los decibeles son una medida logarítmica de la relación de potencias. [cite_start]Se usan para medir la ganancia o pérdida de un sistema. [cite: 961]</p>
+            <p>Los decibeles son una medida logarítmica de la relación de potencias. Se usan para medir la ganancia o pérdida de un sistema. </p>
             <table>
               <tr><th>Ganancia</th><th>Factor</th><th>Significado</th></tr>
-[cite_start]              <tr><td>+3 dB [cite: 918][cite_start]</td><td>x2 [cite: 918][cite_start]</td><td>Duplica la potencia [cite: 918]</td></tr>
-[cite_start]              <tr><td>+6 dB [cite: 918][cite_start]</td><td>x4 [cite: 918][cite_start]</td><td>Cuadruplica la potencia [cite: 918]</td></tr>
-[cite_start]              <tr><td>+10 dB [cite: 918][cite_start]</td><td>x10 [cite: 918][cite_start]</td><td>Aumenta 10 veces [cite: 918]</td></tr>
-[cite_start]              <tr><td>-3 dB</td><td>/2 [cite: 918][cite_start]</td><td>Reduce a la mitad [cite: 918]</td></tr>
-[cite_start]              <tr><td>-10 dB [cite: 918][cite_start]</td><td>/10 [cite: 918][cite_start]</td><td>Reduce a la décima parte [cite: 918]</td></tr>
+              <tr><td>+3 dB </td><td>x2 </td><td>Duplica la potencia </td></tr>
+              <tr><td>+6 dB </td><td>x4 </td><td>Cuadruplica la potencia </td></tr>
+              <tr><td>+10 dB </td><td>x10 </td><td>Aumenta 10 veces </td></tr>
+              <tr><td>-3 dB</td><td>/2 </td><td>Reduce a la mitad </td></tr>
+              <tr><td>-10 dB </td><td>/10 </td><td>Reduce a la décima parte </td></tr>
             </table>
             <dl class="glossary">
-[cite_start]              <dt>dBi [cite: 921][cite_start]</dt><dd>Ganancia respecto a antena isotrópica. [cite: 921]</dd>
-[cite_start]              <dt>dBd [cite: 921][cite_start]</dt><dd>Ganancia respecto a un dipolo. [cite: 921]</dd>
-[cite_start]              <dt>dBm [cite: 921][cite_start]</dt><dd>Potencia referida a 1 milivatio (0 dBm = 1 mW). [cite: 921]</dd>
+              <dt>dBi </dt><dd>Ganancia respecto a antena isotrópica. </dd>
+              <dt>dBd </dt><dd>Ganancia respecto a un dipolo. </dd>
+              <dt>dBm </dt><dd>Potencia referida a 1 milivatio (0 dBm = 1 mW). </dd>
             </dl>
           
             <h3>ROE (Relación de Ondas Estacionarias) / SWR</h3>
-            <p>Mide la adaptación entre la antena y el transmisor. [cite_start]Es crucial para el rendimiento y la seguridad del equipo. [cite: 956]</p>
+            <p>Mide la adaptación entre la antena y el transmisor. Es crucial para el rendimiento y la seguridad del equipo. </p>
             <table>
               <tr><th>ROE</th><th>Estado</th><th>Acción</th></tr>
-[cite_start]              <tr><td>1.0:1 [cite: 957][cite_start]</td><td>Perfecta (teórica) [cite: 957]</td><td></td></tr>
-[cite_start]              <tr><td>≤ 1.5:1 [cite: 957][cite_start]</td><td>Excelente [cite: 957][cite_start]</td><td>Uso normal [cite: 957]</td></tr>
-[cite_start]              <tr><td>1.5:1 - 2:1 [cite: 957][cite_start]</td><td>Aceptable [cite: 957][cite_start]</td><td>Uso normal, considerar ajuste [cite: 957]</td></tr>
-[cite_start]              <tr><td>2:1 - 3:1 [cite: 957][cite_start]</td><td>Regular [cite: 957][cite_start]</td><td>Ajustar antena o usar acoplador [cite: 957]</td></tr>
-              <tr><td>&gt; [cite_start]3:1 [cite: 957][cite_start]</td><td>Mala [cite: 957][cite_start]</td><td>NO transmitir, riesgo de daño [cite: 957]</td></tr>
+              <tr><td>1.0:1 </td><td>Perfecta (teórica) </td><td></td></tr>
+              <tr><td>≤ 1.5:1 </td><td>Excelente </td><td>Uso normal </td></tr>
+              <tr><td>1.5:1 - 2:1 </td><td>Aceptable </td><td>Uso normal, considerar ajuste </td></tr>
+              <tr><td>2:1 - 3:1 </td><td>Regular </td><td>Ajustar antena o usar acoplador </td></tr>
+              <tr><td>&gt; 3:1 </td><td>Mala </td><td>NO transmitir, riesgo de daño </td></tr>
             </table>
           
             <h3>S-METER (Reportes de Señal)</h3>
             <table>
               <tr><th>S</th><th>μV</th><th>Descripción</th></tr>
-[cite_start]              <tr><td>S1 [cite: 927][cite_start]</td><td>0.1 μV [cite: 927][cite_start]</td><td>Apenas audible [cite: 927]</td></tr>
-[cite_start]              <tr><td>S3 [cite: 930][cite_start]</td><td>0.4 μV [cite: 930][cite_start]</td><td>Débil [cite: 930]</td></tr>
-[cite_start]              <tr><td>S5 [cite: 927][cite_start]</td><td>1.6 μV [cite: 927][cite_start]</td><td>Regular [cite: 927]</td></tr>
-[cite_start]              <tr><td>S7 [cite: 927][cite_start]</td><td>6.3 μV [cite: 927][cite_start]</td><td>Buena [cite: 927]</td></tr>
-[cite_start]              <tr><td>S9 [cite: 927][cite_start]</td><td>25 μV [cite: 927][cite_start]</td><td>Muy buena [cite: 927]</td></tr>
-[cite_start]              <tr><td>S9+10dB [cite: 927][cite_start]</td><td>79 μV [cite: 927][cite_start]</td><td>Excelente [cite: 927]</td></tr>
-[cite_start]              <tr><td>S9+20dB [cite: 927][cite_start]</td><td>250 μV [cite: 927][cite_start]</td><td>Extremadamente fuerte [cite: 927]</td></tr>
+              <tr><td>S1 </td><td>0.1 μV </td><td>Apenas audible </td></tr>
+              <tr><td>S3 </td><td>0.4 μV </td><td>Débil </td></tr>
+              <tr><td>S5 </td><td>1.6 μV </td><td>Regular </td></tr>
+              <tr><td>S7 </td><td>6.3 μV </td><td>Buena </td></tr>
+              <tr><td>S9 </td><td>25 μV </td><td>Muy buena </td></tr>
+              <tr><td>S9+10dB </td><td>79 μV </td><td>Excelente </td></tr>
+              <tr><td>S9+20dB </td><td>250 μV </td><td>Extremadamente fuerte </td></tr>
             </table>
             
             <h3>QTH Locator (Sistema Maidenhead)</h3>
-[cite_start]            <p>Sistema de coordenadas de 6-8 caracteres para ubicación geográfica, usado en concursos y para reportes de distancia. [cite: 963]</p>
+            <p>Sistema de coordenadas de 6-8 caracteres para ubicación geográfica, usado en concursos y para reportes de distancia. </p>
             <ul>
-[cite_start]              <li>Barcelona: JN11bm [cite: 969]</li>
-[cite_start]              <li>Madrid: IN80cm [cite: 970]</li>
-[cite_start]              <li>Sevilla: IM76qw [cite: 971]</li>
+              <li>Barcelona: JN11bm </li>
+              <li>Madrid: IN80cm </li>
+              <li>Sevilla: IM76qw </li>
             </ul>
           </section>
         
@@ -295,68 +296,68 @@
             <h2>Subtonos CTCSS y DCS</h2>
           
             <h3>¿Qué son los Subtonos?</h3>
-[cite_start]            <p>Los subtonos son señales de baja frecuencia (sub-audibles) que se añaden a la transmisión FM. [cite: 973, 974] Su propósito es:</p>
+            <p>Los subtonos son señales de baja frecuencia (sub-audibles) que se añaden a la transmisión FM. Su propósito es:</p>
             <ol>
-[cite_start]              <li><strong>Filtrar comunicaciones:</strong> Solo escuchas a quienes usan tu subtono. [cite: 975]</li>
-[cite_start]              <li><strong>Acceder a repetidores:</strong> Muchos repetidores requieren un subtono específico para activarse. [cite: 976]</li>
-[cite_start]              <li><strong>Privacidad selectiva:</strong> Permite operar a múltiples grupos en la misma frecuencia sin molestarse. [cite: 977]</li>
+              <li><strong>Filtrar comunicaciones:</strong> Solo escuchas a quienes usan tu subtono. </li>
+              <li><strong>Acceder a repetidores:</strong> Muchos repetidores requieren un subtono específico para activarse. </li>
+              <li><strong>Privacidad selectiva:</strong> Permite operar a múltiples grupos en la misma frecuencia sin molestarse. </li>
             </ol>
           
             <h3>Tipos de Subtonos</h3>
             <table>
               <tr><th>Tipo</th><th>Nombre Completo</th><th>Tecnología</th><th>Tonos Disponibles</th></tr>
-[cite_start]              <tr><td>CTCSS [cite: 978][cite_start]</td><td>Continuous Tone Coded Squelch System [cite: 978][cite_start]</td><td>Tono analógico continuo [cite: 978][cite_start]</td><td>50 tonos (67 - 254.1 Hz) [cite: 978]</td></tr>
-[cite_start]              <tr><td>DCS [cite: 978][cite_start]</td><td>Digital-Coded Squelch [cite: 978][cite_start]</td><td>Código digital [cite: 978][cite_start]</td><td>104 códigos (23 - 754) [cite: 978]</td></tr>
+              <tr><td>CTCSS </td><td>Continuous Tone Coded Squelch System </td><td>Tono analógico continuo </td><td>50 tonos (67 - 254.1 Hz) </td></tr>
+              <tr><td>DCS </td><td>Digital-Coded Squelch </td><td>Código digital </td><td>104 códigos (23 - 754) </td></tr>
             </table>
           
             <h3>Cómo configurar Subtonos</h3>
-[cite_start]            <p>En el menú de tu equipo debes configurar: [cite: 982]</p>
+            <p>En el menú de tu equipo debes configurar: </p>
             <ul>
-[cite_start]              <li><strong>TX CTCSS/DCS:</strong> Subtono que <strong>transmites</strong> (para abrir un repetidor). [cite: 983]</li>
-[cite_start]              <li><strong>RX CTCSS/DCS:</strong> Subtono que <strong>filtras</strong> al recibir (solo escuchas a este grupo). [cite: 984]</li>
+              <li><strong>TX CTCSS/DCS:</strong> Subtono que <strong>transmites</strong> (para abrir un repetidor). </li>
+              <li><strong>RX CTCSS/DCS:</strong> Subtono que <strong>filtras</strong> al recibir (solo escuchas a este grupo). </li>
             </ul>
-            <p class="note">Si desactivas RX CTCSS, escucharás todas las conversaciones en esa frecuencia. [cite_start]La "N" en DCS indica polaridad normal (existe también la "I" invertida). [cite: 980, 988]</p>
+            <p class="note">Si desactivas RX CTCSS, escucharás todas las conversaciones en esa frecuencia. La "N" en DCS indica polaridad normal (existe también la "I" invertida).</p>
             
             <h3>Tabla de Frecuencias CTCSS (Tonos Analógicos)</h3>
             <table>
               <tr><th>Hz</th><th>Hz</th><th>Hz</th><th>Hz</th></tr>
-[cite_start]              <tr><td>67.0 [cite: 992][cite_start]</td><td>107.2 [cite: 992][cite_start]</td><td>162.2 [cite: 992][cite_start]</td><td>206.5 [cite: 992]</td></tr>
-[cite_start]              <tr><td>69.3 [cite: 992][cite_start]</td><td>110.9 [cite: 992][cite_start]</td><td>167.9 [cite: 992][cite_start]</td><td>210.7 [cite: 992]</td></tr>
-[cite_start]              <tr><td>71.9 [cite: 992][cite_start]</td><td>114.8 [cite: 992][cite_start]</td><td>173.8 [cite: 992][cite_start]</td><td>218.1 [cite: 992]</td></tr>
-[cite_start]              <tr><td>74.4 [cite: 992][cite_start]</td><td>118.8 [cite: 992][cite_start]</td><td>179.9 [cite: 992][cite_start]</td><td>225.7 [cite: 992]</td></tr>
-[cite_start]              <tr><td>77.0 [cite: 992][cite_start]</td><td>123.0 [cite: 992][cite_start]</td><td>186.2 [cite: 992][cite_start]</td><td>229.1 [cite: 992]</td></tr>
-[cite_start]              <tr><td>79.7 [cite: 992][cite_start]</td><td>127.3 [cite: 992][cite_start]</td><td>192.8 [cite: 992][cite_start]</td><td>233.6 [cite: 992]</td></tr>
-[cite_start]              <tr><td>82.5 [cite: 992][cite_start]</td><td>131.8 [cite: 992][cite_start]</td><td>196.6 [cite: 992][cite_start]</td><td>241.8 [cite: 992]</td></tr>
-[cite_start]              <tr><td>85.4 [cite: 992][cite_start]</td><td>136.5 [cite: 992][cite_start]</td><td>199.5 [cite: 992][cite_start]</td><td>250.3 [cite: 992]</td></tr>
-[cite_start]              <tr><td>88.5 [cite: 992][cite_start]</td><td>141.3 [cite: 992][cite_start]</td><td>203.5 [cite: 992][cite_start]</td><td>254.1 [cite: 992]</td></tr>
-[cite_start]              <tr><td>91.5 [cite: 992][cite_start]</td><td>146.2 [cite: 992]</td><td></td><td></td></tr>
-[cite_start]              <tr><td>94.8 [cite: 992][cite_start]</td><td>151.4 [cite: 992]</td><td></td><td></td></tr>
-[cite_start]              <tr><td>97.4 [cite: 992][cite_start]</td><td>156.7 [cite: 992]</td><td></td><td></td></tr>
-[cite_start]              <tr><td>100.0 [cite: 992][cite_start]</td><td>159.8 [cite: 992]</td><td></td><td></td></tr>
+              <tr><td>67.0 </td><td>107.2 </td><td>162.2 </td><td>206.5 </td></tr>
+              <tr><td>69.3 </td><td>110.9 </td><td>167.9 </td><td>210.7 </td></tr>
+              <tr><td>71.9 </td><td>114.8 </td><td>173.8 </td><td>218.1 </td></tr>
+              <tr><td>74.4 </td><td>118.8 </td><td>179.9 </td><td>225.7 </td></tr>
+              <tr><td>77.0 </td><td>123.0 </td><td>186.2 </td><td>229.1 </td></tr>
+              <tr><td>79.7 </td><td>127.3 </td><td>192.8 </td><td>233.6 </td></tr>
+              <tr><td>82.5 </td><td>131.8 </td><td>196.6 </td><td>241.8 </td></tr>
+              <tr><td>85.4 </td><td>136.5 </td><td>199.5 </td><td>250.3 </td></tr>
+              <tr><td>88.5 </td><td>141.3 </td><td>203.5 </td><td>254.1 </td></tr>
+              <tr><td>91.5 </td><td>146.2 </td><td></td><td></td></tr>
+              <tr><td>94.8 </td><td>151.4 </td><td></td><td></td></tr>
+              <tr><td>97.4 </td><td>156.7 </td><td></td><td></td></tr>
+              <tr><td>100.0 </td><td>159.8 </td><td></td><td></td></tr>
             </table>
           </section>
         
           <section id="propagacion">
             <h2>Propagación de Ondas</h2>
-            <p>La forma en que viajan las ondas de radio afecta el alcance. [cite_start]El modo de propagación depende de la frecuencia y las condiciones atmosféricas, especialmente la ionosfera. [cite: 989]</p>
+            <p>La forma en que viajan las ondas de radio afecta el alcance. El modo de propagación depende de la frecuencia y las condiciones atmosféricas, especialmente la ionosfera. </p>
           
             <h3>Capas de la Ionosfera</h3>
             <table>
               <tr><th>Capa</th><th>Altura (km)</th><th>Presente</th><th>Efecto en Radio</th></tr>
-[cite_start]              <tr><td>D [cite: 990][cite_start]</td><td>50-90 [cite: 990][cite_start]</td><td>Solo de día [cite: 990][cite_start]</td><td>Absorbe ondas medias y bajas HF [cite: 990]</td></tr>
-[cite_start]              <tr><td>E [cite: 990][cite_start]</td><td>90-140 [cite: 990][cite_start]</td><td>Día (débil noche) [cite: 990][cite_start]</td><td>Refleja frecuencias bajas, "Skip" corto [cite: 990]</td></tr>
-[cite_start]              <tr><td>Es [cite: 990][cite_start]</td><td>90-140 [cite: 990][cite_start]</td><td>Esporádica [cite: 990][cite_start]</td><td>Propagación inesperada VHF/UHF [cite: 990]</td></tr>
-[cite_start]              <tr><td>F1 [cite: 990][cite_start]</td><td>140-250 [cite: 990][cite_start]</td><td>Solo de día [cite: 990][cite_start]</td><td>Se fusiona con F2 [cite: 990]</td></tr>
-[cite_start]              <tr><td>F2 [cite: 990][cite_start]</td><td>250-400 [cite: 990][cite_start]</td><td>Día y noche [cite: 990][cite_start]</td><td>Principal para DX en HF (larga distancia) [cite: 990]</td></tr>
+              <tr><td>D </td><td>50-90 </td><td>Solo de día </td><td>Absorbe ondas medias y bajas HF </td></tr>
+              <tr><td>E </td><td>90-140 </td><td>Día (débil noche) </td><td>Refleja frecuencias bajas, "Skip" corto </td></tr>
+              <tr><td>Es </td><td>90-140 </td><td>Esporádica </td><td>Propagación inesperada VHF/UHF </td></tr>
+              <tr><td>F1 </td><td>140-250 </td><td>Solo de día </td><td>Se fusiona con F2 </td></tr>
+              <tr><td>F2 </td><td>250-400 </td><td>Día y noche </td><td>Principal para DX en HF (larga distancia) </td></tr>
             </table>
           
             <h3>Tipos de Propagación</h3>
             <dl class="glossary">
-[cite_start]              <dt>Onda de Tierra (Ground Wave) [cite: 922]</dt><dd>Frecuencias: LF, MF, HF bajas (&lt;3 MHz). Alcance: 50-200 km. Sigue la curvatura de la Tierra, muy estable. [cite_start]Uso: Banda 160m. [cite: 922]</dd>
-              <dt>Onda Espacial / Troposférica</dt><dd>Frecuencias: VHF/UHF. Alcance: Línea de visión (+ troposfera). [cite_start]Usada en repetidores y comunicaciones locales. [cite: 922]</dd>
-              <dt>Onda Ionosférica (Sky Wave)</dt><dd>Frecuencias: HF. Alcance: Larga distancia (DX). [cite_start]Depende de las capas F2 para reflejar la señal. [cite: 922]</dd>
-[cite_start]              <dt>MUF [cite: 924][cite_start]</dt><dd>Maximum Usable Frequency: Frecuencia máxima utilizable para una distancia. [cite: 924]</dd>
-[cite_start]              <dt>LUF [cite: 924][cite_start]</dt><dd>Lowest Usable Frequency: Frecuencia mínima (por debajo, demasiada absorción). [cite: 924]</dd>
+              <dt>Onda de Tierra (Ground Wave) </dt><dd>Frecuencias: LF, MF, HF bajas (&lt;3 MHz). Alcance: 50-200 km. Sigue la curvatura de la Tierra, muy estable. Uso: Banda 160m. </dd>
+              <dt>Onda Espacial / Troposférica</dt><dd>Frecuencias: VHF/UHF. Alcance: Línea de visión (+ troposfera). Usada en repetidores y comunicaciones locales. </dd>
+              <dt>Onda Ionosférica (Sky Wave)</dt><dd>Frecuencias: HF. Alcance: Larga distancia (DX). Depende de las capas F2 para reflejar la señal. </dd>
+              <dt>MUF </dt><dd>Maximum Usable Frequency: Frecuencia máxima utilizable para una distancia. </dd>
+              <dt>LUF </dt><dd>Lowest Usable Frequency: Frecuencia mínima (por debajo, demasiada absorción). </dd>
             </dl>
           </section>
         
@@ -366,38 +367,38 @@
             <h3>Códigos Q Más Comunes (Pregunta/Respuesta)</h3>
             <table>
               <tr><th>Código</th><th>Pregunta</th><th>Respuesta/Afirmación</th></tr>
-[cite_start]              <tr><td>QRA? [cite: 927][cite_start]</td><td>¿Quién me llama? [cite: 927][cite_start]</td><td>Te llama... [cite: 927]</td></tr>
-[cite_start]              <tr><td>QTH? [cite: 927][cite_start]</td><td>¿Cuál es tu ubicación? [cite: 927][cite_start]</td><td>Mi ubicación es... [cite: 927]</td></tr>
-[cite_start]              <tr><td>QRL? [cite: 927][cite_start]</td><td>¿Estás ocupado? [cite: 927][cite_start]</td><td>Estoy ocupado [cite: 927]</td></tr>
-[cite_start]              <tr><td>QRM [cite: 927][cite_start]</td><td>¿Hay interferencia? [cite: 927][cite_start]</td><td>Hay interferencia de otras estaciones [cite: 927]</td></tr>
-[cite_start]              <tr><td>QRN [cite: 927][cite_start]</td><td>¿Hay ruido atmosférico? [cite: 927][cite_start]</td><td>Hay ruido (tormentas, etc.) [cite: 927]</td></tr>
-[cite_start]              <tr><td>QRO? [cite: 927][cite_start]</td><td>¿Aumento potencia? [cite: 927][cite_start]</td><td>Aumenta potencia [cite: 927]</td></tr>
-[cite_start]              <tr><td>QRP? [cite: 927][cite_start]</td><td>¿Reduzco potencia? [cite: 927][cite_start]</td><td>Reduce potencia/Opero en baja potencia [cite: 927]</td></tr>
-[cite_start]              <tr><td>QRS? [cite: 927][cite_start]</td><td>¿Transmito más despacio? [cite: 927][cite_start]</td><td>Transmite más despacio [cite: 927]</td></tr>
-[cite_start]              <tr><td>QRT [cite: 927][cite_start]</td><td>¿Dejo de transmitir? [cite: 927][cite_start]</td><td>Dejo de transmitir / Cierro estación [cite: 927]</td></tr>
-[cite_start]              <tr><td>QRV? [cite: 927][cite_start]</td><td>¿Estás listo? [cite: 927][cite_start]</td><td>Estoy listo [cite: 927]</td></tr>
-[cite_start]              <tr><td>QRX [cite: 927][cite_start]</td><td>¿Espero? [cite: 927][cite_start]</td><td>Espera (volveré a llamar) [cite: 927]</td></tr>
-[cite_start]              <tr><td>QSB [cite: 927][cite_start]</td><td>¿Mi señal tiene fading? [cite: 927][cite_start]</td><td>Tu señal tiene fading [cite: 927]</td></tr>
-[cite_start]              <tr><td>QSL? [cite: 927][cite_start]</td><td>¿Puedes acusar recibo? [cite: 927][cite_start]</td><td>Acuso recibo / Tarjeta QSL [cite: 927]</td></tr>
-[cite_start]              <tr><td>QSO? [cite: 927][cite_start]</td><td>¿Puedes comunicar con...? [cite: 927][cite_start]</td><td>Puedo comunicar/Comunicación establecida [cite: 927]</td></tr>
-[cite_start]              <tr><td>QSY? [cite: 927][cite_start]</td><td>¿Cambio a otra frecuencia? [cite: 927][cite_start]</td><td>Cambia a [MHz] [cite: 927]</td></tr>
-[cite_start]              <tr><td>QTR? [cite: 927][cite_start]</td><td>¿Qué hora es? [cite: 927][cite_start]</td><td>La hora es... [cite: 927]</td></tr>
+              <tr><td>QRA? </td><td>¿Quién me llama? </td><td>Te llama... </td></tr>
+              <tr><td>QTH? </td><td>¿Cuál es tu ubicación? </td><td>Mi ubicación es... </td></tr>
+              <tr><td>QRL? </td><td>¿Estás ocupado? </td><td>Estoy ocupado </td></tr>
+              <tr><td>QRM </td><td>¿Hay interferencia? </td><td>Hay interferencia de otras estaciones </td></tr>
+              <tr><td>QRN </td><td>¿Hay ruido atmosférico? </td><td>Hay ruido (tormentas, etc.) </td></tr>
+              <tr><td>QRO? </td><td>¿Aumento potencia? </td><td>Aumenta potencia </td></tr>
+              <tr><td>QRP? </td><td>¿Reduzco potencia? </td><td>Reduce potencia/Opero en baja potencia </td></tr>
+              <tr><td>QRS? </td><td>¿Transmito más despacio? </td><td>Transmite más despacio </td></tr>
+              <tr><td>QRT </td><td>¿Dejo de transmitir? </td><td>Dejo de transmitir / Cierro estación </td></tr>
+              <tr><td>QRV? </td><td>¿Estás listo? </td><td>Estoy listo </td></tr>
+              <tr><td>QRX </td><td>¿Espero? </td><td>Espera (volveré a llamar) </td></tr>
+              <tr><td>QSB </td><td>¿Mi señal tiene fading? </td><td>Tu señal tiene fading </td></tr>
+              <tr><td>QSL? </td><td>¿Puedes acusar recibo? </td><td>Acuso recibo / Tarjeta QSL </td></tr>
+              <tr><td>QSO? </td><td>¿Puedes comunicar con...? </td><td>Puedo comunicar/Comunicación establecida </td></tr>
+              <tr><td>QSY? </td><td>¿Cambio a otra frecuencia? </td><td>Cambia a [MHz] </td></tr>
+              <tr><td>QTR? </td><td>¿Qué hora es? </td><td>La hora es... </td></tr>
             </table>
           
             <h3>Abreviaturas Populares</h3>
             <dl class="glossary">
-[cite_start]              <dt>73 [cite: 929][cite_start]</dt><dd>Saludos cordiales [cite: 929]</dd>
-[cite_start]              <dt>88 [cite: 929][cite_start]</dt><dd>Amor y besos (raramente usado) [cite: 929]</dd>
-[cite_start]              <dt>CQ [cite: 929][cite_start]</dt><dd>Llamada general a todos [cite: 929]</dd>
-[cite_start]              <dt>DX [cite: 929][cite_start]</dt><dd>Larga distancia/Contacto internacional [cite: 929]</dd>
-[cite_start]              <dt>FB [cite: 929][cite_start]</dt><dd>Fine Business (Excelente) [cite: 929]</dd>
-[cite_start]              <dt>GM/GA/GE/GN [cite: 929][cite_start]</dt><dd>Good Morning / Good Afternoon / Good Evening / Good Night [cite: 929]</dd>
-[cite_start]              <dt>HI [cite: 929][cite_start]</dt><dd>Risa [cite: 929]</dd>
-[cite_start]              <dt>OM [cite: 929][cite_start]</dt><dd>Old Man (Radioaficionado experimentado) [cite: 929]</dd>
-[cite_start]              <dt>OP [cite: 929][cite_start]</dt><dd>Operator (Operador) [cite: 929]</dd>
-[cite_start]              <dt>PSE [cite: 929][cite_start]</dt><dd>Please (Por favor) [cite: 929]</dd>
-[cite_start]              <dt>R [cite: 929][cite_start]</dt><dd>Roger (Recibido) [cite: 929]</dd>
-[cite_start]              <dt>RIG [cite: 929][cite_start]</dt><dd>Equipo, transmisor [cite: 929]</dd>
+              <dt>73 </dt><dd>Saludos cordiales </dd>
+              <dt>88 </dt><dd>Amor y besos (raramente usado) </dd>
+              <dt>CQ </dt><dd>Llamada general a todos </dd>
+              <dt>DX </dt><dd>Larga distancia/Contacto internacional </dd>
+              <dt>FB </dt><dd>Fine Business (Excelente) </dd>
+              <dt>GM/GA/GE/GN </dt><dd>Good Morning / Good Afternoon / Good Evening / Good Night </dd>
+              <dt>HI </dt><dd>Risa </dd>
+              <dt>OM </dt><dd>Old Man (Radioaficionado experimentado) </dd>
+              <dt>OP </dt><dd>Operator (Operador) </dd>
+              <dt>PSE </dt><dd>Please (Por favor) </dd>
+              <dt>R </dt><dd>Roger (Recibido) </dd>
+              <dt>RIG </dt><dd>Equipo, transmisor </dd>
             </dl>
           </section>
         
@@ -405,16 +406,16 @@
             <h2>Procedimientos Operativos y Contactos</h2>
           
             <h3>Sistema RST (Readability, Strength, Tone)</h3>
-[cite_start]            <p>El sistema RST se usa para reportar la calidad de la señal del corresponsal, especialmente en CW y SSB. [cite: 939]</p>
+            <p>El sistema RST se usa para reportar la calidad de la señal del corresponsal, especialmente en CW y SSB. </p>
             <ul>
-[cite_start]              <li><strong>R (Readability)</strong>: Legibilidad (1-5) [cite: 940]</li>
-[cite_start]              <li><strong>S (Strength)</strong>: Intensidad (1-9) [cite: 950]</li>
-[cite_start]              <li><strong>T (Tone)</strong>: Tono (solo CW, 1-9) [cite: 951]</li>
+              <li><strong>R (Readability)</strong>: Legibilidad (1-5) </li>
+              <li><strong>S (Strength)</strong>: Intensidad (1-9) </li>
+              <li><strong>T (Tone)</strong>: Tono (solo CW, 1-9) </li>
             </ul>
             <dl class="glossary">
-[cite_start]              <dt>Reporte 59 [cite: 952][cite_start]</dt><dd>Perfectamente legible, S9 (típico en SSB) [cite: 952]</dd>
-[cite_start]              <dt>Reporte 599 [cite: 954][cite_start]</dt><dd>Perfectamente legible, S9, tono perfecto (típico en CW) [cite: 954]</dd>
-[cite_start]              <dt>Reporte 33 [cite: 955][cite_start]</dt><dd>Legible con dificultad, señal débil [cite: 955]</dd>
+              <dt>Reporte 59 </dt><dd>Perfectamente legible, S9 (típico en SSB) </dd>
+              <dt>Reporte 599 </dt><dd>Perfectamente legible, S9, tono perfecto (típico en CW) </dd>
+              <dt>Reporte 33 </dt><dd>Legible con dificultad, señal débil </dd>
             </dl>
           
             <h3>Ejemplo de Contacto Básico</h3>
