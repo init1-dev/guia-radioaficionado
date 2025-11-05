@@ -168,7 +168,12 @@ table {
 }
 
 table .canal {
-    color: green;
+    color: rgb(0, 231, 0);
+    text-align: center;
+}
+
+table .letra-itu {
+    color: yellow;
     text-align: center;
 }
 
