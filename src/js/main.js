@@ -6,7 +6,9 @@
  * - Defensive checks for missing DOM nodes
  */
 
-// -------------------- Helpers --------------------
+import { APP_INFO } from "./appInfo";
+
+ // -------------------- Helpers --------------------
 const slugify = (text) => {
     return text.toString().toLowerCase()
         .replace(/\s+/g, '-')
@@ -203,6 +205,7 @@ function initTocSearch() {
 
 // -------------------- Initialization --------------------
 function initApp() {
+    APP_INFO.updateVersion();
     initSmoothScroll();
     const mobileTocApi = initMobileToc();
     buildIndex(mobileTocApi && mobileTocApi.closeToc);

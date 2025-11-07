@@ -19,9 +19,10 @@
         <div class="logo">
             <a href="#hero-banner">G.R.A.</a>
         </div>
-        <div id="search"><input id="q" placeholder="Buscar en la guía — ejemplo: Bandas, Indicativos, Subtonos, Procedimientos, etc"
-                aria-label="buscar" autocomplete="off" /></div>
-        <div style="min-width:100px;text-align:right;color:var(--muted);font-size:13px">Versión: 1.0</div>
+        <div id="search"><input id="q" placeholder="Buscar en la guía — ejemplo: Bandas, Indicativos, Subtonos, Procedimientos, etc" aria-label="buscar" autocomplete="off" /></div>
+        <div style="min-width:100px;text-align:right;color:var(--muted);font-size:13px">
+            Versión: <span class="version"></span>
+        </div>
     </header>
 
     <div class="container">
@@ -53,7 +54,10 @@
                     <div class="banner-content">
                         <h1>G.R.A.</h1>
                         <p>Guía del Radioaficionado</p>
-                        <small><b>v1.0</b> (<i>Miércoles 05/11/2025</i>)</small>
+                        <small>
+                            <b>v<span class="version"></span></b>
+                            (<i class="last-modified"><span class="updateDay"></span> <span class="updateDate"></span></i>)
+                        </small>
                     </div>
                 </div>
 
