@@ -4,4 +4,7 @@ import { defineConfig } from 'vite';
 // `index.html` directamente (útil para GitHub Pages en modo project page).
 export default defineConfig({
     base: './',
+    build: {
+        outDir: 'docs'
+    }
 });
