@@ -441,7 +441,7 @@ export const glossaryTerms = {
     )
 };
 
-const excludedTAgs = ['SCRIPT', 'STYLE', 'TEXTAREA', 'CODE', 'PRE', 'H2','H3', 'H4'];
+const excludedTAgs = ['SCRIPT', 'STYLE', 'TEXTAREA', 'CODE', 'PRE', 'H2','H3', 'H4', 'A'];
 
 // Crear una expresión regular que combine todas las variantes de términos
 const createGlossaryRegex = () => {
