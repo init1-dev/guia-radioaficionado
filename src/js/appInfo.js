@@ -1,7 +1,7 @@
  // -------------------- App Info --------------------
 const APP_INFO = {
     version: '1.1.0',
-    updateDate: '10/11/2025',
+    updateDate: '10/11/2025 15:09',
     updateVersion() {
         const versionEl = document.querySelectorAll('.version');
         const dayEl = document.querySelector('.updateDay');
@@ -12,12 +12,14 @@ const APP_INFO = {
         // determine date object: prefer explicit updateDate, else current date
         let dateObj;
         if (this.updateDate) {
-            const parts = this.updateDate.includes('/')
-                ? String(this.updateDate).split('/')
-                : String(this.updateDate).split('-');
+            const [datePart, timePart = '00:00'] = String(this.updateDate).split(' ');
+            const parts = datePart.includes('/')
+                ? datePart.split('/')
+                : datePart.split('-');
             const [d, m, y] = parts;
+            const [hours, minutes] = timePart.split(':');
 
-            dateObj = new Date(`${y}-${m}-${d}`);
+            dateObj = new Date(`${y}-${m}-${d}T${hours}:${minutes}`);
         } else {
             dateObj = new Date();
         }
@@ -26,10 +28,14 @@ const APP_INFO = {
         const dayName = dateObj.toLocaleDateString('es-ES', { weekday: 'long' });
         const capitalizedDay = dayName.charAt(0).toUpperCase() + dayName.slice(1);
 
-        const dd = String(dateObj.getDate()).padStart(2, '0');
-        const mm = String(dateObj.getMonth() + 1).padStart(2, '0');
-        const yyyy = dateObj.getFullYear();
-        const formatted = `${dd}/${mm}/${yyyy}`;
+        // Formatear fecha con hora
+        const formatted = dateObj.toLocaleString('es-ES', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        }).replace(',', ' -');
 
         if (dayEl) dayEl.textContent = capitalizedDay;
         if (dateEl) dateEl.textContent = formatted;
