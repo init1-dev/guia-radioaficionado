@@ -989,6 +989,10 @@
 
                     <!-- Conceptos de Propagación -->
                     <h3>Propagación de Ondas</h3>
+
+                    <p>La forma en que viajan las ondas de radio afecta el alcance. El modo de propagación
+                        depende de la frecuencia y las condiciones atmosféricas, especialmente la ionosfera. </p>
+
                     <dl class="conceptos">
                         <dt>Ionosfera</dt>
                         <dd><strong>Definición:</strong> Capa de la atmósfera que refleja ondas de radio HF.</dd>
@@ -1002,6 +1006,190 @@
                         <dd><strong>Definición:</strong> Propagación directa entre antenas sin obstáculos.</dd>
                         <dd><strong>Relevancia:</strong> Crucial en VHF/UHF para comunicaciones locales.</dd>
                     </dl>
+
+                    <h4>Capas de la Ionosfera</h4>
+                    <table>
+                        <tr>
+                            <th>Capa</th>
+                            <th>Altura (km)</th>
+                            <th>Presente</th>
+                            <th>Efecto en Radio</th>
+                        </tr>
+                        <tr>
+                            <td>D </td>
+                            <td>50-90 </td>
+                            <td>Solo de día </td>
+                            <td>Absorbe ondas medias y bajas HF </td>
+                        </tr>
+                        <tr>
+                            <td>E </td>
+                            <td>90-140 </td>
+                            <td>Día (débil noche) </td>
+                            <td>Refleja frecuencias bajas, "Skip" corto </td>
+                        </tr>
+                        <tr>
+                            <td>Es </td>
+                            <td>90-140 </td>
+                            <td>Esporádica </td>
+                            <td>Propagación inesperada VHF/UHF </td>
+                        </tr>
+                        <tr>
+                            <td>F1 </td>
+                            <td>140-250 </td>
+                            <td>Solo de día </td>
+                            <td>Se fusiona con F2 </td>
+                        </tr>
+                        <tr>
+                            <td>F2 </td>
+                            <td>250-400 </td>
+                            <td>Día y noche </td>
+                            <td>Principal para DX en HF (larga distancia) </td>
+                        </tr>
+                    </table>
+
+                    <h4>Tipos de Propagación</h4>
+                    <dl class="glossary">
+                        <dt>1. PROPAGACIÓN POR ONDA DE TIERRA (Ground Wave)</dt>
+                        <dd>
+                            <ul>
+                                <li>Frecuencias: LF, MF, HF bajas (< 3 MHz)</li>
+                                <li>Alcance: 50-200 km</li>
+                                <li>Características: Sigue la curvatura de la Tierra, muy estable</li>
+                                <li>Uso: Banda 160m, CB</li>
+                            </ul>
+                        </dd>
+                        <dt>2. PROPAGACIÓN IONOSFÉRICA (Sky Wave)</dt>
+                        <dd>
+                            <ul>
+                                <li>Frecuencias: HF (3-30 MHz)</li>
+                                <li>Alcance: 500 km - mundial</li>
+                                <li>Características: Reflejo en ionosfera, varía con hora, estación, ciclo solar, múltiples "saltos".</li>
+                                <li>Mejor momento: </li>
+                                <ul>
+                                    <li>Bandas altas (20m, 15m, 10m): Día</li>
+                                    <li>Bandas bajas (80m, 40m): Noche</li>
+                                    <li>Banda mixta (40m): Transiciones</li>
+                                </ul>
+                            </ul>
+                        </dd>
+                        <dt>3. PROPAGACIÓN LÍNEA DE VISTA (Line of Sight)</dt>
+                        <dd>
+                            <ul>
+                                <li>Frecuencias: VHF, UHF, Microondas (&gt; 30 MHz)</li>
+                                <li>Alcance: 5-15 km (portátil), 50-100 km (con repetidor), altura considerable: 100-200 km.</li>
+                                <li>Características: No atraviesa obstáculos sólidos.</li>
+                            </ul>
+                        </dd>
+                        <dt>4. PROPAGACIÓN TROPOSFÉRICA</dt>
+                        <dd>
+                            <ul>
+                                <li>Frecuencias: VHF, UHF</li>
+                                <li>Alcance: 200-800 km</li>
+                                <li>Características: Ductos troposféricos, inversión térmica, condiciones meteorológicas específicas.</li>
+                            </ul>
+                        </dd>
+                        <dt>5. PROPAGACIÓN ESPORÁDICA-E (Es)</dt>
+                        <dd>
+                            <ul>
+                                <li>Frecuencias: VHF, ocasionalmente UHF</li>
+                                <li>Alcance: 500-2500 km</li>
+                                <li>Características: Impredecible, más frecuente en verano, Permite DX en 6m y 2m.</li>
+                            </ul>
+                        </dd>
+                        <dt>6. PROPAGACIÓN POR LLUVIA/METEOROS</dt>
+                        <dd>
+                            <ul>
+                                <li>Frecuencias: VHF, UHF</li>
+                                <li>Alcance: 500-2000 km</li>
+                                <li>Características: Reflexión en estelas de meteoritos, Ráfagas cortas (< 1 segundo), útil para modos digitales rápidos.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    
+                    <h4>Frecuencia Crítica y MUF</h4>
+                    <table>
+                        <tr>
+                            <th>Término</th>
+                            <th>Definición</th>
+                        </tr>
+                        <tr>
+                            <td>MUF</td>
+                            <td>Maximum Usable Frequency: Frecuencia máxima utilizable para una distancia.</td>
+                        </tr>
+                        <tr>
+                            <td>LUF</td>
+                            <td>Lowest Usable Frequency: Frecuencia mínima (por debajo, demasiada absorción).</td>
+                        </tr>
+                        <tr>
+                            <td>FOT</td>
+                            <td>Optimum Working Frequency: Frecuencia óptima de trabajo (85% de MUF).</td>
+                        </tr>
+                    </table>
+
+                    <h4>Indices de Propagación</h4>
+                    <table>
+                        <tr>
+                            <th>Índice</th>
+                            <th>Qué mide</th>
+                            <th>Valores</th>
+                        </tr>
+                        <tr>
+                            <td>SFI (Solar Flux Index)</td>
+                            <td>Actividad solar</td>
+                            <td>70-300 (mejor propagación con valores altos)</td>
+                        </tr>
+                        <tr>
+                            <td>SSN (Sunspot Number)</td>
+                            <td>Manchas solares</td>
+                            <td>0-300 (más manchas, mejor HF)</td>
+                        </tr>
+                        <tr>
+                            <td>A-Index</td>
+                            <td>Perturbaciones geomagnéticas</td>
+                            <td>0-400 (0-7 excelente, >50 tormentas)</td>
+                        </tr>
+                        <tr>
+                            <td>K-Index</td>
+                            <td>Perturbaciones locales (3h)</td>
+                            <td>0-9 (0-2 bueno, >5 mala propagación)</td>
+                        </tr>
+                    </table>
+
+                    <h4>Predicción de propagación</h4>
+
+                    <p>Mejores herramientas online:</p>
+                    <ul>
+                        <li>VOACAP: Predicción profesional</li>
+                        <li>HamQTH.com: Propagación en tiempo real</li>
+                        <li>DX Watch: Spots en vivo</li>
+                        <li>WSPRnet: Datos de propagación globales</li>
+                        <li>PSKReporter: Reportes automáticos</li>
+                    </ul>
+
+                    <h4>Horarios optimos por banda</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Banda</th>
+                                <th>Día</th>
+                                <th>Noche</th>
+                                <th>Mejor estación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>160m</td><td>❌</td><td>✅</td><td>Invierno</td></tr>
+                            <tr><td>80m</td><td>❌</td><td>✅</td><td>Todo el año</td></tr>
+                            <tr><td>40m</td><td>🔶</td><td>✅</td><td>Todo el año</td></tr>
+                            <tr><td>30m</td><td>✅</td><td>✅</td><td>Todo el año</td></tr>
+                            <tr><td>20m</td><td>✅</td><td>🔶</td><td>Todo el año</td></tr>
+                            <tr><td>17m</td><td>✅</td><td>❌</td><td>Ciclo solar alto</td></tr>
+                            <tr><td>15m</td><td>✅</td><td>❌</td><td>Ciclo solar alto</td></tr>
+                            <tr><td>12m</td><td>✅</td><td>❌</td><td>Ciclo solar alto</td></tr>
+                            <tr><td>10m</td><td>✅</td><td>❌</td><td>Ciclo solar alto, verano</td></tr>
+                            <tr><td>6m</td><td>✅</td><td>🔶</td><td>Verano (Esporádica-E)</td></tr>
+                        </tbody>
+                    </table>
+                    <caption>Leyenda: ✅ Excelente | 🔶 Buena | ❌ Limitada</caption>
 
                     <!-- Conceptos de Medición -->
                     <h3>Mediciones y Parámetros</h3>
@@ -1292,197 +1480,6 @@
                         <li>123,0 Hz (Tono #18)</li>
                         <li>141,3 Hz (Tono #22)</li>
                     </ul>
-
-                </section>
-
-                <section id="propagacion">
-                    <h2>Propagación de Ondas</h2>
-                    <p>La forma en que viajan las ondas de radio afecta el alcance. El modo de propagación
-                        depende de la frecuencia y las condiciones atmosféricas, especialmente la ionosfera. </p>
-
-                    <h3>Capas de la Ionosfera</h3>
-                    <table>
-                        <tr>
-                            <th>Capa</th>
-                            <th>Altura (km)</th>
-                            <th>Presente</th>
-                            <th>Efecto en Radio</th>
-                        </tr>
-                        <tr>
-                            <td>D </td>
-                            <td>50-90 </td>
-                            <td>Solo de día </td>
-                            <td>Absorbe ondas medias y bajas HF </td>
-                        </tr>
-                        <tr>
-                            <td>E </td>
-                            <td>90-140 </td>
-                            <td>Día (débil noche) </td>
-                            <td>Refleja frecuencias bajas, "Skip" corto </td>
-                        </tr>
-                        <tr>
-                            <td>Es </td>
-                            <td>90-140 </td>
-                            <td>Esporádica </td>
-                            <td>Propagación inesperada VHF/UHF </td>
-                        </tr>
-                        <tr>
-                            <td>F1 </td>
-                            <td>140-250 </td>
-                            <td>Solo de día </td>
-                            <td>Se fusiona con F2 </td>
-                        </tr>
-                        <tr>
-                            <td>F2 </td>
-                            <td>250-400 </td>
-                            <td>Día y noche </td>
-                            <td>Principal para DX en HF (larga distancia) </td>
-                        </tr>
-                    </table>
-
-                    <h3>Tipos de Propagación</h3>
-                    <dl class="glossary">
-                        <dt>1. PROPAGACIÓN POR ONDA DE TIERRA (Ground Wave)</dt>
-                        <dd>
-                            <ul>
-                                <li>Frecuencias: LF, MF, HF bajas (< 3 MHz)</li>
-                                <li>Alcance: 50-200 km</li>
-                                <li>Características: Sigue la curvatura de la Tierra, muy estable</li>
-                                <li>Uso: Banda 160m, CB</li>
-                            </ul>
-                        </dd>
-                        <dt>2. PROPAGACIÓN IONOSFÉRICA (Sky Wave)</dt>
-                        <dd>
-                            <ul>
-                                <li>Frecuencias: HF (3-30 MHz)</li>
-                                <li>Alcance: 500 km - mundial</li>
-                                <li>Características: Reflejo en ionosfera, varía con hora, estación, ciclo solar, múltiples "saltos".</li>
-                                <li>Mejor momento: </li>
-                                <ul>
-                                    <li>Bandas altas (20m, 15m, 10m): Día</li>
-                                    <li>Bandas bajas (80m, 40m): Noche</li>
-                                    <li>Banda mixta (40m): Transiciones</li>
-                                </ul>
-                            </ul>
-                        </dd>
-                        <dt>3. PROPAGACIÓN LÍNEA DE VISTA (Line of Sight)</dt>
-                        <dd>
-                            <ul>
-                                <li>Frecuencias: VHF, UHF, Microondas (&gt; 30 MHz)</li>
-                                <li>Alcance: 5-15 km (portátil), 50-100 km (con repetidor), altura considerable: 100-200 km.</li>
-                                <li>Características: No atraviesa obstáculos sólidos.</li>
-                            </ul>
-                        </dd>
-                        <dt>4. PROPAGACIÓN TROPOSFÉRICA</dt>
-                        <dd>
-                            <ul>
-                                <li>Frecuencias: VHF, UHF</li>
-                                <li>Alcance: 200-800 km</li>
-                                <li>Características: Ductos troposféricos, inversión térmica, condiciones meteorológicas específicas.</li>
-                            </ul>
-                        </dd>
-                        <dt>5. PROPAGACIÓN ESPORÁDICA-E (Es)</dt>
-                        <dd>
-                            <ul>
-                                <li>Frecuencias: VHF, ocasionalmente UHF</li>
-                                <li>Alcance: 500-2500 km</li>
-                                <li>Características: Impredecible, más frecuente en verano, Permite DX en 6m y 2m.</li>
-                            </ul>
-                        </dd>
-                        <dt>6. PROPAGACIÓN POR LLUVIA/METEOROS</dt>
-                        <dd>
-                            <ul>
-                                <li>Frecuencias: VHF, UHF</li>
-                                <li>Alcance: 500-2000 km</li>
-                                <li>Características: Reflexión en estelas de meteoritos, Ráfagas cortas (< 1 segundo), útil para modos digitales rápidos.</li>
-                            </ul>
-                        </dd>
-                    </dl>
-                    
-                    <h3>Frecuencia Crítica y MUF</h3>
-                    <table>
-                        <tr>
-                            <th>Término</th>
-                            <th>Definición</th>
-                        </tr>
-                        <tr>
-                            <td>MUF</td>
-                            <td>Maximum Usable Frequency: Frecuencia máxima utilizable para una distancia.</td>
-                        </tr>
-                        <tr>
-                            <td>LUF</td>
-                            <td>Lowest Usable Frequency: Frecuencia mínima (por debajo, demasiada absorción).</td>
-                        </tr>
-                        <tr>
-                            <td>FOT</td>
-                            <td>Optimum Working Frequency: Frecuencia óptima de trabajo (85% de MUF).</td>
-                        </tr>
-                    </table>
-
-                    <h3>Indices de Propagación</h3>
-                    <table>
-                        <tr>
-                            <th>Índice</th>
-                            <th>Qué mide</th>
-                            <th>Valores</th>
-                        </tr>
-                        <tr>
-                            <td>SFI (Solar Flux Index)</td>
-                            <td>Actividad solar</td>
-                            <td>70-300 (mejor propagación con valores altos)</td>
-                        </tr>
-                        <tr>
-                            <td>SSN (Sunspot Number)</td>
-                            <td>Manchas solares</td>
-                            <td>0-300 (más manchas, mejor HF)</td>
-                        </tr>
-                        <tr>
-                            <td>A-Index</td>
-                            <td>Perturbaciones geomagnéticas</td>
-                            <td>0-400 (0-7 excelente, >50 tormentas)</td>
-                        </tr>
-                        <tr>
-                            <td>K-Index</td>
-                            <td>Perturbaciones locales (3h)</td>
-                            <td>0-9 (0-2 bueno, >5 mala propagación)</td>
-                        </tr>
-                    </table>
-
-                    <h3>Predicción de propagación</h3>
-
-                    <p>Mejores herramientas online:</p>
-                    <ul>
-                        <li>VOACAP: Predicción profesional</li>
-                        <li>HamQTH.com: Propagación en tiempo real</li>
-                        <li>DX Watch: Spots en vivo</li>
-                        <li>WSPRnet: Datos de propagación globales</li>
-                        <li>PSKReporter: Reportes automáticos</li>
-                    </ul>
-
-                    <h3>Horarios optimos por banda</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Banda</th>
-                                <th>Día</th>
-                                <th>Noche</th>
-                                <th>Mejor estación</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>160m</td><td>❌</td><td>✅</td><td>Invierno</td></tr>
-                            <tr><td>80m</td><td>❌</td><td>✅</td><td>Todo el año</td></tr>
-                            <tr><td>40m</td><td>🔶</td><td>✅</td><td>Todo el año</td></tr>
-                            <tr><td>30m</td><td>✅</td><td>✅</td><td>Todo el año</td></tr>
-                            <tr><td>20m</td><td>✅</td><td>🔶</td><td>Todo el año</td></tr>
-                            <tr><td>17m</td><td>✅</td><td>❌</td><td>Ciclo solar alto</td></tr>
-                            <tr><td>15m</td><td>✅</td><td>❌</td><td>Ciclo solar alto</td></tr>
-                            <tr><td>12m</td><td>✅</td><td>❌</td><td>Ciclo solar alto</td></tr>
-                            <tr><td>10m</td><td>✅</td><td>❌</td><td>Ciclo solar alto, verano</td></tr>
-                            <tr><td>6m</td><td>✅</td><td>🔶</td><td>Verano (Esporádica-E)</td></tr>
-                        </tbody>
-                    </table>
-                    <caption>Leyenda: ✅ Excelente | 🔶 Buena | ❌ Limitada</caption>
 
                 </section>
 
