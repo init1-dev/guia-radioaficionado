@@ -27,6 +27,10 @@ export const glossaryTerms = {
         ['SHF', 'S.H.F.', 'S.H.F'],
         'Super High Frequency: Bandas de microondas por encima de 3 GHz.'
     ),
+    'EHF': createTerm(
+        ['EHF', 'E.H.F.', 'Extremely High Frequency', 'Frecuencia Extremadamente Alta'],
+        'Extremely High Frequency (Frecuencia Extremadamente Alta): Bandas entre 30-300 GHz, utilizadas en aplicaciones especializadas como radares, satélites y comunicaciones punto a punto.'
+    ),
     
     // Modos de Operación
     'AM': createTerm(
@@ -311,7 +315,7 @@ export const glossaryTerms = {
     ),
     'PEP': createTerm(
         ['PEP', 'P.E.P.', 'Peak Envelope Power', 'Potencia Pico'],
-        'Peak Envelope Power (Potencia Pico de Envolvente): Potencia máxima instantánea durante la transmisión, especialmente importante en modos SSB.'
+        'Peak Envelope Power (Potencia Pico de Envolvente o PEP): Potencia máxima instantánea durante la transmisión, especialmente importante en modos SSB.'
     ),
     'PRA': createTerm(
         ['PRA', 'p.r.a.', 'Potencia Radiada Aparente'],
