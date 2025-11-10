@@ -225,6 +225,27 @@ export const glossaryTerms = {
 
 const excludedTAgs = ['SCRIPT', 'STYLE', 'TEXTAREA', 'CODE', 'PRE','H3', 'H4'];
 
+// Crear una expresión regular que combine todas las variantes de términos
+const createGlossaryRegex = () => {
+    const allTerms = Object.values(glossaryTerms).reduce((acc, { variants }) => {
+        return acc.concat(variants.map(v => v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+    }, []);
+    
+    // Ordenar términos por longitud (más largos primero) para manejar correctamente términos compuestos
+    allTerms.sort((a, b) => b.length - a.length);
+    
+    return new RegExp(`\\b(${allTerms.join('|')})\\b`, 'gi');
+};
+
+// Función para buscar término en el glosario sin distinguir mayúsculas/minúsculas
+function findGlossaryTerm(term) {
+    return Object.values(glossaryTerms).find(({ variants }) => 
+        variants.some(v => v.toLowerCase() === term.toLowerCase())
+    );
+}
+
+// Función para procesar el texto y agregar tooltips
+
 // Función para crear un tooltip
 function createTooltip(element, definition) {
     const rect = element.getBoundingClientRect();
@@ -287,23 +308,13 @@ function processText(node) {
         let fragment = document.createDocumentFragment();
         let lastIndex = 0;
 
-        // Crear una expresión regular que combine todas las variantes
-        const allTerms = Object.values(glossaryTerms).reduce((acc, { variants }) => {
-            return acc.concat(variants.map(v => v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
-        }, []);
-        
-        // Ordenar términos por longitud (más largos primero) para manejar correctamente términos compuestos
-        allTerms.sort((a, b) => b.length - a.length);
-        
-        const regex = new RegExp(`\\b(${allTerms.join('|')})\\b`, 'gi');
+        // Usar la regex global para encontrar términos
+        const regex = createGlossaryRegex();
         let match;
 
         while ((match = regex.exec(text)) !== null) {
             const term = match[0];
-            // Encontrar el termData correspondiente
-            const termData = Object.values(glossaryTerms).find(({ variants }) => 
-                variants.some(v => v.toLowerCase() === term.toLowerCase())
-            );
+            const termData = findGlossaryTerm(term);
 
             if (termData) {
                 modified = true;
