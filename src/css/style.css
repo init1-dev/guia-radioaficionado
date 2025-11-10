@@ -215,6 +215,12 @@ table .letra-itu {
     text-align: center;
 }
 
+table .subtone-pmr {
+    font-weight: bold;
+    color: orange;
+    text-align: center;
+}
+
 th,
 td {
     padding: 8px 6px;

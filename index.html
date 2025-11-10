@@ -617,23 +617,71 @@
                         <tr>
                             <th>Canal</th>
                             <th>Frecuencia (MHz)</th>
+                            <th>Canal</th>
+                            <th>Frecuencia (MHz)</th>
                         </tr>
-                        <tr><td>Canal 1</td><td>446.00625</td></tr>
-                        <tr><td>Canal 2</td><td>446.01875</td></tr>
-                        <tr><td>Canal 3</td><td>446.03125</td></tr>
-                        <tr><td>Canal 4</td><td>446.04375</td></tr>
-                        <tr><td>Canal 5</td><td>446.05625</td></tr>
-                        <tr><td>Canal 6</td><td>446.06875</td></tr>
-                        <tr><td>Canal 7</td><td>446.08125</td></tr>
-                        <tr><td>Canal 8</td><td>446.09375</td></tr>
-                        <tr><td>Canal 9</td><td>446.10625</td></tr>
-                        <tr><td>Canal 10</td><td>446.11875</td></tr>
-                        <tr><td>Canal 11</td><td>446.13125</td></tr>
-                        <tr><td>Canal 12</td><td>446.14375</td></tr>
-                        <tr><td>Canal 13</td><td>446.15625</td></tr>
-                        <tr><td>Canal 14</td><td>446.16875</td></tr>
-                        <tr><td>Canal 15</td><td>446.18125</td></tr>
-                        <tr><td>Canal 16</td><td>446.19375</td></tr>
+                        <tr>
+                            <td class="subtone-pmr">1</td><td>446.00625</td>
+                            <td class="subtone-pmr">9</td><td>446.10625</td>
+                        </tr>
+                        <tr>
+                            <td class="subtone-pmr">2</td><td>446.01875</td>
+                            <td class="subtone-pmr">10</td><td>446.11875</td>
+                        </tr>
+                        <tr>
+                            <td class="subtone-pmr">3</td><td>446.03125</td>
+                            <td class="subtone-pmr">11</td><td>446.13125</td>
+                        </tr>
+                        <tr>
+                            <td class="subtone-pmr">4</td><td>446.04375</td>
+                            <td class="subtone-pmr">12</td><td>446.14375</td>
+                        </tr>
+                        <tr>
+                            <td class="subtone-pmr">5</td><td>446.05625</td>
+                            <td class="subtone-pmr">13</td><td>446.15625</td>
+                        </tr>
+                        <tr>
+                            <td class="subtone-pmr">6</td><td>446.06875</td>
+                            <td class="subtone-pmr">14</td><td>446.16875</td>
+                        </tr>
+                        <tr>
+                            <td class="subtone-pmr">7</td><td>446.08125</td>
+                            <td class="subtone-pmr">15</td><td>446.18125</td>
+                        </tr>
+                        <tr>
+                            <td class="subtone-pmr">8</td><td>446.09375</td>
+                            <td class="subtone-pmr">16</td><td>446.19375</td>
+                        </tr>
+                    </table>
+
+                    <h3>Tabla de subtonos (CTCSS) para PMR</h3>
+                    <p>En PMR446, para la comunicación normal entre usuarios la frecuencia del subtono (CTCSS) es siempre la misma para la <b>Recepción</b> (RX) y la <b>Transmisión</b> (TX) si quiere que su grupo se escuche mutuamente.</p>
+                    <ul>
+                        <li><b>RX CTCSS</b> (<b>Tone Squelch</b>): El filtro que mantiene su radio en silencio hasta que detecta ese tono.</li>
+                        <li><b>TX CTCSS</b> (<b>Tone</b>): El tono que su radio emite junto con su voz.</li>
+                    </ul>
+                    <p><i>Si su radio está en modo <b>TSQL</b> (Tone Squelch) y tiene 100.0Hz en RX y 100.0Hz en TX, solo se abrirá para escuchar a quienes transmitan con 100.0Hz.</i></p>
+                    
+                    <p>A continuación se muestran los 38 subtonos CTCSS (en Hz) con su número correspondiente:</p>
+                    <table>
+                        <tr>
+                            <th>Nº</th><th>Freq. (Hz)</th>
+                            <th>Nº</th><th>Freq. (Hz)</th>
+                            <th>Nº</th><th>Freq. (Hz)</th>
+                        </tr>
+                        <tr><td class="subtone-pmr">01</td><td>67.0</td><td class="subtone-pmr">14</td><td>107.2</td><td class="subtone-pmr">27</td><td>167.9</td></tr>
+                        <tr><td class="subtone-pmr">02</td><td>71.9</td><td class="subtone-pmr">15</td><td>110.9</td><td class="subtone-pmr">28</td><td>173.8</td></tr>
+                        <tr><td class="subtone-pmr">03</td><td>74.4</td><td class="subtone-pmr">16</td><td>114.8</td><td class="subtone-pmr">29</td><td>179.9</td></tr>
+                        <tr><td class="subtone-pmr">04</td><td>77.0</td><td class="subtone-pmr">17</td><td>118.8</td><td class="subtone-pmr">30</td><td>186.2</td></tr>
+                        <tr><td class="subtone-pmr">05</td><td>79.7</td><td class="subtone-pmr">18</td><td>123.0</td><td class="subtone-pmr">31</td><td>192.8</td></tr>
+                        <tr><td class="subtone-pmr">06</td><td>82.5</td><td class="subtone-pmr">19</td><td>127.3</td><td class="subtone-pmr">32</td><td>203.5</td></tr>
+                        <tr><td class="subtone-pmr">07</td><td>85.4</td><td class="subtone-pmr">20</td><td>131.8</td><td class="subtone-pmr">33</td><td>210.7</td></tr>
+                        <tr><td class="subtone-pmr">08</td><td>88.5</td><td class="subtone-pmr">21</td><td>136.5</td><td class="subtone-pmr">34</td><td>218.1</td></tr>
+                        <tr><td class="subtone-pmr">09</td><td>91.5</td><td class="subtone-pmr">22</td><td>141.3</td><td class="subtone-pmr">35</td><td>225.7</td></tr>
+                        <tr><td class="subtone-pmr">10</td><td>94.8</td><td class="subtone-pmr">23</td><td>146.2</td><td class="subtone-pmr">36</td><td>233.6</td></tr>
+                        <tr><td class="subtone-pmr">11</td><td>97.4</td><td class="subtone-pmr">24</td><td>151.4</td><td class="subtone-pmr">37</td><td>241.8</td></tr>
+                        <tr><td class="subtone-pmr">12</td><td>100.0</td><td class="subtone-pmr">25</td><td>156.7</td><td class="subtone-pmr">38</td><td>250.3</td></tr>
+                        <tr><td class="subtone-pmr">13</td><td>103.5</td><td class="subtone-pmr">26</td><td>162.2</td><td class="subtone-pmr"></td><td></td></tr>
                     </table>
                 </section>
 
