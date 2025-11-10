@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guía del Radioaficionado v1.0</title>
-  <script type="module" crossorigin src="./assets/index-EQpAfODy.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bb_fFVjp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guía del Radioaficionado</title>
+  <script type="module" crossorigin src="./assets/index-CEB7SEp6.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-D53u5x2C.css">
 </head>
 
 <body>
@@ -31,21 +31,6 @@
                 <h3>Contenido</h3>
                 <button id="toc-close-btn" aria-label="Cerrar contenido">&times;</button>
                 <ul id="index-list">
-                    <!-- <li><a href="#bandas-frecuencias" class="toc-link">1. Tabla de Bandas y Frecuencias</a></li>
-                    <li><a href="#banda-ciudadana" class="toc-link">2. Banda Ciudadana (CB)</a></li>
-                    <li><a href="#modos-emision" class="toc-link">3. Modos de Emisión</a></li>
-                    <li><a href="#indicativos" class="toc-link">4. Sistema de Indicativos</a></li>
-                    <li><a href="#conceptos-clave" class="toc-link">5. Conceptos Clave</a></li>
-                    <li><a href="#subtonos" class="toc-link">6. Subtonos CTCSS y DCS</a></li>
-                    <li><a href="#propagacion" class="toc-link">7. Propagación de Ondas</a></li>
-                    <li><a href="#repetidores" class="toc-link">8. Repetidores</a></li>
-                    <li><a href="#codigos-q" class="toc-link">9. Códigos Q y Abreviaturas</a></li>
-                    <li><a href="#procedimientos" class="toc-link">10. Procedimientos Operativos</a></li>
-                    <li><a href="#consejos-principiantes" class="toc-link">Consejos para Principiantes</a></li>
-                    <li><a href="#software" class="toc-link">Software Útil</a></li>
-                    <li><a href="#recursos" class="toc-link">Recursos y Contactos</a></li>
-                    <li><a href="#glosario" class="toc-link">Glosario Rápido</a></li>
-                    <li><a href="#emergencia" class="toc-link">Contactos de Emergencia</a></li> -->
                 </ul>
             </nav>
 
@@ -68,21 +53,27 @@
                     <img src="assets/images/frecuencias3.png" alt="tipos de frecuencia">
                     <small class="leyenda">Rangos de frecuencias</small>
 
-                    <h4><u>HF (High Frequency / Alta Frecuencia)</u></h4>
+                    <h4 id="HF"><u>
+                        <a href="#bandas-hf">HF (High Frequency / Alta Frecuencia)</a>
+                    </u></h4>
                     <ul>
                         <li><b>Rango de frecuencia</b>: 3 MHz a 30 MHz.</li>
                         <li><b>Características</b>: Propagación de largo alcance, adecuada para comunicarse a través de continentes. Las ondas pueden rebotar en la ionosfera.</li>
                         <li><b>Usos</b>: Radioaficionados, aviación militar y de larga distancia, y comunicaciones de emergencia en áreas remotas.</li>
                     </ul>
 
-                    <h4><u>VHF (Very High Frequency / Muy Alta Frecuencia)</u></h4>
+                    <h4 id="VHF"><u>
+                        <a href="#bandas-vhf">VHF (Very High Frequency / Muy Alta Frecuencia)</a>
+                    </u></h4>
                     <ul>
                         <li><b>Rango de frecuencia</b>: 30 MHz a 300 MHz.</li>
                         <li><b>Características</b>: Requiere línea de visión, pero puede cubrir largas distancias en campos abiertos o en el mar. Las señales se atenúan más por obstáculos que las de UHF.</li>
                         <li><b>Usos</b>: Comunicaciones aéreas, marítimas, y de radioaficionados en frecuencias de campo abierto.</li>
                     </ul>
 
-                    <h4><u>UHF (Ultra High Frequency / Ultra Alta Frecuencia)</u></h4>
+                    <h4 id="UHF"><u>
+                        <a href="#bandas-uhf">UHF (Ultra High Frequency / Ultra Alta Frecuencia)</a>
+                    </u></h4>
                     <ul>
                         <li><b>Rango de frecuencia</b>: 300 MHz a 3 GHz.</li>
                         <li><b>Características</b>: Las ondas son más cortas, lo que les permite penetrar mejor los edificios, árboles y otros obstáculos. Consume más batería que las radios VHF.</li>
@@ -124,7 +115,7 @@
                         </tr>
                     </table>
 
-                    <h3>Bandas HF (Alta frecuencia) - Comunicaciones a larga distancia</h3>
+                    <h3 id="bandas-hf">Bandas HF (Alta frecuencia) - Comunicaciones a larga distancia</h3>
                     <table>
                         <tr>
                             <th>Banda</th>
@@ -218,7 +209,7 @@
                         </tr>
                     </table>
 
-                    <h3>Bandas VHF (Muy alta frecuencia) - Comunicaciones Locales/Regionales</h3>
+                    <h3 id="bandas-vhf">Bandas VHF (Muy alta frecuencia) - Comunicaciones Locales/Regionales</h3>
                     <table>
                         <tr>
                             <th>Banda</th>
@@ -258,7 +249,7 @@
                         </tr>
                     </table>
 
-                    <h3>Bandas UHF (Ultra Alta Frecuencia) - Comunicaciones Locales</h3>
+                    <h3 id="bandas-uhf">Bandas UHF (Ultra Alta Frecuencia) - Comunicaciones Locales</h3>
                     <table>
                         <tr>
                             <th>Banda</th>
@@ -960,17 +951,72 @@
                 <section id="conceptos-clave">
                     <h2>Conceptos Clave de Radioafición</h2>
 
-                    <h3>Relación Frecuencia - Longitud de Onda</h3>
-                    <p>La longitud de onda (λ) se relaciona con la frecuencia (f) mediante la
-                        fórmula:<br><b>λ (metros) = 300 / f (MHz)</b> </p>
-                    <ul>
-                        <li>Ejemplo: <strong>14 MHz</strong> &rightarrow; 300/14 = <strong>21.4
-                                metros</strong> ("Banda de 20m") </li>
-                        <li>Ejemplo: <strong>144 MHz</strong> &rightarrow; 300/144 = <strong>2.08
-                                metros</strong> ("Banda de 2m") </li>
-                        <li>Ejemplo: <strong>435 MHz</strong> &rightarrow; 300/435 = <strong>0.69
-                                metros</strong> ("Banda de 70cm") </li>
-                    </ul>
+                    <!-- Conceptos Fundamentales -->
+                    <h3>Conceptos Básicos</h3>
+                    <dl class="conceptos">
+                        <dt>Frecuencia</dt>
+                        <dd><strong>Definición:</strong> Número de oscilaciones por segundo de una onda electromagnética.</dd>
+                        <dd><strong>Ejemplo:</strong> 14.200 MHz significa 14.200.000 oscilaciones por segundo.</dd>
+
+                        <dt>Longitud de Onda (λ)</dt>
+                        <dd><strong>Definición:</strong> Distancia entre dos puntos consecutivos de una onda que tienen la misma fase.</dd>
+                        <dd><strong>Fórmula:</strong> λ (metros) = 300 / f (MHz)</dd>
+                        <dd><strong>Ejemplo 1:</strong> En 14 MHz → 300/14 = 21.4 metros (Banda de 20m)</dd>
+                        <dd><strong>Ejemplo 2:</strong> En 144 MHz → 300/144 = 2.08 metros (Banda de 2m)</dd>
+                        <dd><strong>Ejemplo 3:</strong> En 435 MHz → 300/435 = 0.69 metros (Banda de 70cm)</dd>
+
+                        <dt>Potencia (W)</dt>
+                        <dd><strong>Definición:</strong> Energía transmitida por unidad de tiempo.</dd>
+                        <dd><strong>Tipos:</strong> 
+                            <ul>
+                                <li>Potencia Portadora: Nivel constante en AM/FM</li>
+                                <li>PEP (Peak Envelope Power): Potencia máxima en SSB</li>
+                            </ul>
+                        </dd>
+
+                        <dt>Modulación</dt>
+                        <dd><strong>Definición:</strong> Proceso de modificar una onda portadora para transmitir información.</dd>
+                        <dd><strong>Tipos principales:</strong>
+                            <ul>
+                                <li>AM: Varía la amplitud</li>
+                                <li>FM: Varía la frecuencia</li>
+                                <li>SSB: Transmite solo una banda lateral</li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <!-- Conceptos de Propagación -->
+                    <h3>Propagación de Ondas</h3>
+                    <dl class="conceptos">
+                        <dt>Ionosfera</dt>
+                        <dd><strong>Definición:</strong> Capa de la atmósfera que refleja ondas de radio HF.</dd>
+                        <dd><strong>Analogía:</strong> Actúa como un espejo para las ondas de radio, permitiendo comunicaciones a larga distancia.</dd>
+
+                        <dt>MUF (Frecuencia Máxima Utilizable)</dt>
+                        <dd><strong>Definición:</strong> Frecuencia más alta que será reflejada por la ionosfera en un momento dado.</dd>
+                        <dd><strong>Importancia:</strong> Determina qué bandas son útiles para DX según hora/estación.</dd>
+
+                        <dt>Línea de Vista (LoS)</dt>
+                        <dd><strong>Definición:</strong> Propagación directa entre antenas sin obstáculos.</dd>
+                        <dd><strong>Relevancia:</strong> Crucial en VHF/UHF para comunicaciones locales.</dd>
+                    </dl>
+
+                    <!-- Conceptos de Medición -->
+                    <h3>Mediciones y Parámetros</h3>
+                    <dl class="conceptos">
+                        <dt>ROE (SWR)</dt>
+                        <dd><strong>Definición:</strong> Relación entre potencia enviada y reflejada en una antena.</dd>
+                        <dd><strong>Analogía:</strong> Como el rebote de una pelota: cuanto más rebota, menos energía llega al destino.</dd>
+                        <dd><strong>Valor ideal:</strong> 1:1 (sin reflexión). Aceptable hasta 3:1.</dd>
+
+                        <dt>dBm/dB</dt>
+                        <dd><strong>Definición:</strong> Unidad logarítmica para medir potencia/ganancia.</dd>
+                        <dd><strong>Regla práctica:</strong> +3dB = doble potencia, -3dB = mitad de potencia.</dd>
+
+                        <dt>S-Meter (RST)</dt>
+                        <dd><strong>Definición:</strong> Sistema para reportar calidad de señal.</dd>
+                        <dd><strong>Formato:</strong> Readability (1-5), Strength (1-9), Tone (1-9, solo CW).</dd>
+                    </dl>
 
                     <h3>Potencia: Conceptos y Unidades</h3>
                     <dl class="glossary">
@@ -1130,7 +1176,7 @@
                         </tr>
                     </table>
 
-                    <h3>ANCHO DE BANDA</h3>
+                    <h3>Ancho de Banda</h3>
                     <table>
                         <tr>
                             <th>Tipo</th>
@@ -1320,7 +1366,7 @@
                         <dt>3. PROPAGACIÓN LÍNEA DE VISTA (Line of Sight)</dt>
                         <dd>
                             <ul>
-                                <li>Frecuencias: VHF, UHF, Microondas (> 30 MHz)</li>
+                                <li>Frecuencias: VHF, UHF, Microondas (&gt; 30 MHz)</li>
                                 <li>Alcance: 5-15 km (portátil), 50-100 km (con repetidor), altura considerable: 100-200 km.</li>
                                 <li>Características: No atraviesa obstáculos sólidos.</li>
                             </ul>
@@ -1531,62 +1577,165 @@
                 <section id="codigos-q">
                     <h2>Códigos Q y Abreviaturas</h2>
 
-                    <h3>Códigos Q Esenciales</h3>
-                    <table>
+                    <h3>Códigos Q por Categoría</h3>
+                    
+                    <h4>Señal y Calidad</h4>
+                    <table class="codigos-q">
                         <tr>
                             <th>Código</th>
                             <th>Pregunta</th>
-                            <th>Respuesta/Afirmación</th>
+                            <th>Respuesta</th>
+                            <th>Uso Común</th>
                         </tr>
-                        <tr><td>QRZ?</td><td>¿Quién me llama?</td><td>Te está llamando...</td></tr>
-                        <tr><td>QTH </td><td>¿Cuál es tu ubicación? </td><td>Mi ubicación es... </td></tr>
-                        <tr><td>QRL? </td><td>¿Estás ocupado? </td><td>Estoy ocupado </td></tr>
-                        <tr><td>QRM </td><td>¿Hay interferencia? </td><td>Hay interferencia de otras estaciones </td></tr>
-                        <tr><td>QRN </td><td>¿Hay ruido atmosférico? </td><td>Hay ruido (tormentas, etc.) </td></tr>
-                        <tr><td>QRO </td><td>¿Aumento potencia? </td><td>Aumenta potencia </td></tr>
-                        <tr><td>QRP </td><td>¿Reduzco potencia? </td><td>Reduce potencia/Opero en baja potencia </td></tr>
-                        <tr><td>QRS </td><td>¿Transmito más despacio? </td><td>Transmite más despacio </td></tr>
-                        <tr><td>QRT </td><td>¿Dejo de transmitir? </td><td>Dejo de transmitir / Cierro estación </td></tr>
-                        <tr><td>QRV </td><td>¿Estás listo? </td><td>Estoy listo </td></tr>
-                        <tr><td>QRX </td><td>¿Espero? </td><td>Espera (volveré a llamar) </td></tr>
-                        <tr><td>QSB </td><td>¿Mi señal tiene fading? </td><td>Tu señal tiene fading </td></tr>
-                        <tr><td>QSL </td><td>¿Puedes acusar recibo? </td><td>Acuso recibo / Tarjeta QSL </td></tr>
-                        <tr><td>QSO </td><td>¿Puedes comunicar con...? </td><td>Puedo comunicar/Comunicación establecida </td></tr>
-                        <tr><td>QSY </td><td>¿Cambio a otra frecuencia? </td><td>Cambia a [MHz] </td></tr>
-                        <tr><td>QTR </td><td>¿Qué hora es? </td><td>La hora es... </td></tr>
+                        <tr><td>QRK</td><td>¿Legibilidad (1-5)?</td><td>Legibilidad = ...</td><td>Calidad señal</td></tr>
+                        <tr><td>QRM</td><td>¿Interferencias?</td><td>Tengo interferencias</td><td>QRM humano</td></tr>
+                        <tr><td>QRN</td><td>¿Ruido natural?</td><td>Hay ruido atmosférico</td><td>QRM natural</td></tr>
+                        <tr><td>QSB</td><td>¿Señal variable?</td><td>Tu señal fluctúa</td><td>Fading</td></tr>
                     </table>
 
-                    <h3>Abreviaturas Populares (CW/SSB)</h3>
-                    <table>
-                        <tr><th>Abreviatura</th><th>Significado</th></tr>
-                        <tr><td>73</td><td>Saludos cordiales</td></tr>
-                        <tr><td>88</td><td>Amor y besos (raramente usado)</td></tr>
-                        <tr><td>CQ</td><td>Llamada general a todos</td></tr>
-                        <tr><td>DX</td><td>Larga distancia / Contacto internacional</td></tr>
-                        <tr><td>ES</td><td>ES Y, además (en CW)</td></tr>
-                        <tr><td>FB</td><td>Fine Business (Excelente)</td></tr>
-                        <tr><td>GA/GE/GL/GM/GN</td><td>Good Afternoon / Evening / Luck / Morning / Night</td></tr>
-                        <tr><td>HI</td><td>Risa</td></tr>
-                        <tr><td>HR</td><td>Here (Aquí)</td></tr>
-                        <tr><td>HW</td><td>How (Cómo)</td></tr>
-                        <tr><td>OM</td><td>Old Man (Radioaficionado experimentado)</td></tr>
-                        <tr><td>OP</td><td>Operator (Operador)</td></tr>
-                        <tr><td>PSE</td><td>Please (Por favor)</td></tr>
-                        <tr><td>R</td><td>Roger (Recibido)</td></tr>
-                        <tr><td>RIG</td><td>Equipo, transmisor</td></tr>
-                        <tr><td>RPT</td><td>Repeat (Repite)</td></tr>
-                        <tr><td>RST</td><td>Readability-Strength-Tone (Reporte de señal)</td></tr>
-                        <tr><td>RX</td><td>Receiver (Receptor)</td></tr>
-                        <tr><td>SRI</td><td>Sorry (Perdona)</td></tr>
-                        <tr><td>TKS/TNX</td><td>Thanks (Gracias)</td></tr>
-                        <tr><td>TU</td><td>Thank You (Gracias)</td></tr>
-                        <tr><td>TX</td><td>Transmitter (Transmisor)</td></tr>
-                        <tr><td>UR</td><td>Your (Tu)</td></tr>
-                        <tr><td>VY</td><td>Very (Muy)</td></tr>
-                        <tr><td>WX</td><td>Weather (Tiempo meteorológico)</td></tr>
-                        <tr><td>XYL</td><td>Wife (Esposa)</td></tr>
-                        <tr><td>YL</td><td>Young Lady (Señorita, operadora femenina)</td></tr>
+                    <h4>Control y Potencia</h4>
+                    <table class="codigos-q">
+                        <tr>
+                            <th>Código</th>
+                            <th>Pregunta</th>
+                            <th>Respuesta</th>
+                            <th>Uso Común</th>
+                        </tr>
+                        <tr><td>QRP</td><td>¿Bajo potencia?</td><td>Baja potencia</td><td><5W</td></tr>
+                        <tr><td>QRO</td><td>¿Subo potencia?</td><td>Alta potencia</td><td>>100W</td></tr>
+                        <tr><td>QRS</td><td>¿Más despacio?</td><td>Transmite lento</td><td>CW</td></tr>
+                        <tr><td>QRQ</td><td>¿Más rápido?</td><td>Transmite rápido</td><td>CW</td></tr>
                     </table>
+
+                    <h4>Gestión QSO</h4>
+                    <table class="codigos-q">
+                        <tr>
+                            <th>Código</th>
+                            <th>Pregunta</th>
+                            <th>Respuesta</th>
+                            <th>Uso Común</th>
+                        </tr>
+                        <tr><td>QRZ</td><td>¿Quién llama?</td><td>Te llama...</td><td>ID</td></tr>
+                        <tr><td>QTH</td><td>¿Ubicación?</td><td>Mi QTH es...</td><td>Localización</td></tr>
+                        <tr><td>QRL</td><td>¿Frecuencia ocupada?</td><td>Frecuencia en uso</td><td>Cortesía</td></tr>
+                        <tr><td>QRV</td><td>¿Listo?</td><td>Listo</td><td>Disponible</td></tr>
+                        <tr><td>QRX</td><td>¿Esperas?</td><td>Espero</td><td>Pausa</td></tr>
+                        <tr><td>QRT</td><td>¿Fin transmisión?</td><td>Cierro estación</td><td>Despedida</td></tr>
+                        <tr><td>QSL</td><td>¿Recibido?</td><td>Recibido</td><td>Confirmación</td></tr>
+                        <tr><td>QSY</td><td>¿Cambio QRG?</td><td>Cambio a...</td><td>QRG nueva</td></tr>
+                        <tr><td>QTR</td><td>¿Hora?</td><td>Son las...</td><td>Tiempo</td></tr>
+                    </table>
+
+                    <h3>Abreviaturas por Categoría</h3>
+
+                    <h4>Operativas Básicas</h4>
+                    <table class="abreviaturas">
+                        <tr>
+                            <th>Abreviatura</th>
+                            <th>Significado</th>
+                            <th>Uso Común</th>
+                        </tr>
+                        <tr><td>CQ</td><td>Llamada general</td><td>Inicio QSO</td></tr>
+                        <tr><td>DX</td><td>Larga distancia</td><td>Internacional</td></tr>
+                        <tr><td>PSE</td><td>Please (Por favor)</td><td>Cortesía</td></tr>
+                        <tr><td>TKS/TNX</td><td>Thanks (Gracias)</td><td>Agradecimiento</td></tr>
+                        <tr><td>RPT</td><td>Repeat (Repite)</td><td>No copiado</td></tr>
+                        <tr><td>R</td><td>Roger (Recibido)</td><td>Confirmación</td></tr>
+                    </table>
+
+                    <h4>Equipo y Técnica</h4>
+                    <table class="abreviaturas">
+                        <tr>
+                            <th>Abreviatura</th>
+                            <th>Significado</th>
+                            <th>Uso</th>
+                        </tr>
+                        <tr><td>RIG</td><td>Equipo/Radio</td><td>Descripción estación</td></tr>
+                        <tr><td>ANT</td><td>Antena</td><td>Descripción sistema</td></tr>
+                        <tr><td>RX</td><td>Recepción</td><td>Escucha</td></tr>
+                        <tr><td>TX</td><td>Transmisión</td><td>Emisión</td></tr>
+                        <tr><td>PWR</td><td>Potencia</td><td>Watios usados</td></tr>
+                        <tr><td>RST</td><td>ReadabilityStrengthTone</td><td>Reporte señal</td></tr>
+                    </table>
+
+                    <h4>Cortesía y Social</h4>
+                    <table class="abreviaturas">
+                        <tr>
+                            <th>Abreviatura</th>
+                            <th>Significado</th>
+                            <th>Contexto</th>
+                        </tr>
+                        <tr><td>73</td><td>Saludos cordiales</td><td>Despedida formal</td></tr>
+                        <tr><td>88</td><td>Besos y abrazos</td><td>Raramente usado</td></tr>
+                        <tr><td>OM</td><td>Old Man (colega)</td><td>Respeto</td></tr>
+                        <tr><td>YL</td><td>Young Lady</td><td>Operadora</td></tr>
+                        <tr><td>XYL</td><td>Ex-YL (esposa)</td><td>Familiar</td></tr>
+                        <tr><td>HI</td><td>Risa (CW)</td><td>Humor</td></tr>
+                    </table>
+
+                    <h4>Saludos y Tiempo</h4>
+                    <table class="abreviaturas">
+                        <tr>
+                            <th>Abreviatura</th>
+                            <th>Significado</th>
+                            <th>Uso</th>
+                        </tr>
+                        <tr><td>GM</td><td>Good Morning</td><td>Buenos días</td></tr>
+                        <tr><td>GA</td><td>Good Afternoon</td><td>Buenas tardes</td></tr>
+                        <tr><td>GE</td><td>Good Evening</td><td>Buenas noches</td></tr>
+                        <tr><td>GN</td><td>Good Night</td><td>Hasta mañana</td></tr>
+                        <tr><td>GL</td><td>Good Luck</td><td>Suerte</td></tr>
+                        <tr><td>WX</td><td>Weather</td><td>Clima</td></tr>
+                    </table>
+
+                    <h3>Sistema de Reporte RST</h3>
+                    <div class="rst-explanation">
+                        <p>El sistema RST es el estándar internacional para reportar la calidad de una señal recibida:</p>
+                        
+                        <dl class="rst-components">
+                            <dt>R - Readability (Legibilidad) - ¿Qué tan bien se entiende?</dt>
+                            <dd>
+                                <ol>
+                                    <li>Ilegible, señal apenas perceptible</li>
+                                    <li>Apenas legible, palabras ocasionales</li>
+                                    <li>Legible con dificultad considerable</li>
+                                    <li>Legible con poca dificultad</li>
+                                    <li>Perfectamente legible</li>
+                                </ol>
+                            </dd>
+
+                            <dt>S - Strength (Intensidad) - ¿Qué tan fuerte llega?</dt>
+                            <dd>
+                                <ul>
+                                    <li>S1-S3: Señales apenas perceptibles</li>
+                                    <li>S4-S6: Señales de débiles a buenas</li>
+                                    <li>S7-S8: Señales moderadamente fuertes</li>
+                                    <li>S9: Señales muy fuertes</li>
+                                    <li>S9+: Señales excepcionalmente fuertes</li>
+                                </ul>
+                            </dd>
+
+                            <dt>T - Tone (Tono) - Solo para CW, ¿qué tan limpia es la nota?</dt>
+                            <dd>
+                                <ul>
+                                    <li>T1-T3: Nota muy áspera o chirriante</li>
+                                    <li>T4-T6: Nota con algo de música pero tosca</li>
+                                    <li>T7-T8: Nota musical buena</li>
+                                    <li>T9: Tono perfecto, cristalino</li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <div class="rst-examples">
+                            <p><strong>Ejemplos comunes:</strong></p>
+                            <ul>
+                                <li><code>59</code> o <code>599</code>: Señal perfecta (usado por cortesía en concursos)</li>
+                                <li><code>57</code>: Perfectamente legible, señal moderada</li>
+                                <li><code>339</code>: Difícil de leer, débil pero buen tono (CW)</li>
+                                <li><code>449</code>: Legible con esfuerzo, señal débil, tono excelente</li>
+                            </ul>
+                        </div>
+                    </div>
 
                     <h3>Alfabeto Fonético Internacional (ITU)</h3>
                     <table>
