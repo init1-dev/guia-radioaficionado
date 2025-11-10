@@ -152,7 +152,7 @@ export const glossaryTerms = {
         'Transmisión: Abreviatura para referirse a la emisión de señales.'
     ),
     'PWR': createTerm(
-        ['PWR', 'Power', 'Potencia'],
+        ['PWR', 'Power'],
         'Power: Potencia en vatios usada en la transmisión.'
     ),
     'WX': createTerm(
@@ -299,7 +299,29 @@ export const glossaryTerms = {
         ['GPS', 'G.P.S.', 'Sistema de Posicionamiento Global'],
         'Global Positioning System: Sistema de navegación por satélite usado para determinar ubicación precisa.'
     ),
+    'REMER': createTerm(
+        ['REMER', 'R.E.M.E.R.', 'Red Radio Emergencia', 'Red de Emergencia'],
+        'Red de Emergencia de Radio: Organización de radioaficionados voluntarios que colaboran con Protección Civil en situaciones de emergencia en España.'
+    ),
     
+    // Medidas y Potencia
+    'dB': createTerm(
+        ['dB', 'Decibelio', 'Decibel', 'dBm'],
+        'Unidad logarítmica para medir relaciones de potencia. +3dB duplica la potencia, -3dB la reduce a la mitad. dBm: potencia referida a 1 milivatios.'
+    ),
+    'PEP': createTerm(
+        ['PEP', 'P.E.P.', 'Peak Envelope Power', 'Potencia Pico'],
+        'Peak Envelope Power (Potencia Pico de Envolvente): Potencia máxima instantánea durante la transmisión, especialmente importante en modos SSB.'
+    ),
+    'PRA': createTerm(
+        ['PRA', 'p.r.a.', 'Potencia Radiada Aparente'],
+        'Potencia Radiada Aparente: Potencia efectiva que una antena irradia en su dirección de máxima ganancia, considerando las pérdidas del sistema y la ganancia de la antena.'
+    ),
+    'PIRE': createTerm(
+        ['PIRE', 'p.i.r.e.', 'Potencia Isotrópica Radiada Equivalente', 'EIRP'],
+        'Potencia Isotrópica Radiada Equivalente: Cantidad de potencia que emitiría una antena isotrópica teórica para producir la densidad de potencia observada en la dirección de máxima ganancia.'
+    ),
+
     // Equipamiento
     'Dipolo': createTerm(
         ['Dipolo', 'Dipole', 'Antena Dipolo'],
@@ -354,6 +376,30 @@ export const glossaryTerms = {
     'MUF': createTerm(
         ['MUF', 'M.U.F.', 'Frecuencia Máxima Utilizable'],
         'Maximum Usable Frequency: Frecuencia máxima utilizable para comunicación ionosférica.'
+    ),
+    'LUF': createTerm(
+        ['LUF', 'L.U.F.', 'Lowest Usable Frequency', 'Frecuencia Mínima Utilizable'],
+        'Lowest Usable Frequency: Frecuencia mínima utilizable por debajo de la cual hay demasiada absorción en la ionosfera.'
+    ),
+    'FOT': createTerm(
+        ['FOT', 'F.O.T.', 'Frecuencia Óptima de Trabajo', 'Optimum Working Frequency'],
+        'Optimum Working Frequency: Frecuencia óptima de trabajo, aproximadamente el 85% de la MUF.'
+    ),
+    'SFI': createTerm(
+        ['SFI', 'Solar Flux Index', 'Índice de Flujo Solar'],
+        'Solar Flux Index: Medida de la actividad solar (70-300). Valores más altos indican mejor propagación en HF.'
+    ),
+    'SSN': createTerm(
+        ['SSN', 'Sunspot Number', 'Número de Manchas Solares'],
+        'Sunspot Number: Índice de manchas solares (0-300). Mayor número de manchas indica mejor propagación en HF.'
+    ),
+    'A-Index': createTerm(
+        ['A-Index', 'Índice A', 'A Index'],
+        'Índice de perturbaciones geomagnéticas (0-400). Valores 0-7 indican excelentes condiciones, >50 indica tormentas magnéticas.'
+    ),
+    'K-Index': createTerm(
+        ['K-Index', 'Índice K', 'K Index'],
+        'Índice de perturbaciones geomagnéticas locales medido cada 3 horas (0-9). Valores 0-2 indican buenas condiciones, >5 indica mala propagación.'
     ),
     'Tropo': createTerm(
         ['Tropo', 'Troposférica', 'Troposcatter'],
