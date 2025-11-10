@@ -1,7 +1,7 @@
  // -------------------- App Info --------------------
 const APP_INFO = {
-    version: '1.1.3',
-    updateDate: '11/11/2025 00:47',
+    version: '1.1.3.1',
+    updateDate: '11/11/2025 00:49',
     updateVersion() {
         const versionEl = document.querySelectorAll('.version');
         const dayEl = document.querySelector('.updateDay');
