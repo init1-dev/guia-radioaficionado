@@ -225,18 +225,6 @@ export const glossaryTerms = {
 
 const excludedTAgs = ['SCRIPT', 'STYLE', 'TEXTAREA', 'CODE', 'PRE','H3', 'H4'];
 
-// Función para buscar término en el glosario sin distinguir mayúsculas/minúsculas
-function findGlossaryTerm(word) {
-    const normalizedWord = word.toLowerCase();
-    for (const [key, termData] of Object.entries(glossaryTerms)) {
-        // Comprobar si alguna variante coincide (ignorando mayúsculas/minúsculas)
-        if (termData.variants.some(variant => variant.toLowerCase() === normalizedWord)) {
-            return termData;
-        }
-    }
-    return null;
-}
-
 // Función para crear un tooltip
 function createTooltip(element, definition) {
     const rect = element.getBoundingClientRect();
@@ -299,28 +287,36 @@ function processText(node) {
         let fragment = document.createDocumentFragment();
         let lastIndex = 0;
 
-        // Buscar palabras en el texto (incluyendo guiones)
-        const words = text.match(/\b[\w-]+\b/g);
-        if (!words) return;
-
+        // Crear una expresión regular que combine todas las variantes
+        const allTerms = Object.values(glossaryTerms).reduce((acc, { variants }) => {
+            return acc.concat(variants.map(v => v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+        }, []);
+        
+        // Ordenar términos por longitud (más largos primero) para manejar correctamente términos compuestos
+        allTerms.sort((a, b) => b.length - a.length);
+        
+        const regex = new RegExp(`\\b(${allTerms.join('|')})\\b`, 'gi');
         let match;
-        words.forEach(word => {
-            const termData = findGlossaryTerm(word);
+
+        while ((match = regex.exec(text)) !== null) {
+            const term = match[0];
+            // Encontrar el termData correspondiente
+            const termData = Object.values(glossaryTerms).find(({ variants }) => 
+                variants.some(v => v.toLowerCase() === term.toLowerCase())
+            );
+
             if (termData) {
                 modified = true;
-                // Añadir texto anterior al término
-                const wordIndex = text.indexOf(word, lastIndex);
-                if (wordIndex > lastIndex) {
-                    fragment.appendChild(document.createTextNode(text.substring(lastIndex, wordIndex)));
+                if (match.index > lastIndex) {
+                    fragment.appendChild(document.createTextNode(text.substring(lastIndex, match.index)));
                 }
 
-                // Crear el elemento del término
-                const termSpan = createGlossaryElement(word, termData.definition);
+                const termSpan = createGlossaryElement(term, termData.definition);
                 fragment.appendChild(termSpan);
 
-                lastIndex = wordIndex + word.length;
+                lastIndex = regex.lastIndex;
             }
-        });
+        }
 
         if (modified) {
             // Añadir el resto del texto si queda algo
