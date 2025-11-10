@@ -82,6 +82,174 @@ export const glossaryTerms = {
         'Amateur Television: Transmisión de video en movimiento por radio aficionado.'
     ),
     
+    // Saludos y Cortesía
+    'GM': createTerm(
+        ['GM'],
+        'Good Morning: Buenos días.'
+    ),
+    'GA': createTerm(
+        ['GA'],
+        'Good Afternoon: Buenas tardes.'
+    ),
+    'GE': createTerm(
+        ['GE'],
+        'Good Evening: Buenas noches.'
+    ),
+    'GN': createTerm(
+        ['GN'],
+        'Good Night: Hasta mañana.'
+    ),
+    'GL': createTerm(
+        ['GL'],
+        'Good Luck: Suerte.'
+    ),
+    'PSE': createTerm(
+        ['PSE'],
+        'Please: Por favor. Término de cortesía.'
+    ),
+    'TKS': createTerm(
+        ['TKS', 'TNX'],
+        'Thanks: Gracias. Término de agradecimiento.'
+    ),
+
+    // Operadores y Referencias Personales
+    'OM': createTerm(
+        ['OM'],
+        'Old Man: Término de respeto usado entre radioaficionados masculinos.'
+    ),
+    'YL': createTerm(
+        ['YL'],
+        'Young Lady: Término usado para referirse a una operadora.'
+    ),
+    'XYL': createTerm(
+        ['XYL', 'Ex-YL'],
+        'Ex-YL: Término usado para referirse a la esposa de un radioaficionado.'
+    ),
+    '73': createTerm(
+        ['73'],
+        'Saludos cordiales: Despedida formal entre radioaficionados.'
+    ),
+    '88': createTerm(
+        ['88'],
+        'Besos y abrazos: Despedida afectuosa, raramente usada.'
+    ),
+    'HI': createTerm(
+        ['HI'],
+        'Risa en CW: Expresión de humor en código Morse.'
+    ),
+
+    // Términos Técnicos de Operación
+    'ANT': createTerm(
+        ['ANT', 'Antenna', 'Antena'],
+        'Antena: Abreviatura para referirse al sistema radiante.'
+    ),
+    'RX': createTerm(
+        ['RX', 'Recepción'],
+        'Recepción: Abreviatura para referirse a la escucha o recepción de señales.'
+    ),
+    'TX': createTerm(
+        ['TX', 'Transmisión'],
+        'Transmisión: Abreviatura para referirse a la emisión de señales.'
+    ),
+    'PWR': createTerm(
+        ['PWR', 'Power', 'Potencia'],
+        'Power: Potencia en vatios usada en la transmisión.'
+    ),
+    'WX': createTerm(
+        ['WX', 'Weather'],
+        'Weather: Término usado para referirse al clima o condiciones meteorológicas.'
+    ),
+    'RPT': createTerm(
+        ['RPT', 'Repeat'],
+        'Repeat: Solicitud de repetición cuando no se ha copiado bien el mensaje.'
+    ),
+    'Roger': createTerm(
+        ['Roger'],
+        'Roger: Confirmación de recepción del mensaje.'
+    ),
+    'CQ': createTerm(
+        ['CQ', 'Llamada General'],
+        'Llamada general: Inicio de QSO, invitación a cualquier estación para establecer contacto.'
+    ),
+
+    // Códigos Q para Control de Transmisión
+    'QSY': createTerm(
+        ['QSY'],
+        'Pregunta: ¿Cambio de frecuencia? / Respuesta: Cambio a... (nueva frecuencia).'
+    ),
+    'QTR': createTerm(
+        ['QTR'],
+        'Pregunta: ¿Qué hora es? / Respuesta: Son las... (hora).'
+    ),
+    'QRL': createTerm(
+        ['QRL'],
+        'Pregunta: ¿Está la frecuencia ocupada? / Respuesta: La frecuencia está en uso.'
+    ),
+    'QRV': createTerm(
+        ['QRV'],
+        'Pregunta: ¿Está listo? / Respuesta: Estoy listo.'
+    ),
+    'QRX': createTerm(
+        ['QRX'],
+        'Pregunta: ¿Puede esperar? / Respuesta: Espero, pausa en la comunicación.'
+    ),
+    'QRT': createTerm(
+        ['QRT'],
+        'Pregunta: ¿Cierra estación? / Respuesta: Cierro la estación.'
+    ),
+    'QRZ': createTerm(
+        ['QRZ'],
+        'Pregunta: ¿Quién me llama? / Respuesta: Le llama... (identificación).'
+    ),
+
+    // Códigos Q para Ajustes de Transmisión
+    'QRO': createTerm(
+        ['QRO'],
+        'Pregunta: ¿Aumento potencia? / Respuesta: Use alta potencia (>100W).'
+    ),
+    'QRS': createTerm(
+        ['QRS'],
+        'Pregunta: ¿Transmito más despacio? / Respuesta: Transmita más despacio (CW).'
+    ),
+    'QRQ': createTerm(
+        ['QRQ'],
+        'Pregunta: ¿Transmito más rápido? / Respuesta: Transmita más rápido (CW).'
+    ),
+
+    // Códigos Q para Calidad de Señal
+    'QRK': createTerm(
+        ['QRK'],
+        'Pregunta: ¿Cuál es mi legibilidad (1-5)? / Respuesta: Su legibilidad es... (1-5).'
+    ),
+    'Legibilidad': createTerm(
+        ['Legibilidad', 'Readability'],
+        'Medida de la claridad con que se recibe una señal, calificada del 1 al 5, donde 5 es perfectamente legible.'
+    ),
+    'QRM': createTerm(
+        ['QRM'],
+        'Pregunta: ¿Tiene interferencias? / Respuesta: Tengo interferencias (de origen humano).'
+    ),
+    'Interferencias': createTerm(
+        ['Interferencias', 'Interference'],
+        'Señales no deseadas que afectan la comunicación, pueden ser de origen humano (QRM) o natural (QRN).'
+    ),
+    'QRN': createTerm(
+        ['QRN'],
+        'Pregunta: ¿Hay ruido atmosférico? / Respuesta: Hay ruido atmosférico.'
+    ),
+    'Ruido Natural': createTerm(
+        ['Ruido Natural', 'Ruido Atmosférico', 'Natural Noise'],
+        'Interferencias de origen natural como tormentas eléctricas, radiación solar u otros fenómenos atmosféricos.'
+    ),
+    'QSB': createTerm(
+        ['QSB'],
+        'Pregunta: ¿Mi señal varía? / Respuesta: Su señal fluctúa (fading).'
+    ),
+    'Señal Variable': createTerm(
+        ['Señal Variable', 'Fading', 'Desvanecimiento'],
+        'Variación en la intensidad de una señal recibida, comúnmente conocida como fading o desvanecimiento.'
+    ),
+
     // Códigos Q y Conceptos Técnicos
     'QSO': createTerm(
         ['QSO'],
@@ -112,7 +280,7 @@ export const glossaryTerms = {
         'Citizens Band: Banda ciudadana en 27 MHz, popular para comunicaciones locales sin licencia.'
     ),
     'QRP': createTerm(
-        ['QRP', 'Baja Potencia'],
+        ['QRP'],
         'Operación en baja potencia, típicamente menos de 5W en CW o 10W en fonía.'
     ),
     'DMR': createTerm(
