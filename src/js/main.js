@@ -85,6 +85,12 @@ function buildIndex(closeTocCallback) {
             ev.preventDefault();
             const h3s = section.querySelectorAll('h3');
             if (h3s.length > 0) {
+                // Si la sección no está abierta, cerrar todas las demás
+                if (!details.open) {
+                    tocList.querySelectorAll('details').forEach(d => {
+                        if (d !== details) d.open = false;
+                    });
+                }
                 details.open = !details.open;
                 if (details.open) location.hash = sectionId;
             } else {
@@ -172,7 +178,13 @@ function initTocSearch() {
             li.style.display = (h2Matches || hasVisibleH3) ? '' : 'none';
 
             if (details) {
-                if (searchTerm && hasVisibleH3 && !h2Matches) details.open = true;
+                if (searchTerm && hasVisibleH3 && !h2Matches) {
+                    // Cerrar todas las demás secciones antes de abrir esta
+                    tocList.querySelectorAll('details').forEach(d => {
+                        if (d !== details) d.open = false;
+                    });
+                    details.open = true;
+                }
                 else if (!searchTerm) details.open = false;
             }
         });

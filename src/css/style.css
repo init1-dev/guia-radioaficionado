@@ -14,7 +14,7 @@ body {
         Roboto, "Helvetica Neue", Arial;
     color: #e6eef6;
     background: linear-gradient(180deg, #071028 0%, #051025 100%);
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 * {
