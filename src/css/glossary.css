@@ -1,0 +1,64 @@
+/* Estilos para términos del glosario */
+.glossary-term {
+    border-bottom: 1px dotted var(--accent);
+    cursor: help;
+    position: relative;
+    color: var(--accent);
+}
+
+/* Tooltip */
+.glossary-tooltip {
+    position: fixed;
+    z-index: 1000;
+    background-color: var(--card);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    max-width: min(300px, calc(100vw - 20px));
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border: 1px solid var(--accent);
+    pointer-events: none;
+    animation: tooltipFadeIn 0.2s ease-in-out;
+    --arrow-left: 50%;
+}
+
+/* Flecha del tooltip - arriba */
+.glossary-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: var(--arrow-left);
+    transform: translateX(-50%);
+    border-width: 0 5px 5px 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--accent) transparent;
+}
+
+/* Tooltip que aparece arriba del elemento */
+.glossary-tooltip.tooltip-top::before {
+    top: auto;
+    bottom: -5px;
+    border-width: 5px 5px 0 5px;
+    border-color: var(--accent) transparent transparent transparent;
+}
+
+/* Animación de entrada */
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Asegurarse que el tooltip no se corte en móviles */
+@media (max-width: 768px) {
+    .glossary-tooltip {
+        max-width: 80vw;
+        font-size: 0.85em;
+    }
+}

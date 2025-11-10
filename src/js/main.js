@@ -8,6 +8,7 @@
 
 import { APP_INFO } from "./appInfo";
 import { slugify, qs, qsa, initSmoothScroll } from "./helpers";
+import { initGlossary } from "./glossary";
 
 // -------------------- Mobile TOC / Search bar --------------------
 function initMobileToc() {
@@ -186,6 +187,7 @@ function initApp() {
     buildIndex(mobileTocApi && mobileTocApi.closeToc);
     initScrollSpy();
     initTocSearch();
+    initGlossary(); // Inicializar el sistema de glosario
 }
 
 // Run on DOM ready
