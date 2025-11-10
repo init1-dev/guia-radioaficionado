@@ -299,8 +299,8 @@ function processText(node) {
         let fragment = document.createDocumentFragment();
         let lastIndex = 0;
 
-        // Buscar palabras en el texto
-        const words = text.match(/\b\w+\b/g);
+        // Buscar palabras en el texto (incluyendo guiones)
+        const words = text.match(/\b[\w-]+\b/g);
         if (!words) return;
 
         let match;
